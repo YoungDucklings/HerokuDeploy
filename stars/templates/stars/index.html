@@ -15,7 +15,7 @@
         {% if star.profileimg_set.all %}
         <img src="{{ star.profileimg_set.first }}" alt="{{ star }}" width="150px">
         {% else %}
-        <img src="{% static '/img/default.png' %}" alt="{{ star }}" width="150px">
+        <img src="{% static 'img/default.png' %}" alt="{{ star }}" width="150px">
         {% endif %}
       </a>
       <br>

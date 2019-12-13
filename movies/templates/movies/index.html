@@ -15,7 +15,7 @@
       <a href="{% url 'movies:detail' movie.pk %}"><img src="{{ movie.poster_set.first }}" alt="{{ movie }}"
           width="150px"></a>
       {% else %}
-      <a href="{% url 'movies:detail' movie.pk %}"><img src="{% static '/img/default.png' %}" alt="{{ movie }}"
+      <a href="{% url 'movies:detail' movie.pk %}"><img src="{% static 'img/default.png' %}" alt="{{ movie }}"
           width="150px">
       {% endif %}    
       <br>

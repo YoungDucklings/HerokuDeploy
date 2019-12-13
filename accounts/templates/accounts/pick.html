@@ -68,7 +68,7 @@
     {% if pick.poster_set.all %}
     <img src="{{ pick.poster_set.first }}" class="rounded mx-auto mt-3 d-block" alt="{{ pick.title }}" style="width:50%">
     {% else %}
-    <img src="{% static '/img/default.png' %}" class="rounded mx-auto mt-3 d-block" alt="{{ pick.title }}"
+    <img src="{% static 'img/default.png' %}" class="rounded mx-auto mt-3 d-block" alt="{{ pick.title }}"
       style="width:50%">
     {% endif %}
     <div class="card-body">
