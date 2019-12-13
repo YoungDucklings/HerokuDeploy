@@ -130,13 +130,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/staticfiles/'
+STATIC_URL = '/staticfiles/admin/'
 
 AUTH_USER_MODEL = 'accounts.User'
 
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles', 'admin')
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 
 
 
