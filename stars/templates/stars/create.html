@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block body %}
+{% include '_nav.html' %}
+<div class="container my-3">
+  <h1 class="title">Add Star</h1>
+  <form action="{% url 'stars:create' %}" method="POST">
+    {% csrf_token %}
+    <h2>[ basic ]</h2>
+    {% bootstrap_form form %}
+    <button class="btn btn-primary">save</button>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,1312 @@
+[
+	{
+		"pk": 330457,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Frozen II",
+			"original_title": "Frozen II",
+			"genres": [
+				12,
+				16,
+				35,
+				10751,
+				10402
+			],
+			"release_date": "2019-11-20",
+			"runtime": 104,
+			"status": "Released",
+			"vote_average": 6.9,
+			"adult": false,
+			"belongs_to_collection": 386382,
+			"original_language": "en",
+			"homepage": "https://movies.disney.com/frozen-2",
+			"overview": "Elsa, Anna, Kristoff and Olaf are going far in the forest to know the truth about an ancient mystery of their kingdom."
+		}
+	},
+	{
+		"pk": 429617,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Spider-Man: Far from Home",
+			"original_title": "Spider-Man: Far from Home",
+			"genres": [
+				28,
+				12,
+				878
+			],
+			"release_date": "2019-06-28",
+			"runtime": 129,
+			"status": "Released",
+			"vote_average": 7.6,
+			"adult": false,
+			"belongs_to_collection": 531241,
+			"original_language": "en",
+			"homepage": "https://www.marvel.com/movies/spider-man-far-from-home",
+			"overview": "Peter Parker and his friends go on a summer trip to Europe. However, they will hardly be able to rest - Peter will have to agree to help Nick Fury uncover the mystery of creatures that cause natural disasters and destruction throughout the continent."
+		}
+	},
+	{
+		"pk": 475557,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Joker",
+			"original_title": "Joker",
+			"genres": [
+				80,
+				53,
+				18
+			],
+			"release_date": "2019-10-02",
+			"runtime": 122,
+			"status": "Released",
+			"vote_average": 8.4,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://www.jokermovie.net/",
+			"overview": "During the 1980s, a failed stand-up comedian is driven insane and turns to a life of crime and chaos in Gotham City while becoming an infamous psychopathic crime figure."
+		}
+	},
+	{
+		"pk": 420818,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Lion King",
+			"original_title": "The Lion King",
+			"genres": [
+				12,
+				18
+			],
+			"release_date": "2019-07-12",
+			"runtime": 118,
+			"status": "Released",
+			"vote_average": 7.1,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://movies.disney.com/the-lion-king-2019",
+			"overview": "Simba idolizes his father, King Mufasa, and takes to heart his own royal destiny. But not everyone in the kingdom celebrates the new cub's arrival. Scar, Mufasa's brother—and former heir to the throne—has plans of his own. The battle for Pride Rock is ravaged with betrayal, tragedy and drama, ultimately resulting in Simba's exile. With help from a curious pair of newfound friends, Simba will have to figure out how to grow up and take back what is rightfully his."
+		}
+	},
+	{
+		"pk": 466272,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Once Upon a Time... in Hollywood",
+			"original_title": "Once Upon a Time... in Hollywood",
+			"genres": [
+				18,
+				35,
+				53
+			],
+			"release_date": "2019-07-25",
+			"runtime": 161,
+			"status": "Released",
+			"vote_average": 7.6,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.onceuponatimeinhollywood.movie/",
+			"overview": "A faded television actor and his stunt double strive to achieve fame and success in the film industry during the final years of Hollywood's Golden Age in 1969 Los Angeles."
+		}
+	},
+	{
+		"pk": 645541,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Ellipse",
+			"original_title": "Ellipse",
+			"genres": [
+				878
+			],
+			"release_date": "2019-11-05",
+			"runtime": 76,
+			"status": "Released",
+			"vote_average": 3.6,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": " ",
+			"overview": "A man and his dog are stranded on a volatile, oval-shaped planet and are forced to adapt and escape before time destroys them both."
+		}
+	},
+	{
+		"pk": 290859,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Terminator: Dark Fate",
+			"original_title": "Terminator: Dark Fate",
+			"genres": [
+				28,
+				878
+			],
+			"release_date": "2019-10-23",
+			"runtime": 128,
+			"status": "Released",
+			"vote_average": 6.3,
+			"adult": false,
+			"belongs_to_collection": 528,
+			"original_language": "en",
+			"homepage": " ",
+			"overview": "Decades after Sarah Connor prevented Judgment Day, a lethal new Terminator is sent to eliminate the future leader of the resistance. In a fight to save mankind, battle-hardened Sarah Connor teams up with an unexpected ally and an enhanced super soldier to stop the deadliest Terminator yet."
+		}
+	},
+	{
+		"pk": 474350,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "It Chapter Two",
+			"original_title": "It Chapter Two",
+			"genres": [
+				27,
+				18
+			],
+			"release_date": "2019-09-04",
+			"runtime": 169,
+			"status": "Released",
+			"vote_average": 6.8,
+			"adult": false,
+			"belongs_to_collection": 477962,
+			"original_language": "en",
+			"homepage": "http://www.it-movie.net/",
+			"overview": "27 years after overcoming the malevolent supernatural entity Pennywise, the former members of the Losers' Club, who have grown up and moved away from Derry, are brought back together by a devastating phone call."
+		}
+	},
+	{
+		"pk": 568012,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "One Piece: Stampede",
+			"original_title": "ワンピーススタンピード",
+			"genres": [
+				16,
+				28,
+				12
+			],
+			"release_date": "2019-08-09",
+			"runtime": 101,
+			"status": "Released",
+			"vote_average": 7.4,
+			"adult": false,
+			"belongs_to_collection": 23456,
+			"original_language": "ja",
+			"homepage": "https://one-piece.com/comicsanime/movie/detail/14.html",
+			"overview": "One Piece: Stampede is a stand-alone film that celebrates the anime's 20th Anniversary and takes place outside the canon of the \"One Piece\" TV series. Monkey D. Luffy and his Straw Hat pirate crew are invited to a massive Pirate Festival that brings many of the most iconic characters from throughout the franchise to participate in competition with the Straw Hats to find Roger's treasure. It also pits the Straw Hats against a new enemy named Bullet, a former member of Roger's crew."
+		}
+	},
+	{
+		"pk": 453405,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Gemini Man",
+			"original_title": "Gemini Man",
+			"genres": [
+				28,
+				53
+			],
+			"release_date": "2019-10-02",
+			"runtime": 117,
+			"status": "Released",
+			"vote_average": 5.7,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": " ",
+			"overview": "Ageing assassin, Henry Brogen tries to get out of the business but finds himself in the ultimate battle—fighting his own clone who is 25 years younger than him, and at the peak of his abilities."
+		}
+	},
+	{
+		"pk": 480042,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Escape Plan: The Extractors",
+			"original_title": "Escape Plan: The Extractors",
+			"genres": [
+				28,
+				53
+			],
+			"release_date": "2019-06-20",
+			"runtime": 97,
+			"status": "Released",
+			"vote_average": 4.7,
+			"adult": false,
+			"belongs_to_collection": 525891,
+			"original_language": "en",
+			"homepage": "https://www.lionsgate.com/movies/escape-plan-the-extractors",
+			"overview": "After security expert Ray Breslin is hired to rescue the kidnapped daughter of a Hong Kong tech mogul from a formidable Latvian prison, Breslin's girlfriend is also captured. Now he and his team must pull off a deadly rescue mission to confront their sadistic foe and save the hostages before time runs out."
+		}
+	},
+	{
+		"pk": 423204,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Angel Has Fallen",
+			"original_title": "Angel Has Fallen",
+			"genres": [
+				28
+			],
+			"release_date": "2019-08-21",
+			"runtime": 121,
+			"status": "Released",
+			"vote_average": 5.8,
+			"adult": false,
+			"belongs_to_collection": 386534,
+			"original_language": "en",
+			"homepage": "https://angelhasfallen.movie/",
+			"overview": "After the events in the previous film, Secret Service agent Mike Banning finds himself framed for an assassination attempt on the President. Pursued by his own agency and the FBI, Banning races to clear his name and uncover the real terrorist threat which has set its sights on Air Force One."
+		}
+	},
+	{
+		"pk": 920,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Cars",
+			"original_title": "Cars",
+			"genres": [
+				16,
+				12,
+				35,
+				10751
+			],
+			"release_date": "2006-06-08",
+			"runtime": 117,
+			"status": "Released",
+			"vote_average": 6.7,
+			"adult": false,
+			"belongs_to_collection": 87118,
+			"original_language": "en",
+			"homepage": "http://disney.go.com/disneyvideos/animatedfilms/cars/",
+			"overview": "Lightning McQueen, a hotshot rookie race car driven to succeed, discovers that life is about the journey, not the finish line, when he finds himself unexpectedly detoured in the sleepy Route 66 town of Radiator Springs. On route across the country to the big Piston Cup Championship in California to compete against two seasoned pros, McQueen gets to know the town's offbeat characters."
+		}
+	},
+	{
+		"pk": 486589,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Red Shoes 2019",
+			"original_title": "Red Shoes 2019",
+			"genres": [
+				16,
+				10749
+			],
+			"release_date": "2019-07-25",
+			"runtime": 0,
+			"status": "Released",
+			"vote_average": 5.9,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": " ",
+			"overview": "Princes who have been turned into Dwarfs seek the red shoes of a lady in order to break the spell, although it will not be easy."
+		}
+	},
+	{
+		"pk": 458897,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Charlie's Angels",
+			"original_title": "Charlie's Angels",
+			"genres": [
+				28,
+				12,
+				35
+			],
+			"release_date": "2019-11-14",
+			"runtime": 118,
+			"status": "Released",
+			"vote_average": 6.2,
+			"adult": false,
+			"belongs_to_collection": 86029,
+			"original_language": "en",
+			"homepage": "https://www.charliesangels.movie/",
+			"overview": "When a systems engineer blows the whistle on a dangerous technology, Charlie's Angels from across the globe are called into action, putting their lives on the line to protect society."
+		}
+	},
+	{
+		"pk": 359724,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Ford v Ferrari",
+			"original_title": "Ford v Ferrari",
+			"genres": [
+				18,
+				36
+			],
+			"release_date": "2019-10-10",
+			"runtime": 152,
+			"status": "Released",
+			"vote_average": 8,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.foxmovies.com/movies/ford-v-ferrari",
+			"overview": "American car designer Carroll Shelby and the British-born driver Ken Miles work together to battle corporate interference, the laws of physics, and their own personal demons to build a revolutionary race car for Ford Motor Company and take on the dominating race cars of Enzo Ferrari at the 24 Hours of Le Mans in France in 1966."
+		}
+	},
+	{
+		"pk": 384018,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Fast & Furious Presents: Hobbs & Shaw",
+			"original_title": "Fast & Furious Presents: Hobbs & Shaw",
+			"genres": [
+				28,
+				12,
+				35
+			],
+			"release_date": "2019-08-01",
+			"runtime": 137,
+			"status": "Released",
+			"vote_average": 6.6,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.hobbsandshawmovie.com",
+			"overview": "Ever since US Diplomatic Security Service Agent Hobbs and lawless outcast Shaw first faced off, they just have swapped smacks and bad words. But when cyber-genetically enhanced anarchist Brixton's ruthless actions threaten the future of humanity, both join forces to defeat him. (A spin-off of “The Fate of the Furious,” focusing on Johnson's Luke Hobbs and Statham's Deckard Shaw.)"
+		}
+	},
+	{
+		"pk": 449924,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Ip Man 4: The Finale",
+			"original_title": "葉問4",
+			"genres": [
+				28,
+				18,
+				36
+			],
+			"release_date": "2019-12-20",
+			"runtime": 0,
+			"status": "Post Production",
+			"vote_average": 0,
+			"adult": false,
+			"belongs_to_collection": 70068,
+			"original_language": "cn",
+			"homepage": " ",
+			"overview": "Ip Man 4 is an upcoming Hong Kong biographical martial arts film directed by Wilson Yip and produced by Raymond Wong. It is the fourth in the Ip Man film series based on the life of the Wing Chun grandmaster of the same name and features Donnie Yen reprising the role. The film began production in April 2018 and ended in July the same year."
+		}
+	},
+	{
+		"pk": 420817,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Aladdin",
+			"original_title": "Aladdin",
+			"genres": [
+				12,
+				14,
+				10749,
+				35,
+				10751
+			],
+			"release_date": "2019-05-22",
+			"runtime": 128,
+			"status": "Released",
+			"vote_average": 7.1,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://movies.disney.com/aladdin-2019",
+			"overview": "A kindhearted street urchin named Aladdin embarks on a magical adventure after finding a lamp that releases a wisecracking genie while a power-hungry Grand Vizier vies for the same lamp that has the power to make their deepest wishes come true."
+		}
+	},
+	{
+		"pk": 476631,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Barbie: Dolphin Magic",
+			"original_title": "Barbie: Dolphin Magic",
+			"genres": [
+				16,
+				12,
+				10751,
+				14
+			],
+			"release_date": "2017-10-13",
+			"runtime": 63,
+			"status": "Released",
+			"vote_average": 6.5,
+			"adult": false,
+			"belongs_to_collection": 517758,
+			"original_language": "en",
+			"homepage": " ",
+			"overview": "Barbie and her sisters take off on another exciting, global adventure to visit their friend Ken at his summer internship at a beautiful and exotic coral reef."
+		}
+	},
+	{
+		"pk": 453075,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "One Summer Night",
+			"original_title": "어느 여름날 밤에",
+			"genres": [
+				18
+			],
+			"release_date": "2017-04-06",
+			"runtime": 98,
+			"status": "Released",
+			"vote_average": 7.5,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "ko",
+			"homepage": " ",
+			"overview": "In the winter of 2013, Yong-jun and Jae-sung, a member of the Korean People’s Army, Their sex scene is caught by the superior. After all, Yong-jun decided to defect from North Korea leaving Jae-sung."
+		}
+	},
+	{
+		"pk": 611207,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Knight Before Christmas",
+			"original_title": "The Knight Before Christmas",
+			"genres": [
+				10749,
+				35
+			],
+			"release_date": "2019-11-21",
+			"runtime": 92,
+			"status": "Released",
+			"vote_average": 6.7,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.netflix.com/title/81026188",
+			"overview": "A movie about a medieval English knight who is magically transported to present day where he ends up falling for a high school science teacher."
+		}
+	},
+	{
+		"pk": 508965,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Klaus",
+			"original_title": "Klaus",
+			"genres": [
+				16,
+				10751,
+				12,
+				35
+			],
+			"release_date": "2019-11-08",
+			"runtime": 97,
+			"status": "Released",
+			"vote_average": 8.5,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.netflix.com/title/80183187",
+			"overview": "When Jesper distinguishes himself as the Postal Academy's worst student, he is sent to Smeerensburg, a small village located on a icy island above the Arctic Circle, where grumpy inhabitants barely exchange words, let alone letters. Jesper is about to give up and abandon his duty as a postman when he meets local teacher Alva and Klaus, a mysterious carpenter who lives alone in a cabin full of handmade toys."
+		}
+	},
+	{
+		"pk": 299536,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Avengers: Infinity War",
+			"original_title": "Avengers: Infinity War",
+			"genres": [
+				12,
+				28,
+				878
+			],
+			"release_date": "2018-04-25",
+			"runtime": 149,
+			"status": "Released",
+			"vote_average": 8.3,
+			"adult": false,
+			"belongs_to_collection": 86311,
+			"original_language": "en",
+			"homepage": "http://marvel.com/movies/movie/223/avengers_infinity_war_part_1",
+			"overview": "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain."
+		}
+	},
+	{
+		"pk": 540247,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Jurassic Galaxy",
+			"original_title": "Jurassic Galaxy",
+			"genres": [
+				878,
+				28,
+				12
+			],
+			"release_date": "2018-08-20",
+			"runtime": 76,
+			"status": "Released",
+			"vote_average": 2.7,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": " ",
+			"overview": "In the near future, a ship of space explorers crash land on an unknown planet. They're soon met with some of their worst fears as they discover the planet is inhabited by monstrous dinosaurs."
+		}
+	},
+	{
+		"pk": 101411,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "23-F: la película",
+			"original_title": "23-F: la película",
+			"genres": [
+				36,
+				18
+			],
+			"release_date": "2011-02-23",
+			"runtime": 105,
+			"status": "Released",
+			"vote_average": 5.5,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "es",
+			"homepage": " ",
+			"overview": "The failed coup d'état of February 23, 1981, which began with the capture of the Congress of Deputies and ended with the release of parliamentarians, put at serious risk the Spanish democracy."
+		}
+	},
+	{
+		"pk": 559969,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "El Camino: A Breaking Bad Movie",
+			"original_title": "El Camino: A Breaking Bad Movie",
+			"genres": [
+				80,
+				18,
+				53
+			],
+			"release_date": "2019-10-11",
+			"runtime": 123,
+			"status": "Released",
+			"vote_average": 7,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.netflix.com/title/81078819",
+			"overview": "In the wake of his dramatic escape from captivity, Jesse Pinkman must come to terms with his past in order to forge some kind of future."
+		}
+	},
+	{
+		"pk": 420809,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Maleficent: Mistress of Evil",
+			"original_title": "Maleficent: Mistress of Evil",
+			"genres": [
+				14,
+				10751,
+				12
+			],
+			"release_date": "2019-10-16",
+			"runtime": 118,
+			"status": "Released",
+			"vote_average": 7.2,
+			"adult": false,
+			"belongs_to_collection": 531331,
+			"original_language": "en",
+			"homepage": "https://movies.disney.com/maleficent-mistress-of-evil",
+			"overview": "Maleficent and her goddaughter Aurora begin to question the complex family ties that bind them as they are pulled in different directions by impending nuptials, unexpected allies, and dark new forces at play."
+		}
+	},
+	{
+		"pk": 484641,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Anna",
+			"original_title": "Anna",
+			"genres": [
+				53,
+				28
+			],
+			"release_date": "2019-06-19",
+			"runtime": 119,
+			"status": "Released",
+			"vote_average": 6.4,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "fr",
+			"homepage": "https://anna.movie",
+			"overview": "Beneath Anna Poliatova's striking beauty lies a secret that will unleash her indelible strength and skill to become one of the world's most feared government assassins."
+		}
+	},
+	{
+		"pk": 11,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Star Wars",
+			"original_title": "Star Wars",
+			"genres": [
+				12,
+				28,
+				878
+			],
+			"release_date": "1977-05-25",
+			"runtime": 121,
+			"status": "Released",
+			"vote_average": 8.2,
+			"adult": false,
+			"belongs_to_collection": 10,
+			"original_language": "en",
+			"homepage": "http://www.starwars.com/films/star-wars-episode-iv-a-new-hope",
+			"overview": "Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire."
+		}
+	},
+	{
+		"pk": 522938,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Rambo: Last Blood",
+			"original_title": "Rambo: Last Blood",
+			"genres": [
+				28,
+				53
+			],
+			"release_date": "2019-09-19",
+			"runtime": 89,
+			"status": "Released",
+			"vote_average": 5.9,
+			"adult": false,
+			"belongs_to_collection": 5039,
+			"original_language": "en",
+			"homepage": "https://rambo.movie/",
+			"overview": "When John Rambo's niece travels to Mexico to find the father that abandoned her and her mother, she finds herself in the grasps of Calle Mexican sex traffickers. When she doesn't return home as expected, John learns she's crossed into Mexico and sets out to get her back and make them pay."
+		}
+	},
+	{
+		"pk": 487616,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Curiosa",
+			"original_title": "Curiosa",
+			"genres": [
+				36,
+				18
+			],
+			"release_date": "2019-04-03",
+			"runtime": 107,
+			"status": "Released",
+			"vote_average": 6.3,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "fr",
+			"homepage": " ",
+			"overview": "A passionate love story set against a backdrop of sexual freedom, loosely based on the relationship between 19th century authors Pierre Louÿs and Marie de Régnier"
+		}
+	},
+	{
+		"pk": 567609,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Ready or Not",
+			"original_title": "Ready or Not",
+			"genres": [
+				27,
+				53,
+				9648,
+				35
+			],
+			"release_date": "2019-08-21",
+			"runtime": 95,
+			"status": "Released",
+			"vote_average": 6.9,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://www.foxsearchlight.com/readyornot/",
+			"overview": "A bride's wedding night takes a sinister turn when her eccentric new in-laws force her to take part in a terrifying game."
+		}
+	},
+	{
+		"pk": 399579,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Alita: Battle Angel",
+			"original_title": "Alita: Battle Angel",
+			"genres": [
+				28,
+				878,
+				53,
+				12
+			],
+			"release_date": "2019-01-31",
+			"runtime": 122,
+			"status": "Released",
+			"vote_average": 6.9,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.foxmovies.com/movies/alita-battle-angel",
+			"overview": "When Alita awakens with no memory of who she is in a future world she does not recognize, she is taken in by Ido, a compassionate doctor who realizes that somewhere in this abandoned cyborg shell is the heart and soul of a young woman with an extraordinary past."
+		}
+	},
+	{
+		"pk": 496243,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Parasite",
+			"original_title": "기생충",
+			"genres": [
+				53,
+				18,
+				35
+			],
+			"release_date": "2019-05-30",
+			"runtime": 132,
+			"status": "Released",
+			"vote_average": 8.5,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "ko",
+			"homepage": "https://www.parasite-movie.com/",
+			"overview": "All unemployed, Ki-taek's family takes peculiar interest in the wealthy and glamorous Parks for their livelihood until they get entangled in an unexpected incident."
+		}
+	},
+	{
+		"pk": 458156,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "John Wick: Chapter 3 - Parabellum",
+			"original_title": "John Wick: Chapter 3 - Parabellum",
+			"genres": [
+				28,
+				53,
+				80
+			],
+			"release_date": "2019-05-15",
+			"runtime": 131,
+			"status": "Released",
+			"vote_average": 7.1,
+			"adult": false,
+			"belongs_to_collection": 404609,
+			"original_language": "en",
+			"homepage": "https://www.johnwick.movie",
+			"overview": "Super-assassin John Wick returns with a $14 million price tag on his head and an army of bounty-hunting killers on his trail. After killing a member of the shadowy international assassin’s guild, the High Table, John Wick is excommunicado, but the world’s most ruthless hit men and women await his every turn."
+		}
+	},
+	{
+		"pk": 499701,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Dora and the Lost City of Gold",
+			"original_title": "Dora and the Lost City of Gold",
+			"genres": [
+				12,
+				35,
+				10751
+			],
+			"release_date": "2019-08-08",
+			"runtime": 102,
+			"status": "Released",
+			"vote_average": 6.4,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.paramount.com/movies/dora-and-lost-city-gold",
+			"overview": "Dora, a girl who has spent most of her life exploring the jungle with her parents, now must navigate her most dangerous adventure yet: high school. Always the explorer, Dora quickly finds herself leading Boots (her best friend, a monkey), Diego, and a rag tag group of teens on an adventure to save her parents and solve the impossible mystery behind a lost Inca civilization."
+		}
+	},
+	{
+		"pk": 301528,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Toy Story 4",
+			"original_title": "Toy Story 4",
+			"genres": [
+				12,
+				16,
+				35,
+				10751,
+				14
+			],
+			"release_date": "2019-06-19",
+			"runtime": 100,
+			"status": "Released",
+			"vote_average": 7.6,
+			"adult": false,
+			"belongs_to_collection": 10194,
+			"original_language": "en",
+			"homepage": "https://www.pixar.com/feature-films-toy-story-4",
+			"overview": "Woody has always been confident about his place in the world and that his priority is taking care of his kid, whether that's Andy or Bonnie. But when Bonnie adds a reluctant new toy called \"Forky\" to her room, a road trip adventure alongside old and new friends will show Woody how big the world can be for a toy."
+		}
+	},
+	{
+		"pk": 501907,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "A Beautiful Day in the Neighborhood",
+			"original_title": "A Beautiful Day in the Neighborhood",
+			"genres": [
+				18
+			],
+			"release_date": "2019-11-22",
+			"runtime": 107,
+			"status": "Released",
+			"vote_average": 7,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.abeautifulday.movie/",
+			"overview": "An award-winning cynical journalist, Lloyd Vogel, begrudgingly accepts an assignment to write an Esquire profile piece on the beloved television icon Fred Rogers. After his encounter with Rogers, Vogel's perspective on life is transformed."
+		}
+	},
+	{
+		"pk": 245891,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "John Wick",
+			"original_title": "John Wick",
+			"genres": [
+				28,
+				53
+			],
+			"release_date": "2014-10-22",
+			"runtime": 101,
+			"status": "Released",
+			"vote_average": 7.2,
+			"adult": false,
+			"belongs_to_collection": 404609,
+			"original_language": "en",
+			"homepage": "http://www.johnwickthemovie.com/",
+			"overview": "Ex-hitman John Wick comes out of retirement to track down the gangsters that took everything from him."
+		}
+	},
+	{
+		"pk": 109445,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Frozen",
+			"original_title": "Frozen",
+			"genres": [
+				16,
+				12,
+				10751
+			],
+			"release_date": "2013-11-27",
+			"runtime": 102,
+			"status": "Released",
+			"vote_average": 7.3,
+			"adult": false,
+			"belongs_to_collection": 386382,
+			"original_language": "en",
+			"homepage": "http://movies.disney.com/frozen",
+			"overview": "Young princess Anna of Arendelle dreams about finding true love at her sister Elsa’s coronation. Fate takes her on a dangerous journey in an attempt to end the eternal winter that has fallen over the kingdom. She's accompanied by ice delivery man Kristoff, his reindeer Sven, and snowman Olaf. On an adventure where she will find out what friendship, courage, family, and true love really means."
+		}
+	},
+	{
+		"pk": 501170,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Doctor Sleep",
+			"original_title": "Doctor Sleep",
+			"genres": [
+				27
+			],
+			"release_date": "2019-10-30",
+			"runtime": 152,
+			"status": "Released",
+			"vote_average": 7.1,
+			"adult": false,
+			"belongs_to_collection": 530064,
+			"original_language": "en",
+			"homepage": "http://www.doctorsleepmovie.net/",
+			"overview": "A traumatized, alcoholic Dan Torrance meets Abra, a kid who also has the ability to \"shine.\" He tries to protect her from the True Knot, a cult whose goal is to feed off of people like them in order to remain immortal."
+		}
+	},
+	{
+		"pk": 246655,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "X-Men: Apocalypse",
+			"original_title": "X-Men: Apocalypse",
+			"genres": [
+				28,
+				12,
+				878,
+				14
+			],
+			"release_date": "2016-05-18",
+			"runtime": 144,
+			"status": "Released",
+			"vote_average": 6.5,
+			"adult": false,
+			"belongs_to_collection": 748,
+			"original_language": "en",
+			"homepage": "http://www.foxmovies.com/movies/x-men-apocalypse",
+			"overview": "After the re-emergence of the world's first mutant, world-destroyer Apocalypse, the X-Men must unite to defeat his extinction level plan."
+		}
+	},
+	{
+		"pk": 155,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Dark Knight",
+			"original_title": "The Dark Knight",
+			"genres": [
+				18,
+				28,
+				80,
+				53
+			],
+			"release_date": "2008-07-16",
+			"runtime": 152,
+			"status": "Released",
+			"vote_average": 8.4,
+			"adult": false,
+			"belongs_to_collection": 263,
+			"original_language": "en",
+			"homepage": "http://thedarkknight.warnerbros.com/dvdsite/",
+			"overview": "Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker."
+		}
+	},
+	{
+		"pk": 299534,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Avengers: Endgame",
+			"original_title": "Avengers: Endgame",
+			"genres": [
+				12,
+				878,
+				28
+			],
+			"release_date": "2019-04-24",
+			"runtime": 181,
+			"status": "Released",
+			"vote_average": 8.3,
+			"adult": false,
+			"belongs_to_collection": 86311,
+			"original_language": "en",
+			"homepage": "https://www.marvel.com/movies/avengers-endgame",
+			"overview": "After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos' actions and restore order to the universe once and for all, no matter what consequences may be in store."
+		}
+	},
+	{
+		"pk": 398978,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Irishman",
+			"original_title": "The Irishman",
+			"genres": [
+				80,
+				36
+			],
+			"release_date": "2019-11-01",
+			"runtime": 209,
+			"status": "Released",
+			"vote_average": 8.5,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.theirishman-movie.com/",
+			"overview": "World War II veteran and mob hitman Frank \"The Irishman\" Sheeran recalls his possible involvement with the slaying of union leader Jimmy Hoffa."
+		}
+	},
+	{
+		"pk": 671,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Harry Potter and the Philosopher's Stone",
+			"original_title": "Harry Potter and the Philosopher's Stone",
+			"genres": [
+				12,
+				14,
+				10751
+			],
+			"release_date": "2001-11-16",
+			"runtime": 152,
+			"status": "Released",
+			"vote_average": 7.8,
+			"adult": false,
+			"belongs_to_collection": 1241,
+			"original_language": "en",
+			"homepage": "http://harrypotter.warnerbros.com/harrypotterandthedeathlyhallows/mainsite/index.html",
+			"overview": "Harry Potter has lived under the stairs at his aunt and uncle's house his whole life. But on his 11th birthday, he learns he's a powerful wizard -- with a place waiting for him at the Hogwarts School of Witchcraft and Wizardry. As he learns to harness his newfound powers with the help of the school's kindly headmaster, Harry uncovers the truth about his parents' deaths -- and about the villain who's to blame."
+		}
+	},
+	{
+		"pk": 283995,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Guardians of the Galaxy Vol. 2",
+			"original_title": "Guardians of the Galaxy Vol. 2",
+			"genres": [
+				28,
+				12,
+				35,
+				878
+			],
+			"release_date": "2017-04-19",
+			"runtime": 137,
+			"status": "Released",
+			"vote_average": 7.7,
+			"adult": false,
+			"belongs_to_collection": 284433,
+			"original_language": "en",
+			"homepage": "http://marvel.com/movies/movie/221/guardians_of_the_galaxy_vol_2",
+			"overview": "The Guardians must fight to keep their newfound family together as they unravel the mysteries of Peter Quill's true parentage."
+		}
+	},
+	{
+		"pk": 551807,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Untitled Fox/Marvel Film II",
+			"original_title": "Untitled Fox/Marvel Film II",
+			"genres": [
+				28,
+				12,
+				878
+			],
+			"release_date": "1111-11-11",
+			"runtime": 0,
+			"status": "Released",
+			"vote_average": 0,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": " ",
+			"overview": "An unknown Untitled Fox/Marvel Film."
+		}
+	},
+	{
+		"pk": 87101,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Terminator Genisys",
+			"original_title": "Terminator Genisys",
+			"genres": [
+				878,
+				28,
+				53,
+				12
+			],
+			"release_date": "2015-06-23",
+			"runtime": 126,
+			"status": "Released",
+			"vote_average": 5.9,
+			"adult": false,
+			"belongs_to_collection": 528,
+			"original_language": "en",
+			"homepage": "http://www.terminatormovie.com/",
+			"overview": "The year is 2029. John Connor, leader of the resistance continues the war against the machines. At the Los Angeles offensive, John's fears of the unknown future begin to emerge when TECOM spies reveal a new plot by SkyNet that will attack him from both fronts; past and future, and will ultimately change warfare forever."
+		}
+	},
+	{
+		"pk": 297802,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Aquaman",
+			"original_title": "Aquaman",
+			"genres": [
+				28,
+				12,
+				14
+			],
+			"release_date": "2018-12-07",
+			"runtime": 144,
+			"status": "Released",
+			"vote_average": 6.8,
+			"adult": false,
+			"belongs_to_collection": 573693,
+			"original_language": "en",
+			"homepage": "http://www.aquamanmovie.com",
+			"overview": "Once home to the most advanced civilization on Earth, Atlantis is now an underwater kingdom ruled by the power-hungry King Orm. With a vast army at his disposal, Orm plans to conquer the remaining oceanic people and then the surface world. Standing in his way is Arthur Curry, Orm's half-human, half-Atlantean brother and true heir to the throne."
+		}
+	},
+	{
+		"pk": 320288,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Dark Phoenix",
+			"original_title": "Dark Phoenix",
+			"genres": [
+				878,
+				28,
+				12
+			],
+			"release_date": "2019-06-05",
+			"runtime": 114,
+			"status": "Released",
+			"vote_average": 6.1,
+			"adult": false,
+			"belongs_to_collection": 748,
+			"original_language": "en",
+			"homepage": "http://darkphoenix.com",
+			"overview": "The X-Men face their most formidable and powerful foe when one of their own, Jean Grey, starts to spiral out of control. During a rescue mission in outer space, Jean is nearly killed when she's hit by a mysterious cosmic force. Once she returns home, this force not only makes her infinitely more powerful, but far more unstable. The X-Men must now band together to save her soul and battle aliens that want to use Grey's new abilities to rule the galaxy."
+		}
+	},
+	{
+		"pk": 71805,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Shipwrecked",
+			"original_title": "Håkon Håkonsen",
+			"genres": [
+				12,
+				10751
+			],
+			"release_date": "1990-10-03",
+			"runtime": 92,
+			"status": "Released",
+			"vote_average": 6.5,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "no",
+			"homepage": " ",
+			"overview": "A young Norwegian boy in 1850s England goes to work as a cabin boy and discovers some of his shipmates are actually pirates."
+		}
+	},
+	{
+		"pk": 513409,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Earthquake Bird",
+			"original_title": "Earthquake Bird",
+			"genres": [
+				18,
+				9648,
+				10749,
+				53
+			],
+			"release_date": "2019-11-01",
+			"runtime": 107,
+			"status": "Released",
+			"vote_average": 5.6,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.netflix.com/title/80244457",
+			"overview": "Tokyo, Japan, 1989. Lucy Fly, a foreigner who works as a translator, begins a passionate relationship with Teiji, a mysterious man obsessed with photography."
+		}
+	},
+	{
+		"pk": 166428,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "How to Train Your Dragon: The Hidden World",
+			"original_title": "How to Train Your Dragon: The Hidden World",
+			"genres": [
+				16,
+				10751,
+				12
+			],
+			"release_date": "2019-01-03",
+			"runtime": 104,
+			"status": "Released",
+			"vote_average": 7.7,
+			"adult": false,
+			"belongs_to_collection": 89137,
+			"original_language": "en",
+			"homepage": "https://www.howtotrainyourdragon.com/",
+			"overview": "As Hiccup fulfills his dream of creating a peaceful dragon utopia, Toothless’ discovery of an untamed, elusive mate draws the Night Fury away. When danger mounts at home and Hiccup’s reign as village chief is tested, both dragon and rider must make impossible decisions to save their kind."
+		}
+	},
+	{
+		"pk": 535292,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "21 Bridges",
+			"original_title": "21 Bridges",
+			"genres": [
+				80,
+				28,
+				53,
+				18
+			],
+			"release_date": "2019-10-24",
+			"runtime": 99,
+			"status": "Released",
+			"vote_average": 7.1,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://depelis.co/pelicula/21-bridges/online-gratis-completa.html",
+			"overview": "A disgraced NYPD detective after being thrust into a citywide manhunt for a cop killer, is given a shot at redemption."
+		}
+	},
+	{
+		"pk": 122917,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Hobbit: The Battle of the Five Armies",
+			"original_title": "The Hobbit: The Battle of the Five Armies",
+			"genres": [
+				28,
+				12,
+				14
+			],
+			"release_date": "2014-12-10",
+			"runtime": 144,
+			"status": "Released",
+			"vote_average": 7.3,
+			"adult": false,
+			"belongs_to_collection": 121938,
+			"original_language": "en",
+			"homepage": "https://www.warnerbros.com/movies/hobbit-battle-five-armies/",
+			"overview": "Immediately after the events of The Desolation of Smaug, Bilbo and the dwarves try to defend Erebor's mountain of treasure from others who claim it: the men of the ruined Laketown and the elves of Mirkwood. Meanwhile an army of Orcs led by Azog the Defiler is marching on Erebor, fueled by the rise of the dark lord Sauron. Dwarves, elves and men must unite, and the hope for Middle-Earth falls into Bilbo's hands."
+		}
+	},
+	{
+		"pk": 546554,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Knives Out",
+			"original_title": "Knives Out",
+			"genres": [
+				9648,
+				53,
+				35
+			],
+			"release_date": "2019-11-27",
+			"runtime": 130,
+			"status": "Released",
+			"vote_average": 8.3,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.knivesout.movie/",
+			"overview": "When renowned crime novelist Harlan Thrombey is found dead at his estate just after his 85th birthday, the inquisitive and debonair Detective Benoit Blanc is mysteriously enlisted to investigate. From Harlan's dysfunctional family to his devoted staff, Blanc sifts through a web of red herrings and self-serving lies to uncover the truth behind Harlan's untimely death."
+		}
+	},
+	{
+		"pk": 528888,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Dolemite Is My Name",
+			"original_title": "Dolemite Is My Name",
+			"genres": [
+				18,
+				35,
+				36
+			],
+			"release_date": "2019-09-07",
+			"runtime": 118,
+			"status": "Released",
+			"vote_average": 7.1,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": " ",
+			"overview": "The story of Rudy Ray Moore, who created the iconic big screen pimp character Dolemite in the 1970s."
+		}
+	},
+	{
+		"pk": 521777,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Good Boys",
+			"original_title": "Good Boys",
+			"genres": [
+				35
+			],
+			"release_date": "2019-08-14",
+			"runtime": 89,
+			"status": "Released",
+			"vote_average": 6.5,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.goodboysmovie.com/",
+			"overview": "A group of young boys on the cusp of becoming teenagers embark on an epic quest to fix their broken drone before their parents get home."
+		}
+	}
+]

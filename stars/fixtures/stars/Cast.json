@@ -1,0 +1,1145 @@
+[
+	{
+		"pk": 1,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 54415,
+			"movie_id": 330457,
+			"character": "Olaf (voice)"
+		}
+	},
+	{
+		"pk": 2,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 1225953,
+			"movie_id": 330457,
+			"character": "Lieutenant Mattias (voice)"
+		}
+	},
+	{
+		"pk": 3,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 131,
+			"movie_id": 429617,
+			"character": "Quentin Beck / Mysterio"
+		}
+	},
+	{
+		"pk": 4,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 2231,
+			"movie_id": 429617,
+			"character": "Nick Fury"
+		}
+	},
+	{
+		"pk": 5,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 6193,
+			"movie_id": 466272,
+			"character": "Rick Dalton"
+		}
+	},
+	{
+		"pk": 6,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 287,
+			"movie_id": 466272,
+			"character": "Cliff Booth"
+		}
+	},
+	{
+		"pk": 7,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 119589,
+			"movie_id": 420818,
+			"character": "Simba (voice)"
+		}
+	},
+	{
+		"pk": 8,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 2713,
+			"movie_id": 290859,
+			"character": "Sarah Connor"
+		}
+	},
+	{
+		"pk": 9,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 1100,
+			"movie_id": 290859,
+			"character": "Carl / The Terminator"
+		}
+	},
+	{
+		"pk": 10,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 55252,
+			"movie_id": 290859,
+			"character": ""
+		}
+	},
+	{
+		"pk": 11,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 5530,
+			"movie_id": 474350,
+			"character": "Bill Denbrough"
+		}
+	},
+	{
+		"pk": 12,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 83002,
+			"movie_id": 474350,
+			"character": "Beverly Marsh"
+		}
+	},
+	{
+		"pk": 13,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 19278,
+			"movie_id": 474350,
+			"character": "Richie Tozier"
+		}
+	},
+	{
+		"pk": 14,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 2888,
+			"movie_id": 453405,
+			"character": "Henry Brogen"
+		}
+	},
+	{
+		"pk": 15,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 2296,
+			"movie_id": 453405,
+			"character": "Clay Verris"
+		}
+	},
+	{
+		"pk": 16,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 16483,
+			"movie_id": 480042,
+			"character": "Ray Breslin"
+		}
+	},
+	{
+		"pk": 17,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 543530,
+			"movie_id": 480042,
+			"character": "Trent DeRosa"
+		}
+	},
+	{
+		"pk": 18,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 5915,
+			"movie_id": 480042,
+			"character": "Abigail Ross"
+		}
+	},
+	{
+		"pk": 19,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 21354,
+			"movie_id": 480042,
+			"character": "Wu Zhang"
+		}
+	},
+	{
+		"pk": 20,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 1614437,
+			"movie_id": 480042,
+			"character": "Ling May"
+		}
+	},
+	{
+		"pk": 21,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 27846,
+			"movie_id": 480042,
+			"character": ""
+		}
+	},
+	{
+		"pk": 22,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 9575,
+			"movie_id": 423204,
+			"character": "FBI Agent Thompson"
+		}
+	},
+	{
+		"pk": 23,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 56734,
+			"movie_id": 486589,
+			"character": "Snow White (voice)"
+		}
+	},
+	{
+		"pk": 24,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 37917,
+			"movie_id": 458897,
+			"character": "Sabina Wilson"
+		}
+	},
+	{
+		"pk": 25,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 9281,
+			"movie_id": 458897,
+			"character": "Bosley"
+		}
+	},
+	{
+		"pk": 26,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 9281,
+			"movie_id": 458897,
+			"character": ""
+		}
+	},
+	{
+		"pk": 27,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 3894,
+			"movie_id": 359724,
+			"character": "Ken Miles"
+		}
+	},
+	{
+		"pk": 28,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 19498,
+			"movie_id": 359724,
+			"character": "Lee Iacocca"
+		}
+	},
+	{
+		"pk": 29,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 366,
+			"movie_id": 359724,
+			"character": ""
+		}
+	},
+	{
+		"pk": 30,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 18918,
+			"movie_id": 384018,
+			"character": "Luke Hobbs"
+		}
+	},
+	{
+		"pk": 31,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 976,
+			"movie_id": 384018,
+			"character": "Deckard Shaw"
+		}
+	},
+	{
+		"pk": 32,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 2888,
+			"movie_id": 420817,
+			"character": "Genie"
+		}
+	},
+	{
+		"pk": 33,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 18999,
+			"movie_id": 508965,
+			"character": "Klaus"
+		}
+	},
+	{
+		"pk": 34,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 3223,
+			"movie_id": 299536,
+			"character": "Tony Stark / Iron Man"
+		}
+	},
+	{
+		"pk": 35,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 74568,
+			"movie_id": 299536,
+			"character": "Thor Odinson"
+		}
+	},
+	{
+		"pk": 36,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 16828,
+			"movie_id": 299536,
+			"character": "Steve Rogers / Captain America"
+		}
+	},
+	{
+		"pk": 37,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 103,
+			"movie_id": 299536,
+			"character": "Bruce Banner / The Hulk"
+		}
+	},
+	{
+		"pk": 38,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 1245,
+			"movie_id": 299536,
+			"character": "Natasha Romanoff / Black Widow"
+		}
+	},
+	{
+		"pk": 39,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 19271,
+			"movie_id": 299536,
+			"character": ""
+		}
+	},
+	{
+		"pk": 40,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 19272,
+			"movie_id": 299536,
+			"character": ""
+		}
+	},
+	{
+		"pk": 41,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 1027740,
+			"movie_id": 101411,
+			"character": "Antonio Tejero"
+		}
+	},
+	{
+		"pk": 42,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 56468,
+			"movie_id": 101411,
+			"character": "Sabino Fernández Campos"
+		}
+	},
+	{
+		"pk": 43,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 37580,
+			"movie_id": 101411,
+			"character": "Alfonso Armada"
+		}
+	},
+	{
+		"pk": 44,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 51902,
+			"movie_id": 101411,
+			"character": "Juan Carlos"
+		}
+	},
+	{
+		"pk": 45,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 1408413,
+			"movie_id": 101411,
+			"character": ""
+		}
+	},
+	{
+		"pk": 46,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 140853,
+			"movie_id": 101411,
+			"character": ""
+		}
+	},
+	{
+		"pk": 47,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 16828,
+			"movie_id": 546554,
+			"character": "Ransom Drysdale"
+		}
+	},
+	{
+		"pk": 48,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 114019,
+			"movie_id": 484641,
+			"character": "Alex Tchenkov"
+		}
+	},
+	{
+		"pk": 49,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 59,
+			"movie_id": 484641,
+			"character": ""
+		}
+	},
+	{
+		"pk": 50,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 2,
+			"movie_id": 11,
+			"character": "Luke Skywalker"
+		}
+	},
+	{
+		"pk": 51,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 3,
+			"movie_id": 11,
+			"character": "Han Solo"
+		}
+	},
+	{
+		"pk": 52,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 4,
+			"movie_id": 11,
+			"character": "Princess Leia Organa"
+		}
+	},
+	{
+		"pk": 53,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 5,
+			"movie_id": 11,
+			"character": "Grand Moff Tarkin"
+		}
+	},
+	{
+		"pk": 54,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 12248,
+			"movie_id": 11,
+			"character": "Obi-Wan \"Ben\" Kenobi"
+		}
+	},
+	{
+		"pk": 55,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 1,
+			"movie_id": 11,
+			"character": ""
+		}
+	},
+	{
+		"pk": 56,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 16483,
+			"movie_id": 522938,
+			"character": "John Rambo"
+		}
+	},
+	{
+		"pk": 57,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 932967,
+			"movie_id": 399579,
+			"character": "Vector"
+		}
+	},
+	{
+		"pk": 58,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 1047649,
+			"movie_id": 399579,
+			"character": "Zapan"
+		}
+	},
+	{
+		"pk": 59,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 6384,
+			"movie_id": 458156,
+			"character": "John Wick"
+		}
+	},
+	{
+		"pk": 60,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 4587,
+			"movie_id": 458156,
+			"character": "Sofia"
+		}
+	},
+	{
+		"pk": 61,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 6972,
+			"movie_id": 458156,
+			"character": "Winston"
+		}
+	},
+	{
+		"pk": 62,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 2975,
+			"movie_id": 458156,
+			"character": "Bowery King"
+		}
+	},
+	{
+		"pk": 63,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 40644,
+			"movie_id": 458156,
+			"character": ""
+		}
+	},
+	{
+		"pk": 64,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 6384,
+			"movie_id": 245891,
+			"character": "John Wick"
+		}
+	},
+	{
+		"pk": 65,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 5293,
+			"movie_id": 245891,
+			"character": "Marcus"
+		}
+	},
+	{
+		"pk": 66,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 6972,
+			"movie_id": 245891,
+			"character": "Winston"
+		}
+	},
+	{
+		"pk": 67,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 40644,
+			"movie_id": 245891,
+			"character": ""
+		}
+	},
+	{
+		"pk": 68,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 54415,
+			"movie_id": 109445,
+			"character": "Olaf (voice)"
+		}
+	},
+	{
+		"pk": 69,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 933238,
+			"movie_id": 501170,
+			"character": "Rose the Hat"
+		}
+	},
+	{
+		"pk": 70,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 7248,
+			"movie_id": 501170,
+			"character": "Billy Freeman"
+		}
+	},
+	{
+		"pk": 71,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 5530,
+			"movie_id": 246655,
+			"character": "Charles Xavier / Professor X"
+		}
+	},
+	{
+		"pk": 72,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 17288,
+			"movie_id": 246655,
+			"character": "Erik Lehnsherr / Magneto"
+		}
+	},
+	{
+		"pk": 73,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 72129,
+			"movie_id": 246655,
+			"character": "Raven Darkholme / Mystique"
+		}
+	},
+	{
+		"pk": 74,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 9032,
+			"movie_id": 246655,
+			"character": ""
+		}
+	},
+	{
+		"pk": 75,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 3894,
+			"movie_id": 155,
+			"character": "Bruce Wayne / Batman"
+		}
+	},
+	{
+		"pk": 76,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 3895,
+			"movie_id": 155,
+			"character": "Alfred Pennyworth"
+		}
+	},
+	{
+		"pk": 77,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 64,
+			"movie_id": 155,
+			"character": "Commissioner James Gordon"
+		}
+	},
+	{
+		"pk": 78,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 525,
+			"movie_id": 155,
+			"character": ""
+		}
+	},
+	{
+		"pk": 79,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 3223,
+			"movie_id": 299534,
+			"character": "Tony Stark / Iron Man"
+		}
+	},
+	{
+		"pk": 80,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 16828,
+			"movie_id": 299534,
+			"character": "Steve Rogers / Captain America"
+		}
+	},
+	{
+		"pk": 81,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 103,
+			"movie_id": 299534,
+			"character": "Bruce Banner / Hulk"
+		}
+	},
+	{
+		"pk": 82,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 74568,
+			"movie_id": 299534,
+			"character": "Thor Odinson"
+		}
+	},
+	{
+		"pk": 83,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 1245,
+			"movie_id": 299534,
+			"character": "Natasha Romanoff / Black Widow"
+		}
+	},
+	{
+		"pk": 84,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 19271,
+			"movie_id": 299534,
+			"character": ""
+		}
+	},
+	{
+		"pk": 85,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 19272,
+			"movie_id": 299534,
+			"character": ""
+		}
+	},
+	{
+		"pk": 86,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 10980,
+			"movie_id": 671,
+			"character": "Harry Potter"
+		}
+	},
+	{
+		"pk": 87,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 10989,
+			"movie_id": 671,
+			"character": "Ron Weasley"
+		}
+	},
+	{
+		"pk": 88,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 10990,
+			"movie_id": 671,
+			"character": "Hermione Granger"
+		}
+	},
+	{
+		"pk": 89,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 10965,
+			"movie_id": 671,
+			"character": ""
+		}
+	},
+	{
+		"pk": 90,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 73457,
+			"movie_id": 283995,
+			"character": "Peter Quill / Star-Lord"
+		}
+	},
+	{
+		"pk": 91,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 8691,
+			"movie_id": 283995,
+			"character": "Gamora"
+		}
+	},
+	{
+		"pk": 92,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 543530,
+			"movie_id": 283995,
+			"character": "Drax the Destroyer"
+		}
+	},
+	{
+		"pk": 93,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 12835,
+			"movie_id": 283995,
+			"character": "Baby Groot (voice)"
+		}
+	},
+	{
+		"pk": 94,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 51329,
+			"movie_id": 283995,
+			"character": "Rocket (voice)"
+		}
+	},
+	{
+		"pk": 95,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 1100,
+			"movie_id": 87101,
+			"character": "The Terminator"
+		}
+	},
+	{
+		"pk": 96,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 1223786,
+			"movie_id": 87101,
+			"character": "Sarah Connor"
+		}
+	},
+	{
+		"pk": 97,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 18999,
+			"movie_id": 87101,
+			"character": "Detective O'Brien"
+		}
+	},
+	{
+		"pk": 98,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 117642,
+			"movie_id": 297802,
+			"character": "Arthur Curry / Aquaman"
+		}
+	},
+	{
+		"pk": 99,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 55085,
+			"movie_id": 297802,
+			"character": "Mera"
+		}
+	},
+	{
+		"pk": 100,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 5293,
+			"movie_id": 297802,
+			"character": "Nuidis Vulko"
+		}
+	},
+	{
+		"pk": 101,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 17178,
+			"movie_id": 297802,
+			"character": "King Orm Marius / Ocean Master"
+		}
+	},
+	{
+		"pk": 102,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 2227,
+			"movie_id": 297802,
+			"character": "Atlanna"
+		}
+	},
+	{
+		"pk": 103,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 2127,
+			"movie_id": 297802,
+			"character": ""
+		}
+	},
+	{
+		"pk": 104,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 1001657,
+			"movie_id": 320288,
+			"character": "Jean Grey / Dark Phoenix"
+		}
+	},
+	{
+		"pk": 105,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 5530,
+			"movie_id": 320288,
+			"character": "Charles Xavier / Professor X"
+		}
+	},
+	{
+		"pk": 106,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 17288,
+			"movie_id": 320288,
+			"character": "Erik Lensherr / Magneto"
+		}
+	},
+	{
+		"pk": 107,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 72129,
+			"movie_id": 320288,
+			"character": "Raven Darkholme / Mystique"
+		}
+	},
+	{
+		"pk": 108,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 83002,
+			"movie_id": 320288,
+			"character": "Vuk"
+		}
+	},
+	{
+		"pk": 109,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 11092,
+			"movie_id": 320288,
+			"character": ""
+		}
+	},
+	{
+		"pk": 110,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 449,
+			"movie_id": 166428,
+			"character": "Hiccup (voice)"
+		}
+	},
+	{
+		"pk": 111,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 59174,
+			"movie_id": 166428,
+			"character": "Astrid (voice)"
+		}
+	},
+	{
+		"pk": 112,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 112,
+			"movie_id": 166428,
+			"character": "Valka (voice)"
+		}
+	},
+	{
+		"pk": 113,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 24264,
+			"movie_id": 166428,
+			"character": "Gobber the Belch (voice)"
+		}
+	},
+	{
+		"pk": 114,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 21007,
+			"movie_id": 166428,
+			"character": "Snotlout Jorgenson (voice)"
+		}
+	},
+	{
+		"pk": 115,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 69797,
+			"movie_id": 166428,
+			"character": ""
+		}
+	},
+	{
+		"pk": 116,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 172069,
+			"movie_id": 535292,
+			"character": "Andre Davis"
+		}
+	},
+	{
+		"pk": 117,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 1388314,
+			"movie_id": 535292,
+			"character": "Michael"
+		}
+	},
+	{
+		"pk": 118,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 23459,
+			"movie_id": 535292,
+			"character": "Frankie Burns"
+		}
+	},
+	{
+		"pk": 119,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 60900,
+			"movie_id": 535292,
+			"character": "Ray"
+		}
+	},
+	{
+		"pk": 120,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 18999,
+			"movie_id": 535292,
+			"character": "Captain McKenna"
+		}
+	},
+	{
+		"pk": 121,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 93223,
+			"movie_id": 535292,
+			"character": ""
+		}
+	},
+	{
+		"pk": 122,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 7060,
+			"movie_id": 122917,
+			"character": "Bilbo Baggins"
+		}
+	},
+	{
+		"pk": 123,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 1327,
+			"movie_id": 122917,
+			"character": "Gandalf"
+		}
+	},
+	{
+		"pk": 124,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 30315,
+			"movie_id": 122917,
+			"character": "Thorin Oakenshield"
+		}
+	},
+	{
+		"pk": 125,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 19034,
+			"movie_id": 122917,
+			"character": "Tauriel"
+		}
+	},
+	{
+		"pk": 126,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 114019,
+			"movie_id": 122917,
+			"character": "Bard"
+		}
+	},
+	{
+		"pk": 127,
+		"model": "stars.Cast",
+		"fields": {
+			"star_id": 108,
+			"movie_id": 122917,
+			"character": ""
+		}
+	}
+]

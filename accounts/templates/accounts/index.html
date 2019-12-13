@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+{% include '_nav.html' %}
+<div class="container">
+  <h2 class="title">User List</h2>
+  {% for user in users %}
+  <li>
+    <h3 class="d-inline title">
+      <a href="{% url 'accounts:detail' user.pk %}">{{ user.username }}</a>
+    </h3>
+  </li>
+  {% endfor %}
+</div>
+
+{% endblock %}

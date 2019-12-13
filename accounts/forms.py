@@ -1,0 +1,20 @@
+from django import forms
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import get_user_model
+
+
+class CustomUserCreationForm(UserCreationForm):
+    class Meta:
+        model = get_user_model()
+        fields = ('username',)
+
+        username = forms.CharField(
+            max_length=20,
+            label="name",
+            widget=forms.TextInput(
+                attrs={
+                    "class": "form-control",
+                    "placeholder": "your name is..."
+                }
+            )
+        )

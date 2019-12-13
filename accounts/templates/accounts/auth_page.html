@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+
+{% block body %}
+
+{% include '_simple_nav.html' %}
+
+
+<div class="page-header header-filter"
+  style="background-image: url({% static '/img/signup_bg.png' %}); background-size: auto; background-position: top center;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+        <div class="card card-login">
+          <form class="form" method="POST">
+
+            <div class="card-header card-header-primary text-center">
+              {% if request.resolver_match.url_name == 'signup' %}
+              <h4 class="card-title">Signup</h4>
+              <h5> Join with our lovely ducklings </h5>
+              {% else %}
+              <h4 class="card-title">Login</h4>
+              <h5> Welcome Back duckling! </h5>
+              {% endif %}
+            </div>
+            
+            <div class="container">
+              <div class="card-body">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+              </div>
+              <div class="footer text-center">
+                  {% if request.resolver_match.url_name == 'signup' %}
+                  <button class="btn btn-primary btn-link" type="submit">Get Started</button>
+                  {% else %}
+                  <button class="btn btn-primary btn-link" type="submit">Login</button>
+                  {% endif %}
+                </div>
+            </div>
+            
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}

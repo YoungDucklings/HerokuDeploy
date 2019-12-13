@@ -1,0 +1,1 @@
+web: gunicorn stalkstarserver.wsgi --log-file -

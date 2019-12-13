@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+{% include '_nav.html' %}
+<div class="container my-3">
+  <div class="row card">
+    <div class="card-body">
+      <h4 class="card-title">you missed your stars' movie</h4>
+      <div style="width: auto; overflow-x: scroll; white-space: nowrap;">
+        {% for star in stars %}
+          {% for cast in star.cast_set.all %}
+            {% if cast.movie not in movies %}
+            <a href="{% url 'movies:detail' cast.movie.pk %}"><img src="{{ cast.movie.poster_set.first }}" width="30%"></a>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="row card">
+    <div class="card-body">
+      <h4 class="card-title">people also like these movies</h4>
+      <div style="width: auto; overflow-x: scroll; white-space: nowrap;">
+        {% for pop in popular %}
+          {% if pop not in movies %}
+            {% if pop.poster_set.all %}
+            <a href="{% url 'movies:detail' pop.pk %}"><img src="{{ pop.poster_set.first }}" width="30%"></a>
+            {% else %}
+            <a href="{% url 'movies:detail' pop.pk %}"><img src="{% static 'img/default.png' %}" width="30%"></a>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

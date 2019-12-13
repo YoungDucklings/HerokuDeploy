@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+
+{% block body %}
+
+<body class="profile-page sidebar-collapse">
+  {% include '_simple_nav.html' %}
+  {% include '_simple_header.html' %}
+
+  <div class="main main-raised">
+
+    <div class="profile-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 ml-auto mr-auto">
+
+            <div class="profile">
+              <div class="avatar">
+                <img src="{% static '/img/duck.png' %}" alt="Circle Image" class="img-raised rounded-circle img-fluid">
+              </div>
+
+              <div class="name">
+                <h3 class="title">{{ user.username }}</h3>
+                <h6>{{user.useremail}}</h6>
+                {% if request.user != user %}
+                {% if request.user in user.followers.all %}
+                <a href="{% url 'accounts:follow' user.pk %}" class="btn btn-link"><i class="fa fa-twitter"></i>
+                  unflock</a>
+                {% else %}
+                <a href="{% url 'accounts:follow' user.pk %}" class="btn btn-link"><i class="fa fa-twitter"></i> flock
+                </a>
+                {% endif %}
+                {% endif %}
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="description text-center">
+          <p>
+            {% if user.following.all or user.followers.all%}
+            {{ user.username }} joined flocks of
+            {% for following in user.following.all %}
+            {{ following }} ,
+            {% endfor %}
+            {% for follower in user.followers.all %}
+            {{ follower }} ,
+            {% endfor %}
+            {% else %}
+            {{ user.username }} not flocked with any feather yet
+            {% endif %}
+          </p>
+          {% if comment %}
+          <div class="card">
+            <div class="card-body mb-1">
+              <h6 class="card-category text-warning">
+                <i class="material-icons">trending_up</i> My lastest Comment
+              </h6>
+              <h4 class="card-title">
+                <a href="{% url 'movies:detail' comment.movie.pk %}">{{ comment }}</a>
+              </h4>
+            </div>
+            <div class="card-footer ">
+              <div class="author">
+                <span>
+                  <a href="{% url 'movies:detail' comment.movie.pk %}"># {{ comment.movie }}</a>
+                  {% for c in comment_casts %}
+                  <a href=""># {{ c.star }}</a>
+                  {% endfor %}
+                </span>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 ml-auto mr-auto">
+            <div class="profile-tabs">
+              <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link" href="#favorite" role="tab" data-toggle="tab">
+                    <i class="material-icons">favorite</i> Stars
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#studio" role="tab" data-toggle="tab">
+                    <i class="material-icons">camera</i> Movies
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+        <!-- <div class="row justify-content-center">
+          <div class="card col-6">
+            <div class="card-body">
+              This is some text within a card body.
+
+            </div>
+          </div>
+        </div> -->
+        <h3>Backdrop</h3>
+        {% for movie in movies %}
+        <p>{{ movies.poster_set.first }}</p>
+        {% endfor %}
+
+
+        <h2 class="title">Gallery</h2>
+        <h3>{{ user.username }} follows these stars... </h3>
+        <div style="width: auto; overflow-x: scroll; white-space: nowrap;">
+          {% for star in stars %}
+          <a href="{% url 'stars:detail' star.pk %}"><img src="{{ star.profileimg_set.first }}" width="30%"></a>
+          {% endfor %}
+        </div>
+
+        <h3>{{ user.username }} watched these movies... </h3>
+
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            {% for movie in movies %}
+            {% if forloop.first %}
+            <div class="carousel-item active">
+              <div class="card bg-dark text-white">
+                <img class="card-img" src="{{ movie.backdrop_set.first }}" alt="Card image">
+                <div class="card-img-overlay">
+                  <h4 class="card-title">{{ movie.title }}</h4>
+                  <p class="card-text">
+                    {% for cast in movie.cast_set.all %}
+                    {{ cast.star }}
+                    {% endfor %}
+                  </p>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+            <div class="carousel-item">
+              <div class="card bg-dark text-white">
+                <img class="card-img" src="{{ movie.backdrop_set.first }}" alt="Card image">
+                <div class="card-img-overlay">
+
+                  <h4 class="card-title">{{ movie.title }}</h4>
+                  <p class="card-text">
+                    {% for cast in movie.cast_set.all %}
+                    {{ cast.star }}
+                    {% endfor %}
+                  </p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  {% endblock %}
