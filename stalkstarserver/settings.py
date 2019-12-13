@@ -56,7 +56,7 @@ MIDDLEWARE = [
 ]
 
 ALLOWED_HOSTS = [
-    'stalkstarserver.herokuapp.com(url_from_heroku)',
+    'youngducklings.herokuapp.com(url_from_heroku)',
 ]
 
 
