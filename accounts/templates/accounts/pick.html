@@ -46,7 +46,8 @@
     {% if pick.name %}
     <div class="container">
       {% if pick.profileimg_set.all %}
-      <img src="{{ pick.profileimg_set.first }}" class="rounded mx-auto d-block" alt="{{ pick.name }}" style="width:30%">
+      <img src="{{ pick.profileimg_set.first }}" class="rounded mx-auto d-block" alt="{{ pick.name }}"
+        style="width:30%">
       {% else %}
       <img src="{% static 'img/default.png' %}" class="rounded mx-auto d-block" alt="{{ pick.name }}" style="width:30%">
       {% endif %}
@@ -66,7 +67,8 @@
     </div>
     {% else %}
     {% if pick.poster_set.all %}
-    <img src="{{ pick.poster_set.first }}" class="rounded mx-auto mt-3 d-block" alt="{{ pick.title }}" style="width:50%">
+    <img src="{{ pick.poster_set.first }}" class="rounded mx-auto mt-3 d-block" alt="{{ pick.title }}"
+      style="width:50%">
     {% else %}
     <img src="{% static 'img/default.png' %}" class="rounded mx-auto mt-3 d-block" alt="{{ pick.title }}"
       style="width:50%">
@@ -92,22 +94,27 @@
   {% endfor %}
 </div>
 <script>
-  const likeButton = document.querySelector('#like-button')
-  likeButton.addEventListener('click', e => {
-    const starId = e.target.dataset.id
-    axios.get(`/stars/${starId}/like/`)
-      .then(res => {
-        // console.log(res.data)
-        if (res.data.liked) {
-          // unlike button
-          e.target.removeAttribute("style")
-        } else {
-          // like button
-          e.target.setAttribute(
-            "style", "color: transparent; -webkit-text-stroke-width: 1px; -webkit-text-stroke-color: red;");
-        }
-      })
-  })
+  const likeButton = document.querySelectorAll('#like-button')
+
+  for (let i = 0; i <= likeButton.length; i++) {
+    likeButton[i].addEventListener('click', e => {
+      const starId = e.target.dataset.id
+      axios.get(`/stars/${starId}/like/`)
+        .then(res => {
+          if (res.data.liked) {
+            // unlike button
+            e.target.removeAttribute("style")
+          } else {
+            // like button
+            e.target.setAttribute(
+              "style", "color: transparent; -webkit-text-stroke-width: 1px; -webkit-text-stroke-color: red;");
+          }
+        })
+    })
+  }
+
+
+  console.log(likeButton)
 
   function mouseClick(n) {
     for (let i = n; i > 0; i--) {
