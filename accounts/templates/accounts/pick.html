@@ -82,8 +82,8 @@
           <i id="{{ forloop.counter }}" class="fa fa-star" aria-hidden="true"
             onclick="mouseClick({{ forloop.counter }})" style="color: gold; text-shadow: 3px 5px grey"></i>
           {% else %}
-          <i id="{{ forloop.counter }}{{ movie }}" class="fa fa-star" aria-hidden="true"
-            onclick="mouseClick({{ forloop.counter }})"></i>
+          <i id="{{ pick.pk }}{{ forloop.counter }}" class="fa fa-star" aria-hidden="true"
+            onclick="mouseClick({{ forloop.counter }}, {{ pick.pk }})"></i>
           {% endif %}
           {% endfor %}
         </div>
@@ -114,21 +114,17 @@
   }
 
 
-  console.log(likeButton)
-
-  function mouseClick(n) {
+  function mouseClick(n, movie_id) {
     for (let i = n; i > 0; i--) {
       // console.log(i)
-      document.getElementById(i).setAttribute(
+      document.getElementById(String(movie_id)+String(i)).setAttribute(
         "style", "color: gold; text-shadow: 3px 5px grey");
     }
     for (let i = n + 1; i < 6; i++) {
       // console.log(i)
-      document.getElementById(i).removeAttribute(
+      document.getElementById(String(movie_id)+String(i)).removeAttribute(
         "style");
     }
-    // console.log(document.querySelector('#score-box'))
-    movie_id = document.querySelector('#score-box').dataset.id
     axios.get(`/movies/${movie_id}/${n}/rate/`)
   }
 
