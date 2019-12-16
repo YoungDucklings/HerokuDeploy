@@ -31,8 +31,8 @@
         <div class="progress-container progress-warning">
           <span class="progress-badge">progressing</span>
           <div class="progress mt-2">
-            <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="45" aria-valuemin="0"
-              aria-valuemax="100" style="width: 45%;">
+            <div id="percentage" class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="45" aria-valuemin="0"
+              aria-valuemax="100" style="width: 0%;">
             </div>
           </div>
         </div>
@@ -46,7 +46,8 @@
     {% if pick.name %}
     <div class="container">
       {% if pick.profileimg_set.all %}
-      <img src="{{ pick.profileimg_set.first }}" class="rounded mx-auto d-block" alt="{{ pick.name }}" style="width:30%">
+      <img src="{{ pick.profileimg_set.first }}" class="rounded mx-auto d-block" alt="{{ pick.name }}"
+        style="width:30%">
       {% else %}
       <img src="{% static 'img/default.png' %}" class="rounded mx-auto d-block" alt="{{ pick.name }}" style="width:30%">
       {% endif %}
@@ -66,7 +67,8 @@
     </div>
     {% else %}
     {% if pick.poster_set.all %}
-    <img src="{{ pick.poster_set.first }}" class="rounded mx-auto mt-3 d-block" alt="{{ pick.title }}" style="width:50%">
+    <img src="{{ pick.poster_set.first }}" class="rounded mx-auto mt-3 d-block" alt="{{ pick.title }}"
+      style="width:50%">
     {% else %}
     <img src="{% static 'img/default.png' %}" class="rounded mx-auto mt-3 d-block" alt="{{ pick.title }}"
       style="width:50%">
@@ -80,8 +82,8 @@
           <i id="{{ forloop.counter }}" class="fa fa-star" aria-hidden="true"
             onclick="mouseClick({{ forloop.counter }})" style="color: gold; text-shadow: 3px 5px grey"></i>
           {% else %}
-          <i id="{{ forloop.counter }}{{ movie }}" class="fa fa-star" aria-hidden="true"
-            onclick="mouseClick({{ forloop.counter }})"></i>
+          <i id="{{ pick.pk }}{{ forloop.counter }}" class="fa fa-star" aria-hidden="true"
+            onclick="mouseClick({{ forloop.counter }}, {{ pick.pk }})"></i>
           {% endif %}
           {% endfor %}
         </div>
@@ -92,36 +94,46 @@
   {% endfor %}
 </div>
 <script>
-  const likeButton = document.querySelector('#like-button')
-  likeButton.addEventListener('click', e => {
-    const starId = e.target.dataset.id
-    axios.get(`/stars/${starId}/like/`)
-      .then(res => {
-        // console.log(res.data)
-        if (res.data.liked) {
-          // unlike button
-          e.target.removeAttribute("style")
-        } else {
-          // like button
-          e.target.setAttribute(
-            "style", "color: transparent; -webkit-text-stroke-width: 1px; -webkit-text-stroke-color: red;");
-        }
-      })
-  })
+  const likeButton = document.querySelectorAll('#like-button')
+  let percentage = document.getElementById('percentage')
+  let selectNum = 0
 
-  function mouseClick(n) {
+  // percentage.style.width
+
+  for (let i = 0; i <= likeButton.length; i++) {
+    likeButton[i].addEventListener('click', e => {
+      const starId = e.target.dataset.id
+      axios.get(`/stars/${starId}/like/`)
+        .then(res => {
+          if (res.data.liked) {
+            // unlike button
+            e.target.removeAttribute("style")
+            selectNum++
+            percentage.setAttribute("style", `width:${selectNum/30 * 100}%`)
+          } else {
+            // like button
+            e.target.setAttribute(
+              "style", "color: transparent; -webkit-text-stroke-width: 1px; -webkit-text-stroke-color: red;");
+            selectNum--
+            percentage.setAttribute("style", `width:${selectNum/30 * 100}%`)
+          }
+        })
+    })
+  }
+
+  function mouseClick(n, movie_id) {
+    selectNum++
+    percentage.setAttribute("style", `width:${selectNum/30 * 100}%`)
     for (let i = n; i > 0; i--) {
       // console.log(i)
-      document.getElementById(i).setAttribute(
+      document.getElementById(String(movie_id)+String(i)).setAttribute(
         "style", "color: gold; text-shadow: 3px 5px grey");
     }
     for (let i = n + 1; i < 6; i++) {
       // console.log(i)
-      document.getElementById(i).removeAttribute(
+      document.getElementById(String(movie_id)+String(i)).removeAttribute(
         "style");
     }
-    // console.log(document.querySelector('#score-box'))
-    movie_id = document.querySelector('#score-box').dataset.id
     axios.get(`/movies/${movie_id}/${n}/rate/`)
   }
 
