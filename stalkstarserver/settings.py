@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'movies',
     'stars',
     'info',
+    'rest_framework',
     'bootstrap4',
     'django.contrib.admin',
     'django.contrib.auth',
