@@ -61,29 +61,3 @@ def user_detail(request, user_pk):
     user = get_object_or_404(User, pk=user_pk)
     serializer = UserSerializer(user)
     return Response(serializer.data)
-
-
-# @api_view(["GET"])
-# def star_detail(request, star_pk):
-#     star = get_object_or_404(Star, pk=star_pk)
-#     serializer = StarSerializer(star)
-#     return Response(serializer.data)
-    
-
-# @api_view(["GET"])
-# def movie_detail(request, movie_pk):
-#     movie = get_object_or_404(Movie, pk=movie_pk)
-#     serializer = MovieSerializer(movie)
-#     return Response(serializer.data)
-    
-
-# @api_view(["GET"])
-# def movie_coworker(request, movie_pk):
-    coworkers = Coworker.objects.all()
-    coworker_set = []
-
-    for coworker in coworkers:
-        if coworker.movie_id == movie_pk:
-            coworker_set.append(coworker)
-    serializer = CoworkerSerializer(coworker_set, many=True)
-    return Response(serializer.data)

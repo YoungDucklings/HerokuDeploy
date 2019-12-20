@@ -12,7 +12,7 @@ class CoworkerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Coworker
         fields = ('movie', 'from_star', 'to_star',)
-        
+
 
 class StarSerializer(serializers.ModelSerializer):
     profileimg_set = serializers.StringRelatedField(many=True)
