@@ -53,7 +53,6 @@
 <script src="{% static 'sigma/src/misc/sigma.misc.drawHovers.js' %}"></script>
 <!-- END SIGMA IMPORTS -->
 <script src="{% static 'sigma/plugins/sigma.plugins.dragNodes/sigma.plugins.dragNodes.js' %}"></script>
-<script src="{% static 'sigma/plugins/sigma.plugins.neighborhoods/sigma.plugins.neighborhoods.js' %}"></script>
 <style>
   #graph-container {
     height: 70vh;
@@ -186,13 +185,10 @@
     .then(res => {
       const stars = res.data.likestars
       let s
-      let originalColor = '#7f0000'
       let graph = {
         nodes: [],
         edges: []
       }
-      const db = new sigma.plugins.neighborhoods();
-
       // add nodes for likestars
       for (let i = 0; i < stars.length; i++) {
         graph.nodes.push({
@@ -201,7 +197,7 @@
           x: Math.random(),
           y: Math.random(),
           size: 4,
-          color: originalColor
+          color: '#7f0000'
         })
       }
       // for iteration again to avoid overlapping of starnodes
@@ -218,7 +214,7 @@
                 x: Math.random(),
                 y: Math.random(),
                 size: 3,
-                color: originalColor,
+                color: '#4B0082',
               })
             }
             // add nodes for coworker of likestars, who is not added
@@ -230,7 +226,7 @@
                 x: Math.random(),
                 y: Math.random(),
                 size: 2,
-                color: originalColor
+                color: '#787878'
               })
             }
           }
@@ -247,7 +243,7 @@
                 source: 'star ' + stars[i].name,
                 target: 'movie ' + stars[i].coworker_from[j].movie,
                 size: 1,
-                color: originalColor
+                color: '#787878'
               })
             }
             // add edges movie -> to_stars
@@ -258,7 +254,7 @@
               source: 'movie ' + stars[i].coworker_from[j].movie,
               target: 'star ' + stars[i].coworker_from[j].to_star,
               size: 1,
-              color: originalColor
+              color: '#787878'
               })
             }
           }
@@ -270,53 +266,13 @@
         graph: graph,
         container: 'graph-container'
       });
-
-
       // Initialize the dragNodes plugin:
       let dragListener = sigma.plugins.dragNodes(s, s.renderers[0]);
       dragListener.bind('startdrag', function (event) { });
       dragListener.bind('drag', function (event) { });
       dragListener.bind('drop', function (event) { });
       dragListener.bind('dragend', function (event) { });
-      // s.bind('clickNode', function(event) {
-      //   console.log(graph.nodes)
-      //   console.log(graph.edges)
-      //   if (!event.data.node.center)
-      //   console.log(s.graph.neighborhood(event.data.node.id))
-      // });
-      s.bind('clickNode', function(e) {
-        var nodeId = e.data.node.id,
-            toKeep = s.graph.neighborhood(nodeId);
-        toKeep[nodeId] = e.data.node;
-
-        s.graph.nodes().forEach(function(n) {
-          if (toKeep[n.id])
-            n.color = n.originalColor;
-          else
-            n.color = '#eee';
-        });
-
-        s.graph.edges().forEach(function(e) {
-          if (toKeep[e.source] && toKeep[e.target])
-            e.color = e.originalColor;
-          else
-            e.color = '#eee';
-        });
-        s.bind('clickStage', function(e) {
-          s.graph.nodes().forEach(function(n) {
-            n.color = n.originalColor;
-          });
-
-          s.graph.edges().forEach(function(e) {
-            e.color = e.originalColor;
-          });
-
-          // Same as in the previous event:
-          s.refresh();
-        });
-      })
     })
-    
 </script>
 
 
