@@ -38,6 +38,8 @@
             </div>
 
           </div>
+        </div>
+        <div class="row">
           <div class="description text-center">
             <p>
               {% if user.following.all or user.followers.all%}
@@ -54,15 +56,22 @@
             </p>
           </div>
         </div>
-        <div data-id="{{ user.pk }}" id="sigma-container"></div>
+        <div class="row">
+          <div class="card">
+            <div data-id="{{ user.pk }}" id="sigma-container"></div>
+          </div>
+        </div>
+        
         <h2 class="title">Gallery</h2>
-        <h3>{{ user.username }} follows these stars... </h3>
-        <div style="width: auto; overflow-x: scroll; white-space: nowrap;">
+        <div class="row">
+          <h3>{{ user.username }} follows these stars... </h3>
+          <div style="width: auto; overflow-x: scroll; white-space: nowrap;">
           {% for star in stars %}
           <a href="{% url 'stars:detail' star.pk %}"><img src="{{ star.profileimg_set.first }}" width="30%"></a>
           {% endfor %}
+          </div>
         </div>
-
+        <div class="row">
         <h3>{{ user.username }} watched these movies... </h3>
 
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -108,6 +117,7 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
+      </div>
 
       </div>
     </div>
@@ -117,113 +127,24 @@
     #sigma-container {
       width: 70vw;
       height: 70vh;
-      margin: auto;
-      background-color: #E1E1E1
+      margin: auto; 
     }
   </style>
-  <script src="{% static 'sigma.js/src/sigma.core.js' %}"></script>
-  <script src="{% static 'sigma.js/src/conrad.js' %}"></script>
-  <script src="{% static 'sigma.js/src/utils/sigma.utils.js' %}"></script>
-  <script src="{% static 'sigma.js/src/utils/sigma.polyfills.js' %}"></script>
-  <script src="{% static 'sigma.js/src/sigma.settings.js' %}"></script>
-  <script src="{% static 'sigma.js/src/classes/sigma.classes.dispatcher.js' %}"></script>
-  <script src="{% static 'sigma.js/src/classes/sigma.classes.configurable.js' %}"></script>
-  <script src="{% static 'sigma.js/src/classes/sigma.classes.graph.js' %}"></script>
-  <script src="{% static 'sigma.js/src/classes/sigma.classes.camera.js' %}"></script>
-  <script src="{% static 'sigma.js/src/classes/sigma.classes.quad.js' %}"></script>
-  <script src="{% static 'sigma.js/src/classes/sigma.classes.edgequad.js' %}"></script>
-  <script src="{% static 'sigma.js/src/captors/sigma.captors.mouse.js' %}"></script>
-  <script src="{% static 'sigma.js/src/captors/sigma.captors.touch.js' %}"></script>
-  <script src="{% static 'sigma.js/src/renderers/sigma.renderers.canvas.js' %}"></script>
-  <script src="{% static 'sigma.js/src/renderers/sigma.renderers.webgl.js' %}"></script>
-  <script src="{% static 'sigma.js/src/renderers/sigma.renderers.svg.js' %}"></script>
-  <script src="{% static 'sigma.js/src/renderers/sigma.renderers.def.js' %}"></script>
-  <script src="{% static 'sigma.js/src/renderers/webgl/sigma.webgl.nodes.def.js' %}"></script>
-  <script src="{% static 'sigma.js/src/renderers/webgl/sigma.webgl.nodes.fast.js' %}"></script>
-  <script src="{% static 'sigma.js/src/renderers/webgl/sigma.webgl.edges.def.js' %}"></script>
-  <script src="{% static 'sigma.js/src/renderers/webgl/sigma.webgl.edges.fast.js' %}"></script>
-  <script src="{% static 'sigma.js/src/renderers/webgl/sigma.webgl.edges.arrow.js' %}"></script>
-  <script src="{% static 'sigma.js/src/renderers/canvas/sigma.canvas.labels.def.js' %}"></script>
-  <script src="{% static 'sigma.js/src/renderers/canvas/sigma.canvas.hovers.def.js' %}"></script>
-  <script src="{% static 'sigma.js/src/renderers/canvas/sigma.canvas.nodes.def.js' %}"></script>
-  <script src="{% static 'sigma.js/src/renderers/canvas/sigma.canvas.edges.def.js' %}"></script>
-  <script src="{% static 'sigma.js/src/renderers/canvas/sigma.canvas.edges.curve.js' %}"></script>
-  <script src="{% static 'sigma.js/src/renderers/canvas/sigma.canvas.edges.arrow.js' %}"></script>
-  <script src="{% static 'sigma.js/src/renderers/canvas/sigma.canvas.edges.curvedArrow.js' %}"></script>
-  <script src="{% static 'sigma.js/src/renderers/canvas/sigma.canvas.edgehovers.def.js' %}"></script>
-  <script src="{% static 'sigma.js/src/renderers/canvas/sigma.canvas.edgehovers.curve.js' %}"></script>
-  <script src="{% static 'sigma.js/src/renderers/canvas/sigma.canvas.edgehovers.arrow.js' %}"></script>
-  <script src="{% static 'sigma.js/src/renderers/canvas/sigma.canvas.edgehovers.curvedArrow.js' %}"></script>
-  <script src="{% static 'sigma.js/src/renderers/canvas/sigma.canvas.extremities.def.js' %}"></script>
-  <script src="{% static 'sigma.js/src/renderers/svg/sigma.svg.utils.js' %}"></script>
-  <script src="{% static 'sigma.js/src/renderers/svg/sigma.svg.nodes.def.js' %}"></script>
-  <script src="{% static 'sigma.js/src/renderers/svg/sigma.svg.edges.def.js' %}"></script>
-  <script src="{% static 'sigma.js/src/renderers/svg/sigma.svg.edges.curve.js' %}"></script>
-  <script src="{% static 'sigma.js/src/renderers/svg/sigma.svg.labels.def.js' %}"></script>
-  <script src="{% static 'sigma.js/src/renderers/svg/sigma.svg.hovers.def.js' %}"></script>
-  <script src="{% static 'sigma.js/src/middlewares/sigma.middlewares.rescale.js' %}"></script>
-  <script src="{% static 'sigma.js/src/middlewares/sigma.middlewares.copy.js' %}"></script>
-  <script src="{% static 'sigma.js/src/misc/sigma.misc.animation.js' %}"></script>
-  <script src="{% static 'sigma.js/src/misc/sigma.misc.bindEvents.js' %}"></script>
-  <script src="{% static 'sigma.js/src/misc/sigma.misc.bindDOMEvents.js' %}"></script>
-  <script src="{% static 'sigma.js/src/misc/sigma.misc.drawHovers.js' %}"></script>
-  <script src="{% static 'sigma.js/plugins/sigma.layout.forceAtlas2/worker.js' %}"></script>
-  <script src="{% static 'sigma.js/plugins/sigma.layout.forceAtlas2/supervisor.js' %}"></script>
+  <script src="{% static 'js/sigma.min.js' %}"></script>
+  <script src="{% static 'js/sigma.forceAtlas2.supervisor.js' %}"></script>
+  <script src="{% static 'js/sigma.forceAtlas2.worker.js' %}"></script>
+  <script src="{% static 'js/sigma.parsers.json.min.js' %}"></script>
+  <script src="{% static 'js/sigma.pathfinding.astar.js' %}"></script>
+
   <script>
     const userpk = document.querySelector('#sigma-container').dataset.id
     axios.get(`/api/v1/accounts/${userpk}/`)
       .then(res => {
         const stars = res.data.likestars
-        // Initialise sigma
-        sigma.utils.pkg('sigma.canvas.edges');
-        sigma.canvas.edges.t = function(edge, source, target, context, settings) {
-          const color = edge.color,
-                prefix = settings('prefix') || '',
-                edgeColor = settings('edgeColor'),
-                defaultNodeColor = settings('defaultNodeColor'),
-                defaultEdgeColor = settings('defaultEdgeColor');
-
-          if (!color)
-            switch (edgeColor) {
-              case 'source':
-                color = source.color || defaultNodeColor;
-                break;
-              case 'target':
-                color = target.color || defaultNodeColor;
-                break;
-              default:
-                color = defaultEdgeColor;
-                break;
-            }
-
-          context.strokeStyle = color;
-          context.lineWidth = edge[prefix + 'size'] || 1;
-          context.beginPath();
-          context.moveTo(
-            source[prefix + 'x'],
-            source[prefix + 'y']
-          );
-          context.lineTo(
-            source[prefix + 'x'],
-            target[prefix + 'y']
-          );
-          context.lineTo(
-            target[prefix + 'x'],
-            target[prefix + 'y']
-          );
-          context.stroke();
-        };
         const graph = {
           nodes: [],
           edges: []
         }
-        const colors = [
-          '#617db4',
-          '#668f3c',
-          '#c6583e',
-          '#b956af'
-        ]
-        let s
         // add nodes for likestars
         for (let i = 0; i < stars.length; i++){        
           graph.nodes.push({
@@ -231,8 +152,8 @@
             label: stars[i].name,
             x: Math.random(),
             y: Math.random(),
-            size: 3,
-            color: '#F5E33C'
+            size: 4,
+            color: '#7f0000'
           })
         }
         // for iteration again to avoid overlapping of starnodes
@@ -248,8 +169,8 @@
                   label: stars[i].coworker_from[j].movie,
                   x: Math.random(),
                   y: Math.random(),
-                  size: 2,
-                  color: colors[Math.floor(Math.random() * colors.length)]
+                  size: 3,
+                  color: '#4B0082',
                 })
               }
               // add nodes for coworker of likestars, who is not added
@@ -260,8 +181,8 @@
                   label: stars[i].coworker_from[j].to_star,
                   x: Math.random(),
                   y: Math.random(),
-                  size: 1,
-                  color: colors[Math.floor(Math.random() * colors.length)]
+                  size: 2,
+                  color: '#787878'
                 })
               }
             }
@@ -277,8 +198,8 @@
                   id:stars[i].name+'_'+stars[i].coworker_from[j].movie,
                   source: 'star ' + stars[i].name,
                   target: 'movie ' + stars[i].coworker_from[j].movie,
-                  size: 1,
-                  type: 't'
+                  color:'#787878',
+                  type: 'curvedArrow'
                 })
               }
               // add edges movie -> to_stars
@@ -286,21 +207,25 @@
                 id:stars[i].coworker_from[j].movie+'_'+stars[i].coworker_from[j].to_star,
                 source: 'movie ' + stars[i].coworker_from[j].movie,
                 target: 'star ' + stars[i].coworker_from[j].to_star,
-                size: 1,
-                type: 't'
+                color:'#787878',
+                type: 'curvedArrow'
               })
             }
           }
         }
-        console.log(graph)
         s = new sigma({
-          graph: graph,
           renderer: {
             container: 'sigma-container',
             type: 'canvas'
           }
         });
+        // load the graph
+        s.graph.read(graph);
+        // draw the graph
+        s.refresh();
+        // launch force-atlas for 5sec
         s.startForceAtlas2();
+        window.setTimeout(function() {s.killForceAtlas2()}, 10000);
       })  
     
   </script>
