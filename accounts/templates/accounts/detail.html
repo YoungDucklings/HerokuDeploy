@@ -2,8 +2,65 @@
 {% load static %}
 {% load bootstrap4 %}
 
-
 {% block body %}
+
+<!-- START SIGMA IMPORTS -->
+<script src="{% static 'sigma/src/sigma.core.js' %}"></script>
+<script src="{% static 'sigma/src/conrad.js' %}"></script>
+<script src="{% static 'sigma/src/utils/sigma.utils.js' %}"></script>
+<script src="{% static 'sigma/src/utils/sigma.polyfills.js' %}"></script>
+<script src="{% static 'sigma/src/sigma.settings.js' %}"></script>
+<script src="{% static 'sigma/src/classes/sigma.classes.dispatcher.js' %}"></script>
+<script src="{% static 'sigma/src/classes/sigma.classes.configurable.js' %}"></script>
+<script src="{% static 'sigma/src/classes/sigma.classes.graph.js' %}"></script>
+<script src="{% static 'sigma/src/classes/sigma.classes.camera.js' %}"></script>
+<script src="{% static 'sigma/src/classes/sigma.classes.quad.js' %}"></script>
+<script src="{% static 'sigma/src/classes/sigma.classes.edgequad.js' %}"></script>
+<script src="{% static 'sigma/src/captors/sigma.captors.mouse.js' %}"></script>
+<script src="{% static 'sigma/src/captors/sigma.captors.touch.js' %}"></script>
+<script src="{% static 'sigma/src/renderers/sigma.renderers.canvas.js' %}"></script>
+<script src="{% static 'sigma/src/renderers/sigma.renderers.webgl.js' %}"></script>
+<script src="{% static 'sigma/src/renderers/sigma.renderers.svg.js' %}"></script>
+<script src="{% static 'sigma/src/renderers/sigma.renderers.def.js' %}"></script>
+<script src="{% static 'sigma/src/renderers/webgl/sigma.webgl.nodes.def.js' %}"></script>
+<script src="{% static 'sigma/src/renderers/webgl/sigma.webgl.nodes.fast.js' %}"></script>
+<script src="{% static 'sigma/src/renderers/webgl/sigma.webgl.edges.def.js' %}"></script>
+<script src="{% static 'sigma/src/renderers/webgl/sigma.webgl.edges.fast.js' %}"></script>
+<script src="{% static 'sigma/src/renderers/webgl/sigma.webgl.edges.arrow.js' %}"></script>
+<script src="{% static 'sigma/src/renderers/canvas/sigma.canvas.labels.def.js' %}"></script>
+<script src="{% static 'sigma/src/renderers/canvas/sigma.canvas.hovers.def.js' %}"></script>
+<script src="{% static 'sigma/src/renderers/canvas/sigma.canvas.nodes.def.js' %}"></script>
+<script src="{% static 'sigma/src/renderers/canvas/sigma.canvas.edges.def.js' %}"></script>
+<script src="{% static 'sigma/src/renderers/canvas/sigma.canvas.edges.curve.js' %}"></script>
+<script src="{% static 'sigma/src/renderers/canvas/sigma.canvas.edges.arrow.js' %}"></script>
+<script src="{% static 'sigma/src/renderers/canvas/sigma.canvas.edges.curvedArrow.js' %}"></script>
+<script src="{% static 'sigma/src/renderers/canvas/sigma.canvas.edgehovers.def.js' %}"></script>
+<script src="{% static 'sigma/src/renderers/canvas/sigma.canvas.edgehovers.curve.js' %}"></script>
+<script src="{% static 'sigma/src/renderers/canvas/sigma.canvas.edgehovers.arrow.js' %}"></script>
+<script src="{% static 'sigma/src/renderers/canvas/sigma.canvas.edgehovers.curvedArrow.js' %}"></script>
+<script src="{% static 'sigma/src/renderers/canvas/sigma.canvas.extremities.def.js' %}"></script>
+<script src="{% static 'sigma/src/renderers/svg/sigma.svg.utils.js' %}"></script>
+<script src="{% static 'sigma/src/renderers/svg/sigma.svg.nodes.def.js' %}"></script>
+<script src="{% static 'sigma/src/renderers/svg/sigma.svg.edges.def.js' %}"></script>
+<script src="{% static 'sigma/src/renderers/svg/sigma.svg.edges.curve.js' %}"></script>
+<script src="{% static 'sigma/src/renderers/svg/sigma.svg.labels.def.js' %}"></script>
+<script src="{% static 'sigma/src/renderers/svg/sigma.svg.hovers.def.js' %}"></script>
+<script src="{% static 'sigma/src/middlewares/sigma.middlewares.rescale.js' %}"></script>
+<script src="{% static 'sigma/src/middlewares/sigma.middlewares.copy.js' %}"></script>
+<script src="{% static 'sigma/src/misc/sigma.misc.animation.js' %}"></script>
+<script src="{% static 'sigma/src/misc/sigma.misc.bindEvents.js' %}"></script>
+<script src="{% static 'sigma/src/misc/sigma.misc.bindDOMEvents.js' %}"></script>
+<script src="{% static 'sigma/src/misc/sigma.misc.drawHovers.js' %}"></script>
+<!-- END SIGMA IMPORTS -->
+<script src="{% static 'sigma/plugins/sigma.plugins.dragNodes/sigma.plugins.dragNodes.js' %}"></script>
+<script src="{% static 'sigma/plugins/sigma.plugins.neighborhoods/sigma.plugins.neighborhoods.js' %}"></script>
+<style>
+  #graph-container {
+    height: 70vh;
+    width: 70vw;
+    margin: auto;
+  }
+</style>
 
 <body class="profile-page sidebar-collapse">
   {% include '_simple_nav.html' %}
@@ -39,86 +96,39 @@
 
           </div>
         </div>
-
-        <div class="description text-center">
-          <p>
-            {% if user.following.all or user.followers.all%}
-            {{ user.username }} joined flocks of
-            {% for following in user.following.all %}
-            {{ following }} ,
-            {% endfor %}
-            {% for follower in user.followers.all %}
-            {{ follower }} ,
-            {% endfor %}
-            {% else %}
-            {{ user.username }} not flocked with any feather yet
-            {% endif %}
-          </p>
-          {% if comment %}
-          <div class="card">
-            <div class="card-body mb-1">
-              <h6 class="card-category text-warning">
-                <i class="material-icons">trending_up</i> My lastest Comment
-              </h6>
-              <h4 class="card-title">
-                <a href="{% url 'movies:detail' comment.movie.pk %}">{{ comment }}</a>
-              </h4>
-            </div>
-            <div class="card-footer ">
-              <div class="author">
-                <span>
-                  <a href="{% url 'movies:detail' comment.movie.pk %}"># {{ comment.movie }}</a>
-                  {% for c in comment_casts %}
-                  <a href=""># {{ c.star }}</a>
-                  {% endfor %}
-                </span>
-              </div>
-            </div>
-          </div>
-          {% endif %}
-        </div>
-
         <div class="row">
-          <div class="col-md-6 ml-auto mr-auto">
-            <div class="profile-tabs">
-              <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
-                <li class="nav-item">
-                  <a class="nav-link" href="#favorite" role="tab" data-toggle="tab">
-                    <i class="material-icons">favorite</i> Stars
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="#studio" role="tab" data-toggle="tab">
-                    <i class="material-icons">camera</i> Movies
-                  </a>
-                </li>
-              </ul>
-            </div>
+          <div class="description text-center">
+            <p>
+              {% if user.following.all or user.followers.all%}
+              {{ user.username }} joined flocks of
+              {% for following in user.following.all %}
+              {{ following }} ,
+              {% endfor %}
+              {% for follower in user.followers.all %}
+              {{ follower }} ,
+              {% endfor %}
+              {% else %}
+              {{ user.username }} not flocked with any feather yet
+              {% endif %}
+            </p>
           </div>
-
         </div>
-        <!-- <div class="row justify-content-center">
-          <div class="card col-6">
-            <div class="card-body">
-              This is some text within a card body.
-
-            </div>
+        <div class="row">
+          <div class="card">
+            <div data-id="{{ user.pk }}" id="graph-container"></div>
           </div>
-        </div> -->
-        <h3>Backdrop</h3>
-        {% for movie in movies %}
-        <p>{{ movies.poster_set.first }}</p>
-        {% endfor %}
-
-
+        </div>
+        
         <h2 class="title">Gallery</h2>
-        <h3>{{ user.username }} follows these stars... </h3>
-        <div style="width: auto; overflow-x: scroll; white-space: nowrap;">
+        <div class="row">
+          <h3>{{ user.username }} follows these stars... </h3>
+          <div style="width: auto; overflow-x: scroll; white-space: nowrap;">
           {% for star in stars %}
           <a href="{% url 'stars:detail' star.pk %}"><img src="{{ star.profileimg_set.first }}" width="30%"></a>
           {% endfor %}
+          </div>
         </div>
-
+        <div class="row">
         <h3>{{ user.username }} watched these movies... </h3>
 
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -164,9 +174,154 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
-
+      </div>
 
       </div>
     </div>
   </div>
-  {% endblock %}
+  
+<script>
+  const userpk = document.querySelector('#graph-container').dataset.id
+  axios.get(`/api/v1/accounts/${userpk}/`)
+    .then(res => {
+      const stars = res.data.likestars
+      console.log(stars)
+      let s
+      let originalColor = '#7f0000'
+      let graph = {
+        nodes: [],
+        edges: []
+      }
+      const db = new sigma.plugins.neighborhoods();
+
+      // add nodes for likestars
+      for (let i = 0; i < stars.length; i++) {
+        graph.nodes.push({
+          id: 'star ' + stars[i].name,
+          label: stars[i].name,
+          x: Math.random(),
+          y: Math.random(),
+          size: 4,
+          color: originalColor
+        })
+      }
+      // for iteration again to avoid overlapping of starnodes
+      for (let i = 0; i < stars.length; i++) {
+        if (stars[i].coworker_from) {
+          // add nodes for coworker & movies of likestars
+          for (let j = 0; j < stars[i].coworker_from.length; j++) {
+            // add nodes for movies of likestars, which is not added
+            const mfound = graph.nodes.some(el => el.id === 'movie ' + stars[i].coworker_from[j].movie)
+            if (!mfound) {
+              graph.nodes.push({
+                id: 'movie ' + stars[i].coworker_from[j].movie,
+                label: stars[i].coworker_from[j].movie,
+                x: Math.random(),
+                y: Math.random(),
+                size: 3,
+                color: originalColor,
+              })
+            }
+            // add nodes for coworker of likestars, who is not added
+            const sfound = graph.nodes.some(el => el.id === 'star ' + stars[i].coworker_from[j].to_star)
+            if (!sfound) {
+              graph.nodes.push({
+                id: 'star ' + stars[i].coworker_from[j].to_star,
+                label: stars[i].coworker_from[j].to_star,
+                x: Math.random(),
+                y: Math.random(),
+                size: 2,
+                color: originalColor
+              })
+            }
+          }
+        }
+      }
+      for (let i = 0; i < stars.length; i++) {
+        if (stars[i].coworker_from) {
+          for (let j = 0; j < stars[i].coworker_from.length; j++) {
+            const efound = graph.edges.some(el => el.id === stars[i].name + '_' + stars[i].coworker_from[j].movie)
+            // add an edge likestar -> movie
+            if (!efound) {
+              graph.edges.push({
+                id: stars[i].name + '_' + stars[i].coworker_from[j].movie,
+                source: 'star ' + stars[i].name,
+                target: 'movie ' + stars[i].coworker_from[j].movie,
+                size: 1,
+                color: originalColor
+              })
+            }
+            // add edges movie -> to_stars
+            const eefound = graph.edges.some(el => el.id === stars[i].coworker_from[j].movie + '_' + stars[i].coworker_from[j].to_star)
+            if (!eefound) {
+              graph.edges.push({
+              id: stars[i].coworker_from[j].movie + '_' + stars[i].coworker_from[j].to_star,
+              source: 'movie ' + stars[i].coworker_from[j].movie,
+              target: 'star ' + stars[i].coworker_from[j].to_star,
+              size: 1,
+              color: originalColor
+              })
+            }
+          }
+        }
+      }
+      // sigma.renderers.def = sigma.renderers.canvas
+      // Instantiate sigma:
+      s = new sigma({
+        graph: graph,
+        container: 'graph-container'
+      });
+
+      // find all neighborhood
+      function dfs(nArray) {
+        let nStack = nArray.map(el => el.id)
+        let point = 1
+        while (point < nStack.length) {
+          s.graph.neighborhood(nStack[point]).nodes.forEach(el => {
+            if (!(nStack.includes(el.id))) {nStack.push(el.id)}
+          })
+          point += 1
+        }
+        return nStack
+      }
+
+      // Initialize the dragNodes plugin:
+      let dragListener = sigma.plugins.dragNodes(s, s.renderers[0]);
+      dragListener.bind('startdrag', function (event) { });
+      dragListener.bind('drag', function (event) { });
+      dragListener.bind('drop', function (event) { });
+      dragListener.bind('dragend', function (event) { });
+      
+      // initialize the neighborhood
+      s.bind('clickNode', function(e) {
+        let nodeId = e.data.node.id,
+            toKeep = dfs(s.graph.neighborhood(nodeId).nodes);
+
+        s.graph.nodes().forEach(function(n) {
+          if (toKeep.includes(n.id)){n.color = n.originalColor}
+          else {n.color = '#eee'}
+        });
+
+        s.graph.edges().forEach(function(e) {
+          if ((toKeep.includes(e.source)) && (toKeep.includes(e.target)))
+            {e.color = e.originalColor}
+          else {e.color = '#eee'}
+        });
+
+        s.refresh()
+      })
+      s.bind('clickStage', function(e) {
+        s.graph.nodes().forEach(function(n) {
+          n.color = n.originalColor;
+        });
+        s.graph.edges().forEach(function(e) {
+          e.color = e.originalColor;
+        });
+        s.refresh();
+      });
+    })
+    
+</script>
+
+
+{% endblock %}

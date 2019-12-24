@@ -1,157 +1,80 @@
-{% load static %}
-<html>
+<div id="sigma-container"></div>
+<script src="path/to/sigma.js"></script>
+<script src="path/to/sigma.parsers.min.gexf.js"></script>
+<script>
+  // Add a method to the graph model that returns an
+  // object with every neighbors of a node inside:
+  sigma.classes.graph.addMethod('neighbors', function(nodeId) {
+    var k,
+        neighbors = {},
+        index = this.allNeighborsIndex[nodeId] || {};
 
-<head>
-  <title>SigmaJS example</title>
-  <script src="{% static 'js/sigma.min.js' %}"></script>
-  <script src="{% static 'sigma.forceAtlas2.supervisor.js' %}"></script>
-  <script src="{% static 'sigma.forceAtlas2.worker.js' %}"></script>
-  </script>
-  <style>
-    html {
-      height: 100%;
-    }
+    for (k in index)
+      neighbors[k] = this.nodesIndex[k];
 
-    body {
-      height: 100%;
-    }
+    return neighbors;
+  });
 
-    #sigma-container {
-      width: 50%;
-      height: 50%;
-      background-color: #E1E1E1
-    }
-  </style>
-</head>
-
-<body>
-  <div style="height:50%">
-    <div id='sigma-container'></div>
-  </div>
-  // Random function that follows a normal distributino
-  const user_pk = document.querySelector(sigma-container).dataset.id
-  function randon_bm() {
-    var u = 0,
-      v = 0;
-    while (u === 0) u = Math.random(); //Converting [0,1) to (0,1)
-    while (v === 0) v = Math.random();
-    let num = Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
-    num = num / 10.0 + 0.5; // Translate to 0 -> 1
-    return Math.max(Math.min(num, 1), 0); // cap between 0 and 1
-  }
-
-  // Initialise sigma:
-  var s = new sigma({
-    renderer: {
-      container: document.getElementById('sigma-container'),
-      type: 'canvas'
+  sigma.parsers.gexf(
+    'path/to/les-miserables.gexf',
+    {
+      container: 'sigma-container'
     },
-    settings: {}
-  });
+    function(s) {
+      // We first need to save the original colors of our
+      // nodes and edges, like this:
+      s.graph.nodes().forEach(function(n) {
+        n.originalColor = n.color;
+      });
+      s.graph.edges().forEach(function(e) {
+        e.originalColor = e.color;
+      });
 
-  // Generate a random graph:
-  var nbNode = 0;
-  axios.get(`/accounts/test/${user_pk}`)
-  .then( response => {
-    nbNode = response.data.stars
-  })
-  console.log(nbNode)
-  var nbEdge = 100;
-  var graph = {
-    nodes: [],
-    edges: []
-  };
-  for (i = 0; i < nbNode; i++)
-    graph.nodes.push({
-      id: i,
-      label: 'Node ' + i,
-      x: Math.random(),
-      y: Math.random(),
-      size: 1,
-      color: '#EE651D'
-    });
+      // When a node is clicked, we check for each node
+      // if it is a neighbor of the clicked one. If not,
+      // we set its color as grey, and else, it takes its
+      // original color.
+      // We do the same for the edges, and we only keep
+      // edges that have both extremities colored.
+      s.bind('clickNode', function(e) {
+        var nodeId = e.data.node.id,
+            toKeep = s.graph.neighbors(nodeId);
+        toKeep[nodeId] = e.data.node;
 
-  for (i = 0; i < nbEdge; i++)
-    graph.edges.push({
-      id: i,
-      source: '' + (Math.random() * nbNode | 0),
-      target: '' + (randon_bm() * nbNode | 0),
-      color: '#202020'
-    });
+        s.graph.nodes().forEach(function(n) {
+          if (toKeep[n.id])
+            n.color = n.originalColor;
+          else
+            n.color = '#eee';
+        });
 
+        s.graph.edges().forEach(function(e) {
+          if (toKeep[e.source] && toKeep[e.target])
+            e.color = e.originalColor;
+          else
+            e.color = '#eee';
+        });
 
-  // load the graph
-  s.graph.read(graph);
-  // call the plugin
-  sigma.plugins.relativeSize(s, 1);
-  // draw the graph
-  s.refresh();
-  // launch force-atlas for 5sec
-  s.startForceAtlas2();
-  window.setTimeout(function () {
-    s.killForceAtlas2()
-  }, 10000);
+        // Since the data has been modified, we need to
+        // call the refresh method to make the colors
+        // update effective.
+        s.refresh();
+      });
 
-  <script>
-    // Random function that follows a normal distributino
-    function randon_bm() {
-      var u = 0,
-        v = 0;
-      while (u === 0) u = Math.random(); //Converting [0,1) to (0,1)
-      while (v === 0) v = Math.random();
-      let num = Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
-      num = num / 10.0 + 0.5; // Translate to 0 -> 1
-      return Math.max(Math.min(num, 1), 0); // cap between 0 and 1
+      // When the stage is clicked, we just color each
+      // node and edge with its original color.
+      s.bind('clickStage', function(e) {
+        s.graph.nodes().forEach(function(n) {
+          n.color = n.originalColor;
+        });
+
+        s.graph.edges().forEach(function(e) {
+          e.color = e.originalColor;
+        });
+
+        // Same as in the previous event:
+        s.refresh();
+      });
     }
-
-    // Initialise sigma:
-    var s = new sigma({
-      renderer: {
-        container: document.getElementById('sigma-container'),
-        type: 'canvas'
-      },
-      settings: {
-        edgeLabelSize: 'proportional',
-        minArrowSize: 10
-      }
-    });
-
-    // Generate a random graph:
-    var nbNode = 50;
-var nbEdge = 100;
-var graph = {
-  nodes: [],
-  edges: []
-};
-for (i = 0; i < nbNode; i++)
-  graph.nodes.push({ 
-    id:  i,
-    label: 'Node ' + i,
-    x: Math.random(),
-    y: Math.random(),
-    size: 1,
-    color: '#EE651D'
-  });
-
-for (i = 0; i < nbEdge; i++)
-  graph.edges.push({ 
-    id: i, 
-    label: 'Edge ' +i,
-    source: '' + (Math.random() * nbNode | 0), 
-    target: '' + (Math.random() * nbNode | 0),
-    color: '#00000',
-    type: 'curvedArrow',
-  });
-
-
-// load the graph
-s.graph.read(graph);
-// draw the graph
-s.refresh();
-// launch force-atlas for 5sec
-s.startForceAtlas2();
-window.setTimeout(function() {s.killForceAtlas2()}, 10000);
-  </script>
-</body>
-
-</html>
+  );
+</script>

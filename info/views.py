@@ -1,8 +1,16 @@
-from django.shortcuts import render
-from stars.models import Star
-from movies.models import Movie
-from accounts.models import User
+from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
+
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
+
+from accounts.models import User
+from movies.models import Movie
+from stars.models import Star, ProfileImg, Cast, Coworker
+
+from django.http import JsonResponse
+from .serializers import UserSerializer
+
 # Create your views here.
 
 def intro(request):
@@ -45,3 +53,11 @@ def rec(request):
         'popular':popular,
     }
     return render(request, 'info/rec.html', context)
+
+
+# Serailizer
+@api_view(["GET"])
+def user_detail(request, user_pk):
+    user = get_object_or_404(User, pk=user_pk)
+    serializer = UserSerializer(user)
+    return Response(serializer.data)
