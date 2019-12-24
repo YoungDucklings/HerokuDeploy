@@ -185,6 +185,7 @@
   axios.get(`/api/v1/accounts/${userpk}/`)
     .then(res => {
       const stars = res.data.likestars
+      console.log(stars)
       let s
       let originalColor = '#7f0000'
       let graph = {
@@ -271,6 +272,18 @@
         container: 'graph-container'
       });
 
+      // find all neighborhood
+      function dfs(nArray) {
+        let nStack = nArray.map(el => el.id)
+        let point = 1
+        while (point < nStack.length) {
+          s.graph.neighborhood(nStack[point]).nodes.forEach(el => {
+            if (!(nStack.includes(el.id))) {nStack.push(el.id)}
+          })
+          point += 1
+        }
+        return nStack
+      }
 
       // Initialize the dragNodes plugin:
       let dragListener = sigma.plugins.dragNodes(s, s.renderers[0]);
@@ -278,43 +291,34 @@
       dragListener.bind('drag', function (event) { });
       dragListener.bind('drop', function (event) { });
       dragListener.bind('dragend', function (event) { });
-      // s.bind('clickNode', function(event) {
-      //   console.log(graph.nodes)
-      //   console.log(graph.edges)
-      //   if (!event.data.node.center)
-      //   console.log(s.graph.neighborhood(event.data.node.id))
-      // });
+      
+      // initialize the neighborhood
       s.bind('clickNode', function(e) {
-        var nodeId = e.data.node.id,
-            toKeep = s.graph.neighborhood(nodeId);
-        toKeep[nodeId] = e.data.node;
+        let nodeId = e.data.node.id,
+            toKeep = dfs(s.graph.neighborhood(nodeId).nodes);
 
         s.graph.nodes().forEach(function(n) {
-          if (toKeep[n.id])
-            n.color = n.originalColor;
-          else
-            n.color = '#eee';
+          if (toKeep.includes(n.id)){n.color = n.originalColor}
+          else {n.color = '#eee'}
         });
 
         s.graph.edges().forEach(function(e) {
-          if (toKeep[e.source] && toKeep[e.target])
-            e.color = e.originalColor;
-          else
-            e.color = '#eee';
+          if ((toKeep.includes(e.source)) && (toKeep.includes(e.target)))
+            {e.color = e.originalColor}
+          else {e.color = '#eee'}
         });
-        s.bind('clickStage', function(e) {
-          s.graph.nodes().forEach(function(n) {
-            n.color = n.originalColor;
-          });
 
-          s.graph.edges().forEach(function(e) {
-            e.color = e.originalColor;
-          });
-
-          // Same as in the previous event:
-          s.refresh();
-        });
+        s.refresh()
       })
+      s.bind('clickStage', function(e) {
+        s.graph.nodes().forEach(function(n) {
+          n.color = n.originalColor;
+        });
+        s.graph.edges().forEach(function(e) {
+          e.color = e.originalColor;
+        });
+        s.refresh();
+      });
     })
     
 </script>
