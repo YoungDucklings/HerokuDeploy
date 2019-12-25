@@ -3,11 +3,24 @@
 {% block body %}
 
 {% include '_nav.html' %}
+<style>
+
+.arraycontainer::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+.arraycontainer {
+  -ms-overflow-style: none;
+  width: auto; overflow-x: auto; white-space: nowrap;
+}
+
+</style>
 <div class="container my-3">
   <div class="row card">
     <div class="card-body">
       <h4 class="card-title">you missed your stars' movie</h4>
-      <div style="width: auto; overflow-x: scroll; white-space: nowrap;">
+      <div class="arraycontainer">
         {% for star in stars %}
           {% for cast in star.cast_set.all %}
             {% if cast.movie not in movies %}
@@ -21,7 +34,7 @@
   <div class="row card">
     <div class="card-body">
       <h4 class="card-title">people also like these movies</h4>
-      <div style="width: auto; overflow-x: scroll; white-space: nowrap;">
+      <div class="arraycontainer">
         {% for pop in popular %}
           {% if pop not in movies %}
             {% if pop.poster_set.all %}

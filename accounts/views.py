@@ -25,6 +25,14 @@ def index(request):
 def detail(request, user_pk):
     user = get_object_or_404(get_user_model(), pk=user_pk)
     movies = user.likemovies.all()
+    scores = user.score_set.all()
+    scoreli = [0,0,0,0,0]
+    for s in scores:
+        scoreli[s.score-1] += 1
+    if sum(scoreli):
+        scoreli = [int(s/sum(scoreli)*100) if int(s/sum(scoreli)*100)>10 else 10 for s in scoreli]
+    else:
+        scoreli = [10,10,10,10,10]
     stars = user.likestars.all()
     comment = user.comment_set.first()
     if comment:
@@ -37,6 +45,7 @@ def detail(request, user_pk):
         'stars': stars,
         'comment': comment,
         'comment_stars': comment_casts,
+        'scoreli':scoreli,
     }
     return render(request, 'accounts/detail.html', context)
 

@@ -56,9 +56,36 @@
 <script src="{% static 'sigma/plugins/sigma.plugins.neighborhoods/sigma.plugins.neighborhoods.js' %}"></script>
 <style>
   #graph-container {
-    height: 70vh;
-    width: 70vw;
+    height: 50vh;
+    width: 50vw;
     margin: auto;
+  }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .arraycontainer::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE and Edge */
+  .arraycontainer {
+    -ms-overflow-style: none;
+    width: auto; overflow-x: auto; white-space: nowrap;
+  }
+  .staravatar {
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  .neighboravatar {
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+  .gradebar {
+    height:10px; align-self: flex-end; width:30px; background-color:#12c2e9; margin-left:5px;
   }
 </style>
 
@@ -115,79 +142,92 @@
         </div>
         <div class="row">
           <div class="card">
-            <div data-id="{{ user.pk }}" id="graph-container"></div>
+            <div class="card-header card-header-text card-header-primary">
+              <div class="card-text">
+                <h4 class="card-title">Star Dashboard</h4>
+              </div>
+            </div>
+            <div class="card-body">
+              <div data-id="{{ user.pk }}" id="graph-container"></div>
+            </div>
           </div>
         </div>
-        
-        <h2 class="title">Gallery</h2>
-        <div class="row">
-          <h3>{{ user.username }} follows these stars... </h3>
-          <div style="width: auto; overflow-x: scroll; white-space: nowrap;">
-          {% for star in stars %}
-          <a href="{% url 'stars:detail' star.pk %}"><img src="{{ star.profileimg_set.first }}" width="30%"></a>
-          {% endfor %}
-          </div>
-        </div>
-        <div class="row">
-        <h3>{{ user.username }} watched these movies... </h3>
 
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            {% for movie in movies %}
-            {% if forloop.first %}
-            <div class="carousel-item active">
-              <div class="card bg-dark text-white">
-                <img class="card-img" src="{{ movie.backdrop_set.first }}" alt="Card image">
-                <div class="card-img-overlay">
-                  <h4 class="card-title">{{ movie.title }}</h4>
-                  <p class="card-text">
-                    {% for cast in movie.cast_set.all %}
-                    {{ cast.star }}
-                    {% endfor %}
-                  </p>
+        <div class="row">
+          <div class="card mb-3">
+            <div class="arraycontainer my-2 mx-2">
+              <div class="defaultarray" style="display:flex">
+                {% for star in stars %}
+                  <a href="{% url 'stars:detail' star.pk %}">
+                    <div style="display:flex; flex-direction:column;">
+                    <img src="{{ star.profileimg_set.first }}" class="staravatar card-img">
+                    <button class="btn btn-primary btn-sm">{{star}}</button>
+                    </div>
+                  </a>
+                {% endfor %}
+              </div>
+              <div id="stararray" style="display:flex"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="card mb-3">
+            <div class="arraycontainer my-2 mx-2">
+              <div id="moviearray" style="display:flex"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="card">
+            <div class="card-header card-header-text card-header-primary">
+              <div class="card-text">
+                <h4 class="card-title">my movie logs</h4>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="mb-2" style="display:flex; justify-content:center; height:120px;">
+                {% for score in scoreli %}
+                <div class="gradebar" style="height:{{score}}px"></div>
+                {% endfor %}
+              </div>
+              <div class="arraycontainer mb-2">
+                <div style="display:flex">
+                {% for movie in movies %}
+                <a href="{% url 'movies:detail' movie.pk %}">
+                  <div class="card bg-dark text-white mx-2" style="width:200px">
+                    <img class="card-img" src="{{ movie.poster_set.first }}" alt="Card image">
+                  </div>
+                </a>
+                {% endfor %}
                 </div>
               </div>
             </div>
-            {% endif %}
-            <div class="carousel-item">
-              <div class="card bg-dark text-white">
-                <img class="card-img" src="{{ movie.backdrop_set.first }}" alt="Card image">
-                <div class="card-img-overlay">
-
-                  <h4 class="card-title">{{ movie.title }}</h4>
-                  <p class="card-text">
-                    {% for cast in movie.cast_set.all %}
-                    {{ cast.star }}
-                    {% endfor %}
-                  </p>
-                </div>
-              </div>
-            </div>
-            {% endfor %}
           </div>
-          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
         </div>
-      </div>
 
       </div>
     </div>
   </div>
-  
+
 <script>
   const userpk = document.querySelector('#graph-container').dataset.id
+  const likestarset = []
+  const movieset = []
+  const starObject = {}
+  const movieObject = {}
+  const starArray = document.querySelector('#stararray')
+  const movieArray = document.querySelector('#moviearray')
   axios.get(`/api/v1/accounts/${userpk}/`)
     .then(res => {
       const stars = res.data.likestars
-      console.log(stars)
-      let s
-      let originalColor = '#7f0000'
+      const movies = res.data.likemovies
+      const myStarColor = '#F64F59'
+      const neighborColor = '#c471ed'
+      const movieColor = '#12c2e9'
+      const background = '#eeeeee'
+      const edgeColor = '#c471ed'
       let graph = {
         nodes: [],
         edges: []
@@ -197,13 +237,15 @@
       // add nodes for likestars
       for (let i = 0; i < stars.length; i++) {
         graph.nodes.push({
-          id: 'star ' + stars[i].name,
+          id: stars[i].pk,
           label: stars[i].name,
           x: Math.random(),
           y: Math.random(),
-          size: 4,
-          color: originalColor
+          size: 15,
+          color: myStarColor
         })
+        likestarset.push(stars[i].pk)
+        starObject[stars[i].pk] = stars[i].profileimg_set[0]
       }
       // for iteration again to avoid overlapping of starnodes
       for (let i = 0; i < stars.length; i++) {
@@ -211,28 +253,35 @@
           // add nodes for coworker & movies of likestars
           for (let j = 0; j < stars[i].coworker_from.length; j++) {
             // add nodes for movies of likestars, which is not added
-            const mfound = graph.nodes.some(el => el.id === 'movie ' + stars[i].coworker_from[j].movie)
+            const mfound = graph.nodes.some(el => el.id === stars[i].coworker_from[j].movie.pk)
             if (!mfound) {
               graph.nodes.push({
-                id: 'movie ' + stars[i].coworker_from[j].movie,
-                label: stars[i].coworker_from[j].movie,
+                id: stars[i].coworker_from[j].movie.pk,
+                label: stars[i].coworker_from[j].movie.title,
                 x: Math.random(),
                 y: Math.random(),
-                size: 3,
-                color: originalColor,
+                size: 5,
+                color: movieColor,
               })
+              movieset.push(stars[i].coworker_from[j].movie.pk)
+              movieObject[stars[i].coworker_from[j].movie.pk] = stars[i].coworker_from[j].movie.poster_set[0]
+            } else {
+              graph.nodes.find(x => x.id === stars[i].coworker_from[j].movie.pk).size = 10
             }
             // add nodes for coworker of likestars, who is not added
-            const sfound = graph.nodes.some(el => el.id === 'star ' + stars[i].coworker_from[j].to_star)
+            const sfound = graph.nodes.some(el => el.id === stars[i].coworker_from[j].to_star.pk)
             if (!sfound) {
               graph.nodes.push({
-                id: 'star ' + stars[i].coworker_from[j].to_star,
-                label: stars[i].coworker_from[j].to_star,
+                id: stars[i].coworker_from[j].to_star.pk,
+                label: stars[i].coworker_from[j].to_star.name,
                 x: Math.random(),
                 y: Math.random(),
-                size: 2,
-                color: originalColor
+                size: 7,
+                color: neighborColor
               })
+              starObject[stars[i].coworker_from[j].to_star.pk] = stars[i].coworker_from[j].to_star.profileimg_set[0]
+            } else {
+              graph.nodes.find(x => x.id === stars[i].coworker_from[j].to_star.pk).size += 2
             }
           }
         }
@@ -240,26 +289,26 @@
       for (let i = 0; i < stars.length; i++) {
         if (stars[i].coworker_from) {
           for (let j = 0; j < stars[i].coworker_from.length; j++) {
-            const efound = graph.edges.some(el => el.id === stars[i].name + '_' + stars[i].coworker_from[j].movie)
+            const efound = graph.edges.some(el => el.id === stars[i].pk + '_' + stars[i].coworker_from[j].movie.pk)
             // add an edge likestar -> movie
             if (!efound) {
               graph.edges.push({
-                id: stars[i].name + '_' + stars[i].coworker_from[j].movie,
-                source: 'star ' + stars[i].name,
-                target: 'movie ' + stars[i].coworker_from[j].movie,
+                id: stars[i].pk + '_' + stars[i].coworker_from[j].movie.pk,
+                source: stars[i].pk,
+                target: stars[i].coworker_from[j].movie.pk,
                 size: 1,
-                color: originalColor
+                color: edgeColor
               })
             }
             // add edges movie -> to_stars
-            const eefound = graph.edges.some(el => el.id === stars[i].coworker_from[j].movie + '_' + stars[i].coworker_from[j].to_star)
+            const eefound = graph.edges.some(el => el.id === stars[i].coworker_from[j].movie.pk + '_' + stars[i].coworker_from[j].to_star.pk)
             if (!eefound) {
               graph.edges.push({
-              id: stars[i].coworker_from[j].movie + '_' + stars[i].coworker_from[j].to_star,
-              source: 'movie ' + stars[i].coworker_from[j].movie,
-              target: 'star ' + stars[i].coworker_from[j].to_star,
+              id: stars[i].coworker_from[j].movie.pk + '_' + stars[i].coworker_from[j].to_star.pk,
+              source: stars[i].coworker_from[j].movie.pk,
+              target: stars[i].coworker_from[j].to_star.pk,
               size: 1,
-              color: originalColor
+              color: edgeColor
               })
             }
           }
@@ -269,7 +318,8 @@
       // Instantiate sigma:
       s = new sigma({
         graph: graph,
-        container: 'graph-container'
+        container: 'graph-container',
+        type: 'canvas'
       });
 
       // find all neighborhood
@@ -294,28 +344,72 @@
       
       // initialize the neighborhood
       s.bind('clickNode', function(e) {
+        document.querySelectorAll('div.defaultarray').forEach(el => el.style.display = "none")
+        starArray.innerHTML = ""
+        movieArray.innerHTML = ""
         let nodeId = e.data.node.id,
             toKeep = dfs(s.graph.neighborhood(nodeId).nodes);
 
         s.graph.nodes().forEach(function(n) {
-          if (toKeep.includes(n.id)){n.color = n.originalColor}
-          else {n.color = '#eee'}
+          if (toKeep.includes(n.id)){
+            let starimg = document.createElement("a")
+            starimg.href = `/stars/${n.id}/`
+            if (likestarset.includes(n.id)){
+              n.color = myStarColor
+              starimg.innerHTML = `<div style="display:flex; flex-direction:column;">
+              <img src="${starObject[n.id]}" class="staravatar"/>
+              <button class="btn btn-primary btn-sm">${n.label}</button></div>`
+            } else if (!movieset.includes(n.id)) {
+              n.color = neighborColor
+              starimg.innerHTML = `<div style="display:flex; flex-direction:column;">
+              <img src="${starObject[n.id]}" class="neighboravatar"/>
+              <button class="btn btn-default btn-sm">${n.label}</button></div>`
+            } else {
+              n.color = movieColor
+              let movieimg = document.createElement("a")
+              movieimg.href = `/movies/${n.id}/`
+              if (movies.includes(n.id)){
+                movieimg.innerHTML = `<div class="card bg-dark text-white mx-2" style="width:200px">
+                <img class="card-img" src="${movieObject[n.id]}" alt="Card image"></div>`
+              } else {
+                movieimg.innerHTML = `<div class="card bg-dark text-white mx-2" style="width:200px">
+                <img class="card-img" src="${movieObject[n.id]}" alt="Card image" style="-webkit-filter: grayscale(100%);
+                filter: grayscale(100%);"></div>`
+              }
+              
+              movieArray.appendChild(movieimg)
+            }
+            starArray.appendChild(starimg)
+            } else {
+              n.color = '#eee'
+            }
         });
 
         s.graph.edges().forEach(function(e) {
-          if ((toKeep.includes(e.source)) && (toKeep.includes(e.target)))
-            {e.color = e.originalColor}
-          else {e.color = '#eee'}
+          if ((toKeep.includes(e.source)) && (toKeep.includes(e.target))){
+            e.color = edgeColor
+          } else {
+            e.color = background
+          }
         });
 
         s.refresh()
       })
       s.bind('clickStage', function(e) {
+        starArray.innerHTML = ""
+        movieArray.innerHTML = ""
+        document.querySelectorAll('div.defaultarray').forEach(el => el.style.display = "flex")
         s.graph.nodes().forEach(function(n) {
-          n.color = n.originalColor;
+          if (likestarset.includes(n.id)){
+            n.color = myStarColor
+          } else if(movieset.includes(n.id)) {
+            n.color = movieColor
+          } else {
+            n.color = neighborColor
+          }
         });
         s.graph.edges().forEach(function(e) {
-          e.color = e.originalColor;
+          e.color = edgeColor;
         });
         s.refresh();
       });

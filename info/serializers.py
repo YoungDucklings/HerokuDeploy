@@ -4,10 +4,26 @@ from movies.models import Movie
 from stars.models import Star, Coworker, ProfileImg, Cast
 
 
+class MovieInfoSerializer(serializers.ModelSerializer):
+    poster_set = serializers.StringRelatedField(many=True)
+    
+    class Meta:
+        model = Movie
+        fields = ('pk', 'title', 'poster_set',)
+
+
+class StarInfoSerializer(serializers.ModelSerializer):
+    profileimg_set = serializers.StringRelatedField(many=True)
+    
+    class Meta:
+        model = Star
+        fields = ('pk', 'name', 'profileimg_set',)
+
+
 class CoworkerSerializer(serializers.ModelSerializer):
-    movie = serializers.StringRelatedField()
+    movie = MovieInfoSerializer()
     from_star = serializers.StringRelatedField()
-    to_star = serializers.StringRelatedField()
+    to_star = StarInfoSerializer()
     
     class Meta:
         model = Coworker
@@ -25,7 +41,7 @@ class StarSerializer(serializers.ModelSerializer):
 
 class UserSerializer(serializers.ModelSerializer):
     likestars = StarSerializer(many=True, read_only=True)
-    likemovies = serializers.StringRelatedField(many=True)
+    likemovies = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
     
     class Meta:
         model = get_user_model()
