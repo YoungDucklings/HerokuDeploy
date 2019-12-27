@@ -3,6 +3,17 @@
 
 {% block body %}
 {% include '_nav.html' %}
+<style>
+.arraycontainer::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+.arraycontainer {
+  -ms-overflow-style: none;
+  width: auto; overflow-x: auto; white-space: nowrap;
+}
+</style>
 <div class="row container">
 
 
@@ -22,7 +33,7 @@
             <img class="card-img d-block w-100" src="{{ backdrops.first }}" alt="Card image">
           </div>
   
-          {% for backdrop in backdrops %}
+          {% for backdrop in backdrops|slice:"1:" %}
           <div class="carousel-item">
               <img class="card-img d-block w-100" src="{{ backdrop }}" alt="Card image">
           </div>
@@ -49,6 +60,7 @@
               {% endfor %}
             </div>
           </p>
+          <p class="card-text" style="width:300px">{{ movie.overview }}</p>
           <p class="card-text">
             vote average: {{ movie.vote_average }} <br />
 
@@ -56,26 +68,14 @@
             {% for genre in movie.genres.all %}
             {{ genre }} |
             {% endfor %}<br />
+            adult : {{ movie.adult }}<br/>
             release date : {{ movie.release_date }}<br />
             runtime : {{ movie.runtime }}<br />
             status : {{ movie.status }}</p>
       </div>
     </div>
 
-
-    <div class="card">
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">adult : {{ movie.adult }}</li>
-        <li class="list-group-item">original language : {{ movie.original_language }}</li>
-        <li class="list-group-item">homepage : <a href="{{ movie.homepage }}" target="_blank">{{ movie.homepage }}</a>
-        </li>
-        <li class="list-group-item">overview : {{ movie.overview }}</li>
-      </ul>
-    </div>
-
-    <h3>Cast</h3>
-
-    <div style="width: auto; overflow-x: scroll;">
+    <div class="arraycontainer">
       <div class="d-inline-flex">
           {% for cast in movie.cast_set.all %}
           <a href="{% url 'stars:detail' cast.star.pk %}">
@@ -102,7 +102,7 @@
     <h2 class="title">Gallery</h2>
     {% if posters %}
     <h3>Poster</h3>
-    <div style="width: auto; overflow-x: scroll; white-space: nowrap;">
+    <div class="arraycontainer">
       {% for poster in posters %}
       <img src="{{ poster }}" width="30%">
       {% endfor %}
@@ -119,7 +119,7 @@
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
         </div>
-        {% for video in videos %}
+        {% for video in videos|slice:"1:" %}
         <div class="carousel-item">
           <iframe width="560" height="315" src="{{ video }}" frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -181,58 +181,12 @@
     }
 
     function castInfo(n) {
-      console.log('castInfo')
       document.getElementById(`cast${n}`).removeAttribute("style");
     }
 
     function hideCastInfo(n) {
-      console.log('hideCastInfo')
       document.getElementById(`cast${n}`).setAttribute("style", "display:none");
-    }
-    // let israting = true
-
-    // function enterBox() {
-    //   // console.log(israting)
-    //   israting = true
-    //   console.log(israting)
-    // }
-
-
-    // function leaveBox() {
-    //   movie_id = document.querySelector('#score-box').dataset.id
-    //   axios.get(`/movies/${movie_id}/score/`)
-    //   .then(response => {
-    //     const n = response.data.rate
-    //     if (n) {
-    //       for (let i = n; i > 0; i--) {
-    //         console.log(i)
-    //         document.getElementById(i).setAttribute(
-    //           "style", "color: gold; text-shadow: 3px 5px grey")}
-    //       for (let i = n+1; i<6; i++) {
-    //         console.log(i)
-    //         document.getElementById(i).removeAttribute("style")}
-    //     }
-    //   })
-    // israting = false
-    // console.log(israting)
-    // }
-
-    
-
-    // function mouseOver(n) {
-    //   if (israting) {
-    //     for (let i = n; i > 0; i--) {
-    //       document.getElementById(i).setAttribute(
-    //         "style", "color: gold; text-shadow: 3px 5px grey")
-    //     }
-    //     for (let i = n+1; i<6; i++) {
-    //       document.getElementById(i).removeAttribute(
-    //         "style");}
-    //   }
-    // }
-
-
-    
+    }    
     
   </script>
   {% endblock %}

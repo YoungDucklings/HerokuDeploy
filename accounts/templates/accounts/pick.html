@@ -5,125 +5,152 @@
 
 {% block body %}
 
-{% include '_simple_nav.html' %}
-{% include '_big_header.html' %}
+{% include '_nav.html' %}
+<style>
+  .arraycontainer::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE and Edge */
+  .arraycontainer {
+    -ms-overflow-style: none;
+    width: auto; overflow-x: auto; white-space: nowrap;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 0.25rem;
+    width:80vw; margin:auto;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3), 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+    margin-top: 5vh;
+  }
 
-<div class="main main-raised">
-  <div style="height:10px"></div>
+  .content {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 0px 10px;
+}
 
-  <div class="container" style="width:70%; margin-left: auto; margin-right: auto;">
-    <div class="card card-nav-tabs text-center">
-      <div class="card-header card-header-primary">
-        Ready to Start
-      </div>
-      <div class="card-body">
-        <h4 class="card-title">Pick your stars and movies!</h4>
-        <p class="card-text">Below cards contain some random movies and stars. <br />
-          Get some your favorite to start our Service</p>
-      </div>
-    </div>
-  </div>
+h5 {
+  white-space:normal;
+}
+</style>
 
-  <div class="fixed-bottom container " style="width:50%; margin-left: auto; margin-right: auto;">
-    <div class="card card-nav-tabs text-center">
 
-      <div class="card-body">
-        <div class="progress-container progress-warning">
-          <span class="progress-badge">progressing</span>
-          <div class="progress mt-2">
-            <div id="percentage" class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="45" aria-valuemin="0"
-              aria-valuemax="100" style="width: 0%;">
-            </div>
+
+  <div class="card text-center" style="width:80vw; margin:auto;">
+    <div class="card-body">
+      <h4 class="card-title">Pick your stars and movies!</h4>
+      <p class="card-text">
+        Get some your favorite to start our Service</p>
+      <div class="progress-container progress-warning">
+        <div class="progress mt-2">
+          <div id="percentage" class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="45" aria-valuemin="0"
+            aria-valuemax="100" style="width: 0%;">
           </div>
         </div>
-        <a href="{% url 'info:rec' %}" class="btn btn-primary">submit</a>
       </div>
+      <a href="{% url 'info:rec' %}" class="btn btn-primary">submit</a>
     </div>
   </div>
 
-  {% for pick in pickset %}
-  <div class="card mb-3" style="width:70%; margin-left: auto; margin-right: auto;">
-    {% if pick.name %}
-    <div class="container">
-      {% if pick.profileimg_set.all %}
-      <img src="{{ pick.profileimg_set.first }}" class="rounded mx-auto d-block" alt="{{ pick.name }}"
-        style="width:30%">
-      {% else %}
-      <img src="{% static 'img/default.png' %}" class="rounded mx-auto d-block" alt="{{ pick.name }}" style="width:30%">
-      {% endif %}
-    </div>
-    <div class="card-body">
-      <h4 class="card-title">{{ pick.name }}
-        {% if user in star.user_set.all %}
-        <button id="like-button" class="btn btn-danger btn-link btn-fab btn-fab-mini btn-round">
-          <i data-id="{{ pick.pk }}" class="material-icons">favorite</i></button>
+
+
+  <div class="arraycontainer">
+    <div style="display:inline-flex; align-items:center;">
+    {% for pick in pickset %}
+      <div class="card my-3 mx-3 bg-dark text-white" style="width:20vw; min-width:200px; margin: auto;">
+        {% if pick.name %}
+        {% if pick.profileimg_set.all %}
+        <img src="{{ pick.profileimg_set.first }}" class="card-img rounded mx-auto" alt="{{ pick.name }}">
         {% else %}
-        <button id="like-button" class="btn btn-danger btn-link btn-fab btn-fab-mini btn-round">
-          <i data-id="{{ pick.pk }}" class="material-icons" style="color: transparent;
-          -webkit-text-stroke-width: 1px;
-          -webkit-text-stroke-color: red;">favorite</i></button>
+        <img src="{% static 'img/default.png' %}" class="card-img rounded mx-auto" alt="{{ pick.name }}">
         {% endif %}
-      </h4>
-    </div>
-    {% else %}
-    {% if pick.poster_set.all %}
-    <img src="{{ pick.poster_set.first }}" class="rounded mx-auto mt-3 d-block" alt="{{ pick.title }}"
-      style="width:50%">
-    {% else %}
-    <img src="{% static 'img/default.png' %}" class="rounded mx-auto mt-3 d-block" alt="{{ pick.title }}"
-      style="width:50%">
-    {% endif %}
-    <div class="card-body">
-      <h4 class="card-title">{{ pick.title }}</h4>
-      <p class="card-text">
-        <div data-id="{{ pick.pk }}" id="score-box">
-          {% for i in '12345'|make_list %}
-          {% if score >= forloop.counter %}
-          <i id="{{ forloop.counter }}" class="fa fa-star" aria-hidden="true"
-            onclick="mouseClick({{ forloop.counter }})" style="color: gold; text-shadow: 3px 5px grey"></i>
-          {% else %}
-          <i id="{{ pick.pk }}{{ forloop.counter }}" class="fa fa-star" aria-hidden="true"
-            onclick="mouseClick({{ forloop.counter }}, {{ pick.pk }})"></i>
-          {% endif %}
-          {% endfor %}
+        <div class="content">
+          <h5 class="card-title">{{ pick.name }}</h5>
+          <p class="card-text">
+            {% if user in star.user_set.all %}
+            <button id="like-button" class="btn btn-danger btn-link btn-fab btn-fab-mini btn-round">
+              <i data-id="{{ pick.pk }}" class="material-icons">favorite</i></button>
+            {% else %}
+            <button id="like-button" class="btn btn-danger btn-link btn-fab btn-fab-mini btn-round">
+              <i data-id="{{ pick.pk }}" class="material-icons" style="color: transparent;
+              -webkit-text-stroke-width: 1px;
+              -webkit-text-stroke-color: red;">favorite</i></button>
+            {% endif %}
+          </p>
         </div>
-      </p>
+        {% else %}
+        {% if pick.poster_set.all %}
+        <img src="{{ pick.poster_set.first }}" class="card-img rounded mx-auto" alt="{{ pick.title }}">
+        {% else %}
+        <img src="{% static 'img/default.png' %}" class="card-img rounded mx-auto" alt="{{ pick.title }}">
+        {% endif %}
+        <div class="content">
+          <h5 class="card-title">{{ pick.title }}</h5>
+          <p class="card-text">
+            <div data-id="{{ pick.pk }}" id="score-box">
+              {% for i in '12345'|make_list %}
+              {% if score >= forloop.counter %}
+              <i id="{{ forloop.counter }}" class="fa fa-star" aria-hidden="true"
+                onclick="mouseClick({{ forloop.counter }})" style="color: gold; text-shadow: 3px 5px grey"></i>
+              {% else %}
+              <i id="{{ pick.pk }}{{ forloop.counter }}" class="fa fa-star" aria-hidden="true"
+                onclick="mouseClick({{ forloop.counter }}, {{ pick.pk }})"></i>
+              {% endif %}
+              {% endfor %}
+            </div>
+          </p>
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
     </div>
-    {% endif %}
   </div>
-  {% endfor %}
-</div>
+
+
+
 <script>
   const likeButton = document.querySelectorAll('#like-button')
   let percentage = document.getElementById('percentage')
   let selectNum = 0
+  const selected = new Set
 
   // percentage.style.width
 
-  for (let i = 0; i <= likeButton.length; i++) {
+  for (let i = 0; i < likeButton.length; i++) {
     likeButton[i].addEventListener('click', e => {
       const starId = e.target.dataset.id
       axios.get(`/stars/${starId}/like/`)
         .then(res => {
           if (res.data.liked) {
             // unlike button
-            e.target.removeAttribute("style")
-            selectNum++
-            percentage.setAttribute("style", `width:${selectNum/30 * 100}%`)
+            if (!(selected.has(starId))) {
+              e.target.removeAttribute("style")
+              selectNum++
+              selected.add(starId)
+              percentage.setAttribute("style", `width:${selectNum/20 * 100}%`)
+            }
           } else {
             // like button
             e.target.setAttribute(
               "style", "color: transparent; -webkit-text-stroke-width: 1px; -webkit-text-stroke-color: red;");
             selectNum--
-            percentage.setAttribute("style", `width:${selectNum/30 * 100}%`)
+            selected.delete(starId)
+            percentage.setAttribute("style", `width:${selectNum/20 * 100}%`)
           }
         })
     })
   }
 
   function mouseClick(n, movie_id) {
-    selectNum++
-    percentage.setAttribute("style", `width:${selectNum/30 * 100}%`)
+    if (!(selected.has(movie_id))) {
+      selectNum++
+      selected.add(movie_id)
+      percentage.setAttribute("style", `width:${selectNum/20 * 100}%`)
+    }
     for (let i = n; i > 0; i--) {
       // console.log(i)
       document.getElementById(String(movie_id)+String(i)).setAttribute(
