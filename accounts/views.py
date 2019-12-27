@@ -116,7 +116,6 @@ def pick(request):
         castCandidate = []
         for i in randset:
             castCandidate += i.get_cast_order()
-            print(i.get_cast_order())
         randcastset = random.sample(castCandidate, int(len(castCandidate) * 0.7))
         casts = [Cast.objects.get(pk=i).star for i in randcastset]
         pickset = casts + randset
