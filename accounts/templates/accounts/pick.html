@@ -38,9 +38,9 @@ h5 {
 }
 </style>
 
-
-
-  <div class="card text-center" style="width:80vw; margin:auto;">
+<div class="container">
+  <div class="row" style="margin-top:70px"></div>
+  <div class="card text-center mt-2 mx-auto" style="width:80vw">
     <div class="card-body">
       <h4 class="card-title">Pick your stars and movies!</h4>
       <p class="card-text">
@@ -52,7 +52,7 @@ h5 {
           </div>
         </div>
       </div>
-      <a href="{% url 'info:rec' %}" class="btn btn-primary">submit</a>
+      <a href="{% url 'accounts:detail' request.user.pk %}" class="btn btn-primary">submit</a>
     </div>
   </div>
 
@@ -109,7 +109,7 @@ h5 {
       {% endfor %}
     </div>
   </div>
-
+</div>
 
 
 <script>
