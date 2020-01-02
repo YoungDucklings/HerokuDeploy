@@ -26,12 +26,17 @@ def detail(request, user_pk):
     user = get_object_or_404(get_user_model(), pk=user_pk)
     movies = user.likemovies.all()
     scores = user.score_set.all()
+    popular = Movie.objects.all()[:30]
     scoreli = [0,0,0,0,0]
+    scoresum = 0
     for s in scores:
         scoreli[s.score-1] += 1
-    if sum(scoreli):
-        scoreli = [int(s/sum(scoreli)*100) if int(s/sum(scoreli)*100)>10 else 10 for s in scoreli]
+        scoresum += s.score
+    if scoresum:
+        average = round(scoresum/(len(scores)), 2)
+        scoreli = [int(s/len(scores)*100) if int(s/len(scores)*100)>10 else 10 for s in scoreli]
     else:
+        average = 0
         scoreli = [10,10,10,10,10]
     stars = user.likestars.all()
     comment = user.comment_set.first()
@@ -42,10 +47,12 @@ def detail(request, user_pk):
     context = {
         'user': user,
         'movies': movies,
+        'popular': popular,
         'stars': stars,
         'comment': comment,
         'comment_stars': comment_casts,
         'scoreli':scoreli,
+        'average':average,
     }
     return render(request, 'accounts/detail.html', context)
 

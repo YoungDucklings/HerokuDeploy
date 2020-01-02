@@ -57,7 +57,8 @@
 <style>
   #graph-container {
     height: 50vh;
-    width: 50vw;
+    min-height: 280px;
+    min-width: 280px;
     margin: auto;
   }
   /* Hide scrollbar for Chrome, Safari and Opera */
@@ -72,144 +73,190 @@
   }
   .staravatar {
     object-fit: cover;
-    width: 150px;
-    height: 150px;
+    width: 30vw;
+    height: 30vw;
+    max-width: 150px;
+    max-height: 150px;
     border-radius: 50%;
   }
   .neighboravatar {
     object-fit: cover;
-    width: 150px;
-    height: 150px;
+    width: 30vw;
+    height: 30vw;
+    max-width: 150px;
+    max-height: 150px;
     border-radius: 50%;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
   }
+
+  .movieposter {
+    width: 30vw;
+    max-width: 180px;
+    min-width: 120px;
+  }
+
   .gradebar {
-    height:10px; align-self: flex-end; width:30px; background-color:#12c2e9; margin-left:5px;
+    height:10px; align-self: flex-end; width:30px; background-image: linear-gradient(to bottom, #12c2e9, #c471ed, #f64f59); margin-left:5px;
   }
 </style>
 
-<body class="profile-page sidebar-collapse">
-  {% include '_simple_nav.html' %}
-  {% include '_simple_header.html' %}
+  {% include '_nav.html' %}
 
-  <div class="main main-raised">
-
-    <div class="profile-content">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 ml-auto mr-auto">
-
-            <div class="profile">
-              <div class="avatar">
-                <img src="{% static 'img/duck.png' %}" alt="Circle Image" class="img-raised rounded-circle img-fluid">
-              </div>
-
-              <div class="name">
-                <h3 class="title">{{ user.username }}</h3>
-                <h6>{{user.useremail}}</h6>
-                {% if request.user != user %}
-                {% if request.user in user.followers.all %}
-                <a href="{% url 'accounts:follow' user.pk %}" class="btn btn-link"><i class="fa fa-twitter"></i>
-                  unflock</a>
-                {% else %}
-                <a href="{% url 'accounts:follow' user.pk %}" class="btn btn-link"><i class="fa fa-twitter"></i> flock
-                </a>
-                {% endif %}
-                {% endif %}
-
-              </div>
-            </div>
-
+<div class="container">
+  <div class="row" style="margin-top:70px"></div>
+  <div class="row">
+    <div class="card col-xs-11 col-md-7 mx-auto">
+      <div class="card-body d-flex justify-content-around">
+        <div class="col-xs-5 col-md-3 p-0 d-flex align-self-center">
+          <img src="{% static 'img/duck.png' %}" alt="Circle Image" class="rounded-circle img-fluid">
+        </div>
+        <div class="col-xs-5 col-md-3 p-0">
+          <h4 class="card-title"></h4>
+          <div class="card-subtitle d-flex flex-column justify-content-center">
+            <button class="btn btn-round" data-toggle="modal" data-target="#userDetailModal" style="background-image: linear-gradient(to right, #12c2e9, #c471ed, #f64f59)">{{ user.username }}</button>
+            {% if request.user != user %}
+            {% if request.user in user.followers.all %}
+            <a href="{% url 'accounts:follow' user.pk %}" class="btn btn-link">unflock</a>
+            {% else %}
+            <a href="{% url 'accounts:follow' user.pk %}" class="btn btn-link">flock
+            </a>
+            {% endif %}
+            {% endif %}
           </div>
         </div>
-        <div class="row">
-          <div class="description text-center">
-            <p>
-              {% if user.following.all or user.followers.all%}
-              {{ user.username }} joined flocks of
-              {% for following in user.following.all %}
-              {{ following }} ,
-              {% endfor %}
-              {% for follower in user.followers.all %}
-              {{ follower }} ,
-              {% endfor %}
-              {% else %}
-              {{ user.username }} not flocked with any feather yet
-              {% endif %}
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="card">
-            <div class="card-header card-header-text card-header-primary">
-              <div class="card-text">
-                <h4 class="card-title">Star Dashboard</h4>
-              </div>
-            </div>
-            <div class="card-body">
-              <div data-id="{{ user.pk }}" id="graph-container"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="card mb-3">
-            <div class="arraycontainer my-2 mx-2">
-              <div class="defaultarray" style="display:flex">
-                {% for star in stars %}
-                  <a href="{% url 'stars:detail' star.pk %}">
-                    <div style="display:flex; flex-direction:column;">
-                    <img src="{{ star.profileimg_set.first }}" class="staravatar card-img">
-                    <button class="btn btn-primary btn-sm">{{star}}</button>
-                    </div>
-                  </a>
-                {% endfor %}
-              </div>
-              <div id="stararray" style="display:flex"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="card mb-3">
-            <div class="arraycontainer my-2 mx-2">
-              <div id="moviearray" style="display:flex"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="card">
-            <div class="card-header card-header-text card-header-primary">
-              <div class="card-text">
-                <h4 class="card-title">my movie logs</h4>
-              </div>
-            </div>
-            <div class="card-body">
-              <div class="mb-2" style="display:flex; justify-content:center; height:120px;">
-                {% for score in scoreli %}
-                <div class="gradebar" style="height:{{score}}px"></div>
-                {% endfor %}
-              </div>
-              <div class="arraycontainer mb-2">
-                <div style="display:flex">
-                {% for movie in movies %}
-                <a href="{% url 'movies:detail' movie.pk %}">
-                  <div class="card bg-dark text-white mx-2" style="width:200px">
-                    <img class="card-img" src="{{ movie.poster_set.first }}" alt="Card image">
-                  </div>
-                </a>
-                {% endfor %}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </div>
+
+  <div class="modal fade" id="userDetailModal" tabindex="-1" role="dialog" aria-labelledby="userModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title btn btn-round" id="userModalLabel" style="background-image: linear-gradient(to right, #12c2e9, #c471ed, #f64f59)">{{ user.username }}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h6>feather of {{ user.username }}</h6>
+          <p>
+            {% if user.following.all or user.followers.all%}
+            {{ user.username }} joined flocks of
+            {% for following in user.following.all %}
+            <a href="{% url 'accounts:detail' following.pk %}" class="btn btn-primary btn-link">{{ following }}</a>
+            {% endfor %}
+          </p>
+          <p>
+            {% for follower in user.followers.all %}
+            <a href="{% url 'accounts:detail' follower.pk %}" class="btn btn-primary btn-link">{{ follower }}</a>
+            {% endfor %}
+            {% else %}
+            {{ user.username }} not flocked with any feather yet
+            {% endif %}
+          </p>
+          <h6>average score of {{ user.username }} is {{ average }}</h6>
+          <div class="mb-2" style="display:flex; justify-content:center; height:120px;">
+            {% for score in scoreli %}
+            <div class="gradebar" style="height:{{score}}px"></div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row my-0">
+    <div class="card col-xs-11 col-md-7 mx-auto mt-3">
+      <div class="card-header card-header-text card-header-primary"  style="background-image: linear-gradient(to right, #12c2e9, #c471ed, #f64f59)">
+        <div class="card-text">
+          <h4 class="card-title">Star Dashboard</h4>
+        </div>
+      </div>
+      <div class="card-body px-0">
+        <div data-id="{{ user.pk }}" id="graph-container"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row my-0">
+    <div class="card col-xs-11 col-md-7 mx-auto">
+      <div class="card-body">
+        <h4 class="card-title">Who you are followings</h4>
+        <div class="arraycontainer mb-2">
+          <div class="defaultarray" style="display:flex">
+            {% for star in stars %}
+              <div class="mx-1" style="display:flex; flex-direction:column;">
+                <img src="{{ star.profileimg_set.first }}" class="staravatar card-img">
+                <a href="{% url 'stars:detail' star.pk %}"></a><button class="btn btn-primary btn-sm">{{star}}</button></a>
+              </div>
+            {% endfor %}
+          </div>
+          <div id="stararray" style="display:flex"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row my-0">
+    <div class="card col-xs-11 col-md-7 mx-auto">
+      <div class="card-body">
+        <h4 class="card-title">What you've seen before</h4>
+        <div class="arraycontainer mb-2">
+          <div class="defaultarray" style="display:flex">
+            {% for movie in movies %}
+            <div class="mx-1">
+              <a href="{% url 'movies:detail' movie.pk %}">
+                <img src="{{ movie.poster_set.first }}" alt="Card image" class="movieposter">
+              </a>
+            </div>
+            {% endfor %}
+          </div>
+          <div id="moviearray" style="display:flex"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row my-0">
+    <div class="card col-xs-11 col-md-7 mx-auto">
+      <div class="card-body mt-0">
+        <h4 class="card-title">Check out which movie you have missed of your stars</h4>
+        <div class="arraycontainer mb-2">
+          {% for star in stars %}
+            {% for cast in star.cast_set.all %}
+              {% if cast.movie not in movies %}
+              <a href="{% url 'movies:detail' cast.movie.pk %}"><img src="{{ cast.movie.poster_set.first }}" class="movieposter"></a>
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row my-0">
+    <div class="card col-xs-11 col-md-7 mx-auto">
+      <div class="card-body mt-0">
+        <h4 class="card-title">People also love these movies</h4>
+        <div class="arraycontainer mb-2">
+          {% for pop in popular %}
+            {% if pop not in movies %}
+              {% if pop.poster_set.all %}
+              <a href="{% url 'movies:detail' pop.pk %}"><img src="{{ pop.poster_set.first }}"  class="movieposter"></a>
+              {% else %}
+              <a href="{% url 'movies:detail' pop.pk %}"><img src="{% static 'img/default.png' %}"  class="movieposter"></a>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div> 
+  </div>
+
+</div>
+
+
 
 <script>
   const userpk = document.querySelector('#graph-container').dataset.id
@@ -227,7 +274,7 @@
       const neighborColor = '#c471ed'
       const movieColor = '#12c2e9'
       const background = '#eeeeee'
-      const edgeColor = '#c471ed'
+      const edgeColor = '#D3D3D3'
       let graph = {
         nodes: [],
         edges: []
@@ -369,11 +416,11 @@
               let movieimg = document.createElement("a")
               movieimg.href = `/movies/${n.id}/`
               if (movies.includes(n.id)){
-                movieimg.innerHTML = `<div class="card bg-dark text-white mx-2" style="width:200px">
-                <img class="card-img" src="${movieObject[n.id]}" alt="Card image"></div>`
+                movieimg.innerHTML = `<div class="mx-1">
+                <img class="movieposter" src="${movieObject[n.id]}" alt="Card image"></div>`
               } else {
-                movieimg.innerHTML = `<div class="card bg-dark text-white mx-2" style="width:200px">
-                <img class="card-img" src="${movieObject[n.id]}" alt="Card image" style="-webkit-filter: grayscale(100%);
+                movieimg.innerHTML = `<div class="mx-1">
+                <img class="movieposter" src="${movieObject[n.id]}" alt="Card image" style="-webkit-filter: grayscale(100%);
                 filter: grayscale(100%);"></div>`
               }
               
