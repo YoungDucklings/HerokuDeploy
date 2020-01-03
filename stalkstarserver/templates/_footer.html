@@ -1,22 +1,30 @@
 {% load static %}
 {% load bootstrap4 %}
-
-<footer class="footer" data-background-color="black">
-    <div class="container">
-        <nav class="float-left">
-            <ul>
-                <li>
-                    <a href="https://github.com/YoungDucklings/HerokuDeploy">
-                        Made by YoungDucklings
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <div class="copyright float-right">
-            &copy;
-            <script>
-                document.write(new Date().getFullYear())
-            </script>
-        </div>
+<style>
+footer{
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  line-height: 0px;
+  bottom: 0%; 
+  color: white; 
+  background-color: black;
+}
+</style>
+<footer>
+  <div class="container">
+    <nav class="float-left">
+      <ul>
+        <li>
+          <a href="https://github.com/YoungDucklings/HerokuDeploy" target="_blank">Made by YoungDucklings</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="copyright float-right">
+      &copy;
+      <script>
+        document.write(new Date().getFullYear())
+      </script>
     </div>
+  </div>
 </footer>
