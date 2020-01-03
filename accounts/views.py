@@ -4,6 +4,7 @@ from django.contrib.auth import login as auth_login
 from django.contrib.auth import logout as auth_logout
 from django.contrib.auth import get_user_model, authenticate
 from django.contrib.auth.decorators import login_required
+# from django.http import JsonResponse
 from .models import User
 from movies.models import Movie
 from stars.models import Star, ProfileImg, Cast, Coworker
@@ -133,15 +134,12 @@ def pick(request):
         return render(request, 'accounts/pick.html', context)
 
 
-def test(request, user_pk):
-    user = get_object_or_404(get_user_model(), pk=user_pk)
-    movies = user.likemovies.all()
-    stars = user.likestars.all()
+# def test(request, user_pk):
+#     user = get_object_or_404(get_user_model(), pk=user_pk)
+#     movies = user.likemovies.all()
+#     stars = user.likestars.all()
 
-    context = {
-        'test':1,
-    }
-    return JsonResponse(context)
-
-
-
+#     context = {
+#         'test':1,
+#     }
+#     return JsonResponse(context)

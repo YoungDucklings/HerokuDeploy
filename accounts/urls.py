@@ -11,6 +11,5 @@ urlpatterns = [
     path('<int:user_pk>/', views.detail, name='detail'),
     path('pick/', views.pick, name='pick'),
     path('<int:user_pk>/follow/', views.follow, name='follow'),
-    path('test/<int:user_pk>/', views.test, name='test'),
-
+    # path('test/<int:user_pk>/', views.test, name='test'),
 ]
