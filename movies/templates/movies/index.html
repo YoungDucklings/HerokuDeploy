@@ -10,7 +10,7 @@
   </div>
   <div class="row">
     {% for movie in movies %}
-    <div class="col-2">
+    <div class="col-lg-2 col-md-4 col-sm-12">
       {% if movie.poster_set.all %}
       <a href="{% url 'movies:detail' movie.pk %}"><img src="{{ movie.poster_set.first }}" alt="{{ movie }}"
           width="150px"></a>
