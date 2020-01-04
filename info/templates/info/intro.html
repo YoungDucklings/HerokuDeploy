@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block body %}
-
-{% include '_simple_nav.html' %}
+{% include '_nav.html' %}
+<style>
+nav{
+  background-image: none !important;
+}
+</style>
 {% include '_big_header.html' %}
 {% endblock %}
