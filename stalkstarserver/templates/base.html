@@ -15,13 +15,22 @@
   <!-- ... -->
 </head>
 
-  <title>YoungDuckling</title>
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-  <link href="{% static 'css/material-kit.css' %}" rel="stylesheet" />
+<title>YoungDuckling</title>
+<link rel="stylesheet" type="text/css"
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+<link href="{% static 'css/material-kit.css' %}" rel="stylesheet" />
 </head>
 
 <body>
+  <style>
+    #content-container {
+      padding: 70px 0px;
+    }
+    img {
+      width: 100%;
+    }
+  </style>
   {% block body %}
   {% endblock %}
   {% include '_footer.html' %}

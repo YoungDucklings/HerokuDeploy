@@ -3,13 +3,13 @@
 
 {% block body %}
 {% include '_nav.html' %}
-<div class="container my-3">
+<div id="content-container" class="container my-3">
   <h1 class="title">Search Result</h1>
   {% if stars %}
   <h2>Stars</h2>
   <div class="row">
     {% for star in stars %}
-    <div class="col-2">
+    <div class="col-lg-2 col-md-4 col-sm-12">
       <a href="{% url 'stars:detail' star.pk %}">
       {% if star.profileimg_set.all %}
       <img src="{{ star.profileimg_set.first }}" alt="{{ star }}" width="150px">

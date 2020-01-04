@@ -20,10 +20,7 @@
 </div>
 
 <div id="yet" class="my-3">
-  <div class="container">
-
-    <h1 class="title text-crenter">{{ movie.title }}</h1>
-
+  <div id="content-container" class="container">
     <div class="card bg-dark text-white">
 
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -43,7 +40,7 @@
       </div>
 
       <div class="card-img-overlay">
-        <h4 class="card-title">{{ movie.original_title }}</h4>
+        <h2 class="card-title">{{ movie.original_title }}</h2>
         <p class="card-text">
           <p class="card-text">
             <div data-id="{{ movie.pk }}" id="score-box">
