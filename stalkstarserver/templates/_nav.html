@@ -48,15 +48,19 @@
           <a class="nav-link" href="{% url 'accounts:signup' %}">SignUp</a>
         </li>
         {% endif %}
+        <li class="nav-item">
+          <form action="{% url 'info:search' %}" class="form-inline ml-auto">
+            <div class="mx-3">
+              <div class="form-group no-border">
+                <input name="query" type="text" class="form-control" placeholder="Search">
+              </div>
+              <button type="submit" class="btn btn-white btn-just-icon btn-round">
+                <i class="material-icons">search</i>
+              </button>
+            </div>
+          </form>
+        </li>
       </ul>
-      <form action="{% url 'info:search' %}" class="form-inline ml-auto">
-        <div class="form-group no-border">
-          <input name="query" type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-white btn-just-icon btn-round">
-          <i class="material-icons">search</i>
-        </button>
-      </form>
     </div>
   </div>
 </nav>
