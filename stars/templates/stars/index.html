@@ -3,7 +3,7 @@
 
 {% block body %}
 {% include '_nav.html' %}
-<div class="container">
+<div id="content-container" class="container">
   <div class="my-3">
     <h1 class="title d-inline">Star List</h1>
     <a class="m-3" href="{% url 'stars:create' %}"><button class="btn btn-primary">Add Star</button></a>
@@ -30,5 +30,4 @@
     {% endfor %}
   </div>
 </div>
-<hr>
 {% endblock %}
