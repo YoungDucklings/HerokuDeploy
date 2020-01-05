@@ -101,37 +101,77 @@
 
 <div id="content-container" class="container">
   <div class="row">
-    <div class="card col-xs-11 col-md-7 mx-auto">
-      <div class="card-body d-flex justify-content-around">
-        <div class="col-xs-5 col-md-3 p-0 d-flex align-self-center">
-          <img src="{% static 'img/duck.png' %}" alt="Circle Image" class="rounded-circle img-fluid">
-        </div>
-        <div class="col-xs-5 col-md-3 p-0">
-          <h4 class="card-title"></h4>
-          <div class="card-subtitle d-flex flex-column justify-content-center">
-            <button class="btn btn-round" data-toggle="modal" data-target="#userDetailModal"
-              style="background-image: linear-gradient(to right, #12c2e9, #c471ed, #f64f59)">{{ user.username }}</button>
-            {% if request.user != user %}
-            {% if request.user in user.followers.all %}
-            <a href="{% url 'accounts:follow' user.pk %}" class="btn btn-link">unflock</a>
-            {% else %}
-            <a href="{% url 'accounts:follow' user.pk %}" class="btn btn-link">flock
-            </a>
-            {% endif %}
-            {% endif %}
+    <div class="row col-lg-6 col-12">
+      <div class="card col-12 p-0 mb-0" style="height: 15rem;">
+        <div class="card-body d-flex justify-content-around">
+          <div class="col-6 p-0 d-flex align-self-center">
+            <img src="{% static 'img/duck.png' %}" alt="Circle Image" class="rounded-circle img-fluid">
           </div>
+          <div class="col-6 p-0 text-center" style="line-height: 50%;">
+            <h2 class="card-title">{{ user.username }}</h2>
+            <div class="card-subtitle d-flex flex-column justify-content-center">
+              <button class="btn btn-round" data-toggle="modal" data-target="#userDetailModal"
+                style="background-image: linear-gradient(to right, #f64f59, #f64f59, #f64f59)">Information</button>
+              {% if request.user != user %}
+              {% if request.user in user.followers.all %}
+              <a href="{% url 'accounts:follow' user.pk %}" class="btn btn-link">unflock</a>
+              {% else %}
+              <a href="{% url 'accounts:follow' user.pk %}" class="btn btn-link">flock
+              </a>
+              {% endif %}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Who you are followings -->
+      <div class="card w-100">
+        <div class="card-body py-0 mt-0">
+          <h4 class="card-title">Who you are followings</h4>
+          <div class="mb-2">
+            <div class="defaultarray array-container" style="display:flex; overflow-x: auto;">
+              {% for star in stars %}
+              <div class="mx-2" style="display:flex; flex-direction:column;">
+                <img src="{{ star.profileimg_set.first }}" class="staravatar card-img">
+                <a href="{% url 'stars:detail' star.pk %}">
+                  <button class="btn btn-primary btn-sm w-100"
+                    style="background-image: linear-gradient(to right, #c471ed, #c471ed, #c471ed)">
+                    {{ star }}
+                  </button>
+                </a>
+              </div>
+              {% endfor %}
+            </div>
+            <div id="stararray" class="mx-3" style="display:flex; overflow-x: auto;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- dashboard -->
+    <div class="col-lg-6 col-12">
+      <div class="card col-12 mx-auto" style="height: 35rem;">
+        <div class="card-header card-header-text mt-3"
+          style="background-image: linear-gradient(to right, #c471ed, #c471ed, #c471ed)">
+          <div class="card-text text-center">
+            <h4 class="card-title">Star Dashboard</h4>
+          </div>
+        </div>
+        <div class="card-body px-0">
+          <div data-id="{{ user.pk }}" id="graph-container" style="height: 100%"></div>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- info modal -->
   <div class="modal fade" id="userDetailModal" tabindex="-1" role="dialog" aria-labelledby="userModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title btn btn-round" id="userModalLabel"
-            style="background-image: linear-gradient(to right, #12c2e9, #c471ed, #f64f59)">{{ user.username }}</h5>
+          <h2 class="title">{{ user.username }}</h2>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -165,47 +205,35 @@
   </div>
 
   <div class="row my-0">
-    <div class="card col-xs-11 col-md-7 mx-auto">
-      <div class="card-header card-header-text card-header-primary"
-        style="background-image: linear-gradient(to right, #12c2e9, #c471ed, #f64f59)">
-        <div class="card-text">
-          <h4 class="card-title">Star Dashboard</h4>
+    <div class="card col-12 mx-auto">
+      <!-- dropdown menu -->
+      <div class="dropdown">
+        <button class="btn btn-info dropdown-toggle col-12" type="button" id="dropdownMenu2" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Menu
+        </button>
+        <div class="dropdown-menu col-12" aria-labelledby="dropdownMenu2">
+          <button class="dropdown-item w-100 justify-content-center tablinks"
+            onclick="buttonClick(event, 'seen-movie')">
+            What you've seen before
+          </button>
+          <button class="dropdown-item w-100 justify-content-center tablinks"
+            onclick="buttonClick(event, 'missed-movie')">
+            Check out which movie you have missed of your stars
+          </button>
+          <button class="dropdown-item w-100 justify-content-center tablinks"
+            onclick="buttonClick(event, 'popular-movie')">
+            People also love these movies
+          </button>
         </div>
       </div>
-      <div class="card-body px-0">
-        <div data-id="{{ user.pk }}" id="graph-container"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row my-0">
-    <div class="card col-xs-11 col-md-7 mx-auto">
-      <div class="card-body">
-        <h4 class="card-title">Who you are followings</h4>
-        <div class="mb-2">
-          <div class="defaultarray array-container" style="display:flex; overflow-x: auto;">
-            {% for star in stars %}
-            <div class="mx-2" style="display:flex; flex-direction:column;">
-              <img src="{{ star.profileimg_set.first }}" class="staravatar card-img">
-              <a href="{% url 'stars:detail' star.pk %}"></a><button
-                class="btn btn-primary btn-sm">{{star}}</button></a>
-            </div>
-            {% endfor %}
-          </div>
-          <div id="stararray" class="mx-2" style="display:flex; overflow-x: auto;"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row my-0">
-    <div class="card col-xs-11 col-md-7 mx-auto">
-      <div class="card-body">
+      <!-- menu 1 -->
+      <div id="seen-movie" class="card-body tabcontent" style="display: block;">
         <h4 class="card-title">What you've seen before</h4>
         <div class="mb-2">
           <div class="defaultarray array-container" style="display:flex; overflow-x: auto;">
             {% for movie in movies %}
-            <div class="mx-1">
+            <div class="mx-2">
               <a href="{% url 'movies:detail' movie.pk %}">
                 <img src="{{ movie.poster_set.first }}" alt="Card image" class="movieposter">
               </a>
@@ -215,42 +243,40 @@
           <div id="moviearray" style="display:flex; overflow-x: auto;"></div>
         </div>
       </div>
-    </div>
-  </div>
-
-  <div class="row my-0">
-    <div class="card col-xs-11 col-md-7 mx-auto">
-      <div class="card-body mt-0">
+      <!-- menu 2 -->
+      <div id="missed-movie" class="card-body tabcontent" style="display: none;">
         <h4 class="card-title">Check out which movie you have missed of your stars</h4>
         <div class="mb-2">
           <div class="defaultarray array-container" style="display:flex; overflow-x: auto;">
             {% for star in stars %}
             {% for cast in star.cast_set.all %}
             {% if cast.movie not in movies %}
-            <a href="{% url 'movies:detail' cast.movie.pk %}"><img src="{{ cast.movie.poster_set.first }}"
-                class="movieposter"></a>
+            <div class="mx-2">
+              <a href="{% url 'movies:detail' cast.movie.pk %}">
+                <img src="{{ cast.movie.poster_set.first }}" class="movieposter">
+              </a>
+            </div>
             {% endif %}
             {% endfor %}
             {% endfor %}
           </div>
         </div>
       </div>
-    </div>
-  </div>
-
-  <div class="row my-0">
-    <div class="card col-xs-11 col-md-7 mx-auto">
-      <div class="card-body mt-0">
+      <!-- menu 3 -->
+      <div id="popular-movie" class="card-body tabcontent" style="display: none;">
         <h4 class="card-title">People also love these movies</h4>
         <div class="mb-2">
           <div class="defaultarray array-container" style="display:flex; overflow-x: auto;">
             {% for pop in popular %}
             {% if pop not in movies %}
             {% if pop.poster_set.all %}
-            <a href="{% url 'movies:detail' pop.pk %}"><img src="{{ pop.poster_set.first }}" class="movieposter"></a>
+            <a href="{% url 'movies:detail' pop.pk %}">
+              <img src="{{ pop.poster_set.first }}" class="movieposter mx-2">
+            </a>
             {% else %}
-            <a href="{% url 'movies:detail' pop.pk %}"><img src="{% static 'img/default.png' %}"
-                class="movieposter"></a>
+            <a href="{% url 'movies:detail' pop.pk %}">
+              <img src="{% static 'img/default.png' %}" class="movieposter mx-2">
+            </a>
             {% endif %}
             {% endif %}
             {% endfor %}
@@ -259,11 +285,24 @@
       </div>
     </div>
   </div>
-
 </div>
+<!-- menu js -->
+<script>
+  function buttonClick(e, tabName) {
+    let tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    e.currentTarget.className += " active";
+  }
+</script>
 
-
-
+<!-- dashboard js -->
 <script>
   const userpk = document.querySelector('#graph-container').dataset.id
   const likestarset = []
@@ -469,6 +508,4 @@
     })
 
 </script>
-
-
 {% endblock %}
