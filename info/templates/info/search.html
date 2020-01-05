@@ -4,56 +4,69 @@
 {% block body %}
 {% include '_nav.html' %}
 <div id="content-container" class="container my-3">
-  <h1 class="title">Search Result</h1>
-  {% if stars %}
-  <h2>Stars</h2>
-  <div class="row">
-    {% for star in stars %}
-    <div class="col-lg-2 col-md-4 col-sm-12">
-      <a href="{% url 'stars:detail' star.pk %}">
-      {% if star.profileimg_set.all %}
-      <img src="{{ star.profileimg_set.first }}" alt="{{ star }}" width="150px">
-      {% else %}
-      <img src="{% static 'img/default.png' %}" alt="{{ star }}" width="150px">
-      {% endif %}
-      </a><br>
-      {{ star }}
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header card-header-text card-header-primary">
+        <div class="card-text">
+          <h4 class="card-title">Search Result</h4>
+        </div>
+      </div>
+      <div class="card-body">
+        {% if stars %}
+        <h2 class="title">Stars</h2 class="title">
+        <div class="row">
+          {% for star in stars %}
+          <div class="col-lg-2 col-md-3 col-sm-6 text-center">
+            <a href="{% url 'stars:detail' star.pk %}">
+              {% if star.profileimg_set.all %}
+              <img src="{{ star.profileimg_set.first }}" alt="{{ star }}"
+                style="object-fit: cover; max-width: 150px; max-height: 150px; border-radius: 50%;">
+              {% else %}
+              <img src="{% static 'img/default.png' %}" alt="{{ star }}"
+                style="object-fit: cover; max-width: 150px; max-height: 150px; border-radius: 50%;">
+              {% endif %}
+            </a><br>
+            <p>{{ star }}</p>
+          </div>
+          {% endfor %}
+        </div>
+        <hr>
+        {% endif %} {% if movies %}
+        <h2 class="title">Movies</h2>
+        <div class="row">
+          {% for movie in movies %}
+          <div class="col-lg-2 col-md-3 col-sm-6 text-center title">
+            <a href="{% url 'movies:detail' movie.pk %}">
+              {% if movie.poster_set.all %}
+              <img src="{{ movie.poster_set.first }}" alt="{{ star }}" class="rounded">
+              {% else %}
+              <img src="{% static 'img/default.png' %}" alt="{{ star }}" class="rounded">
+              {% endif %}
+              {{ movie }}
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+        <hr>
+        {% endif %}
+        {% if users %}
+        <h2 class="title">Users</h2 class="title">
+        <div class="row">
+          {% for flock in users %}
+          <div class="col-lg-2 col-md-3 col-sm-6 text-center">
+            <p class="title">
+              <a href="{% url 'accounts:detail' flock.pk %}">
+                <img src="{% static 'img/duck.png' %}"
+                  style="object-fit: cover; max-width: 150px; max-height: 150px; border-radius: 50%;">
+                {{ flock.username }}
+              </a>
+            </p>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
     </div>
-    {% endfor %}
   </div>
-  {% endif %}
-
-  {% if movies %}
-  <h2>Movies</h2>
-  <div class="row">
-    {% for movie in movies %}
-    <div class="col-2">
-      <a href="{% url 'movies:detail' movie.pk %}">
-          {% if movie.poster_set.all %}
-          <img src="{{ movie.poster_set.first }}" alt="{{ star }}" width="150px">
-          {% else %}
-          <img src="{% static 'img/default.png' %}" alt="{{ star }}" width="150px">
-          {% endif %}
-        </a><br>
-      {{ movie }}
-    </div>
-    {% endfor %}
-  </div>
-  {% endif %}
-
-
-  {% if users %}
-  <h2>Users</h2>
-  <div class="row">
-    {% for flock in users %}
-    <li>
-      <h3 class="title d-inline">
-        <a href="{% url 'accounts:detail' flock.pk %}">{{ flock.username }}</a><br>
-      </h3>
-
-    </li>
-    {% endfor %}
-  </div>
-  {% endif %}
 </div>
 {% endblock %}
