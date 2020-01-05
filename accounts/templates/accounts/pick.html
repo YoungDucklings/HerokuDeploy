@@ -7,23 +7,6 @@
 
 {% include '_nav.html' %}
 <style>
-  .arraycontainer::-webkit-scrollbar {
-    display: none;
-  }
-  
-  /* Hide scrollbar for IE and Edge */
-  .arraycontainer {
-    -ms-overflow-style: none;
-    width: auto; overflow-x: auto; white-space: nowrap;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    border-radius: 0.25rem;
-    width:80vw; margin:auto;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3), 0 3px 10px 0 rgba(0, 0, 0, 0.1);
-    margin-top: 5vh;
-  }
-
   .content {
   position: absolute;
   bottom: 0;
@@ -38,9 +21,8 @@ h5 {
 }
 </style>
 
-<div class="container">
-  <div class="row" style="margin-top:70px"></div>
-  <div class="card text-center mt-2 mx-auto" style="width:80vw">
+<div id="content-container" class="container">
+  <div class="card col-12 text-center mt-2 mx-auto">
     <div class="card-body">
       <h4 class="card-title">Pick your stars and movies!</h4>
       <p class="card-text">
@@ -58,7 +40,7 @@ h5 {
 
 
 
-  <div class="arraycontainer">
+  <div class="array-container col-12" style="overflow-x:auto; white-space: nowrap;">
     <div style="display:inline-flex; align-items:center;">
     {% for pick in pickset %}
       <div class="card my-3 mx-3 bg-dark text-white" style="width:20vw; min-width:200px; margin: auto;">

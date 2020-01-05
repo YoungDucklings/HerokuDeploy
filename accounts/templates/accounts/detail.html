@@ -61,16 +61,7 @@
     min-width: 280px;
     margin: auto;
   }
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  .arraycontainer::-webkit-scrollbar {
-    display: none;
-  }
 
-  /* Hide scrollbar for IE and Edge */
-  .arraycontainer {
-    -ms-overflow-style: none;
-    width: auto; overflow-x: auto; white-space: nowrap;
-  }
   .staravatar {
     object-fit: cover;
     width: 30vw;
@@ -79,6 +70,7 @@
     max-height: 150px;
     border-radius: 50%;
   }
+
   .neighboravatar {
     object-fit: cover;
     width: 30vw;
@@ -97,14 +89,17 @@
   }
 
   .gradebar {
-    height:10px; align-self: flex-end; width:30px; background-image: linear-gradient(to bottom, #12c2e9, #c471ed, #f64f59); margin-left:5px;
+    height: 10px;
+    align-self: flex-end;
+    width: 30px;
+    background-image: linear-gradient(to bottom, #12c2e9, #c471ed, #f64f59);
+    margin-left: 5px;
   }
 </style>
 
-  {% include '_nav.html' %}
+{% include '_nav.html' %}
 
 <div id="content-container" class="container">
-  <div class="row" style="margin-top:70px"></div>
   <div class="row">
     <div class="card col-xs-11 col-md-7 mx-auto">
       <div class="card-body d-flex justify-content-around">
@@ -114,7 +109,8 @@
         <div class="col-xs-5 col-md-3 p-0">
           <h4 class="card-title"></h4>
           <div class="card-subtitle d-flex flex-column justify-content-center">
-            <button class="btn btn-round" data-toggle="modal" data-target="#userDetailModal" style="background-image: linear-gradient(to right, #12c2e9, #c471ed, #f64f59)">{{ user.username }}</button>
+            <button class="btn btn-round" data-toggle="modal" data-target="#userDetailModal"
+              style="background-image: linear-gradient(to right, #12c2e9, #c471ed, #f64f59)">{{ user.username }}</button>
             {% if request.user != user %}
             {% if request.user in user.followers.all %}
             <a href="{% url 'accounts:follow' user.pk %}" class="btn btn-link">unflock</a>
@@ -129,11 +125,13 @@
     </div>
   </div>
 
-  <div class="modal fade" id="userDetailModal" tabindex="-1" role="dialog" aria-labelledby="userModalLabel" aria-hidden="true">
+  <div class="modal fade" id="userDetailModal" tabindex="-1" role="dialog" aria-labelledby="userModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title btn btn-round" id="userModalLabel" style="background-image: linear-gradient(to right, #12c2e9, #c471ed, #f64f59)">{{ user.username }}</h5>
+          <h5 class="modal-title btn btn-round" id="userModalLabel"
+            style="background-image: linear-gradient(to right, #12c2e9, #c471ed, #f64f59)">{{ user.username }}</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -167,8 +165,9 @@
   </div>
 
   <div class="row my-0">
-    <div class="card col-xs-11 col-md-7 mx-auto mt-3">
-      <div class="card-header card-header-text card-header-primary"  style="background-image: linear-gradient(to right, #12c2e9, #c471ed, #f64f59)">
+    <div class="card col-xs-11 col-md-7 mx-auto">
+      <div class="card-header card-header-text card-header-primary"
+        style="background-image: linear-gradient(to right, #12c2e9, #c471ed, #f64f59)">
         <div class="card-text">
           <h4 class="card-title">Star Dashboard</h4>
         </div>
@@ -183,16 +182,17 @@
     <div class="card col-xs-11 col-md-7 mx-auto">
       <div class="card-body">
         <h4 class="card-title">Who you are followings</h4>
-        <div class="arraycontainer mb-2">
-          <div class="defaultarray" style="display:flex">
+        <div class="mb-2">
+          <div class="defaultarray array-container" style="display:flex; overflow-x: auto;">
             {% for star in stars %}
-              <div class="mx-1" style="display:flex; flex-direction:column;">
-                <img src="{{ star.profileimg_set.first }}" class="staravatar card-img">
-                <a href="{% url 'stars:detail' star.pk %}"></a><button class="btn btn-primary btn-sm">{{star}}</button></a>
-              </div>
+            <div class="mx-2" style="display:flex; flex-direction:column;">
+              <img src="{{ star.profileimg_set.first }}" class="staravatar card-img">
+              <a href="{% url 'stars:detail' star.pk %}"></a><button
+                class="btn btn-primary btn-sm">{{star}}</button></a>
+            </div>
             {% endfor %}
           </div>
-          <div id="stararray" style="display:flex"></div>
+          <div id="stararray" class="mx-2" style="display:flex; overflow-x: auto;"></div>
         </div>
       </div>
     </div>
@@ -202,8 +202,8 @@
     <div class="card col-xs-11 col-md-7 mx-auto">
       <div class="card-body">
         <h4 class="card-title">What you've seen before</h4>
-        <div class="arraycontainer mb-2">
-          <div class="defaultarray" style="display:flex">
+        <div class="mb-2">
+          <div class="defaultarray array-container" style="display:flex; overflow-x: auto;">
             {% for movie in movies %}
             <div class="mx-1">
               <a href="{% url 'movies:detail' movie.pk %}">
@@ -212,7 +212,7 @@
             </div>
             {% endfor %}
           </div>
-          <div id="moviearray" style="display:flex"></div>
+          <div id="moviearray" style="display:flex; overflow-x: auto;"></div>
         </div>
       </div>
     </div>
@@ -222,14 +222,17 @@
     <div class="card col-xs-11 col-md-7 mx-auto">
       <div class="card-body mt-0">
         <h4 class="card-title">Check out which movie you have missed of your stars</h4>
-        <div class="arraycontainer mb-2">
-          {% for star in stars %}
+        <div class="mb-2">
+          <div class="defaultarray array-container" style="display:flex; overflow-x: auto;">
+            {% for star in stars %}
             {% for cast in star.cast_set.all %}
-              {% if cast.movie not in movies %}
-              <a href="{% url 'movies:detail' cast.movie.pk %}"><img src="{{ cast.movie.poster_set.first }}" class="movieposter"></a>
-              {% endif %}
+            {% if cast.movie not in movies %}
+            <a href="{% url 'movies:detail' cast.movie.pk %}"><img src="{{ cast.movie.poster_set.first }}"
+                class="movieposter"></a>
+            {% endif %}
             {% endfor %}
-          {% endfor %}
+            {% endfor %}
+          </div>
         </div>
       </div>
     </div>
@@ -239,19 +242,22 @@
     <div class="card col-xs-11 col-md-7 mx-auto">
       <div class="card-body mt-0">
         <h4 class="card-title">People also love these movies</h4>
-        <div class="arraycontainer mb-2">
-          {% for pop in popular %}
+        <div class="mb-2">
+          <div class="defaultarray array-container" style="display:flex; overflow-x: auto;">
+            {% for pop in popular %}
             {% if pop not in movies %}
-              {% if pop.poster_set.all %}
-              <a href="{% url 'movies:detail' pop.pk %}"><img src="{{ pop.poster_set.first }}"  class="movieposter"></a>
-              {% else %}
-              <a href="{% url 'movies:detail' pop.pk %}"><img src="{% static 'img/default.png' %}"  class="movieposter"></a>
-              {% endif %}
+            {% if pop.poster_set.all %}
+            <a href="{% url 'movies:detail' pop.pk %}"><img src="{{ pop.poster_set.first }}" class="movieposter"></a>
+            {% else %}
+            <a href="{% url 'movies:detail' pop.pk %}"><img src="{% static 'img/default.png' %}"
+                class="movieposter"></a>
             {% endif %}
-          {% endfor %}
+            {% endif %}
+            {% endfor %}
+          </div>
         </div>
       </div>
-    </div> 
+    </div>
   </div>
 
 </div>
@@ -351,11 +357,11 @@
             const eefound = graph.edges.some(el => el.id === stars[i].coworker_from[j].movie.pk + '_' + stars[i].coworker_from[j].to_star.pk)
             if (!eefound) {
               graph.edges.push({
-              id: stars[i].coworker_from[j].movie.pk + '_' + stars[i].coworker_from[j].to_star.pk,
-              source: stars[i].coworker_from[j].movie.pk,
-              target: stars[i].coworker_from[j].to_star.pk,
-              size: 1,
-              color: edgeColor
+                id: stars[i].coworker_from[j].movie.pk + '_' + stars[i].coworker_from[j].to_star.pk,
+                source: stars[i].coworker_from[j].movie.pk,
+                target: stars[i].coworker_from[j].to_star.pk,
+                size: 1,
+                color: edgeColor
               })
             }
           }
@@ -375,7 +381,7 @@
         let point = 1
         while (point < nStack.length) {
           s.graph.neighborhood(nStack[point]).nodes.forEach(el => {
-            if (!(nStack.includes(el.id))) {nStack.push(el.id)}
+            if (!(nStack.includes(el.id))) { nStack.push(el.id) }
           })
           point += 1
         }
@@ -388,20 +394,20 @@
       dragListener.bind('drag', function (event) { });
       dragListener.bind('drop', function (event) { });
       dragListener.bind('dragend', function (event) { });
-      
+
       // initialize the neighborhood
-      s.bind('clickNode', function(e) {
+      s.bind('clickNode', function (e) {
         document.querySelectorAll('div.defaultarray').forEach(el => el.style.display = "none")
         starArray.innerHTML = ""
         movieArray.innerHTML = ""
         let nodeId = e.data.node.id,
-            toKeep = dfs(s.graph.neighborhood(nodeId).nodes);
+          toKeep = dfs(s.graph.neighborhood(nodeId).nodes);
 
-        s.graph.nodes().forEach(function(n) {
-          if (toKeep.includes(n.id)){
+        s.graph.nodes().forEach(function (n) {
+          if (toKeep.includes(n.id)) {
             let starimg = document.createElement("a")
             starimg.href = `/stars/${n.id}/`
-            if (likestarset.includes(n.id)){
+            if (likestarset.includes(n.id)) {
               n.color = myStarColor
               starimg.innerHTML = `<div style="display:flex; flex-direction:column;">
               <img src="${starObject[n.id]}" class="staravatar"/>
@@ -415,7 +421,7 @@
               n.color = movieColor
               let movieimg = document.createElement("a")
               movieimg.href = `/movies/${n.id}/`
-              if (movies.includes(n.id)){
+              if (movies.includes(n.id)) {
                 movieimg.innerHTML = `<div class="mx-1">
                 <img class="movieposter" src="${movieObject[n.id]}" alt="Card image"></div>`
               } else {
@@ -423,17 +429,17 @@
                 <img class="movieposter" src="${movieObject[n.id]}" alt="Card image" style="-webkit-filter: grayscale(100%);
                 filter: grayscale(100%);"></div>`
               }
-              
+
               movieArray.appendChild(movieimg)
             }
             starArray.appendChild(starimg)
-            } else {
-              n.color = '#eee'
-            }
+          } else {
+            n.color = '#eee'
+          }
         });
 
-        s.graph.edges().forEach(function(e) {
-          if ((toKeep.includes(e.source)) && (toKeep.includes(e.target))){
+        s.graph.edges().forEach(function (e) {
+          if ((toKeep.includes(e.source)) && (toKeep.includes(e.target))) {
             e.color = edgeColor
           } else {
             e.color = background
@@ -442,26 +448,26 @@
 
         s.refresh()
       })
-      s.bind('clickStage', function(e) {
+      s.bind('clickStage', function (e) {
         starArray.innerHTML = ""
         movieArray.innerHTML = ""
         document.querySelectorAll('div.defaultarray').forEach(el => el.style.display = "flex")
-        s.graph.nodes().forEach(function(n) {
-          if (likestarset.includes(n.id)){
+        s.graph.nodes().forEach(function (n) {
+          if (likestarset.includes(n.id)) {
             n.color = myStarColor
-          } else if(movieset.includes(n.id)) {
+          } else if (movieset.includes(n.id)) {
             n.color = movieColor
           } else {
             n.color = neighborColor
           }
         });
-        s.graph.edges().forEach(function(e) {
+        s.graph.edges().forEach(function (e) {
           e.color = edgeColor;
         });
         s.refresh();
       });
     })
-    
+
 </script>
 
 
