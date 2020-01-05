@@ -20,14 +20,7 @@ def intro(request):
 def search(request):
     q = request.GET.get('query', '')
     stars, movies, users = [], [], []
-    if q == 'stars':
-        stars = Star.objects.all()
-    elif q == 'movies':
-        movies = Movie.objects.all()
-
-    elif q == 'users':
-        users = User.objects.all()
-    else:
+    if q:
         stars = Star.objects.filter(name__icontains=q)
         movies = Movie.objects.filter(title__icontains=q) or Movie.objects.filter(original_title__icontains=q)
         users = User.objects.filter(username__icontains=q)
