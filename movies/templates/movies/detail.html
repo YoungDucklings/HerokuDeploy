@@ -4,7 +4,7 @@
 {% block body %}
 {% include '_nav.html' %}
 
-<div id="yet" class="my-2">
+<div id="yet" class="mt-2">
   <div id="content-container" class="container">
     <div class="card bg-dark text-white">
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -60,7 +60,7 @@
 
     <div class="row">
       <!-- list of casting -->
-      <div class="card mx-2" style="width: 15rem; height: 23rem;">
+      <div class="card col-lg-2 col-md-12" style="height: 23rem;">
         <div class="card-header card-header-text"
           style="background-image: linear-gradient(to right, #12c2e9, #12c2e9, #12c2e9)">
           <div class="card-text">
@@ -68,12 +68,12 @@
           </div>
         </div>
         {% if movie.cast_set.all %}
-        <div class="card-body array-container" style="overflow-y: auto;">
+        <div class="card-body array-container" style="overflow-x: auto; overflow-y: auto;">
           {% for cast in movie.cast_set.all %}
           <div class="text-center">
             <a href="{% url 'stars:detail' cast.star.pk %}">
               <img src="{{ cast.star.profileimg_set.first }}" alt="{{ cast.star }}"
-                style="object-fit: cover; max-width: 150px; max-height: 150px; border-radius: 50%;">
+                style="object-fit: cover; max-width: 100px; max-height: 100px; border-radius: 50%;">
             </a>
             <h4 class="card-title">{{ cast.star }}</h4>
             {% if cast.character %}
@@ -92,7 +92,7 @@
         </div>
 
         <!-- list of media -->
-        <div class="card mx-2" style="width: 35rem; height: 23rem;">
+        <div class="card col-lg-7 col-md-12" style="height: 23rem;">
           <div class="card-header card-header-text"
             style="background-image: linear-gradient(to right, #c471ed, #c471ed, #c471ed)">
             <div class="card-text">
@@ -150,7 +150,7 @@
         </div>
 
         <!-- list of information -->
-        <div class="card mx-2" style="width: 20rem; height: 23rem;">
+        <div class="card col-lg-3 col-md-12" style="height: 23rem;">
           <div class="card-header card-header-text"
             style="background-image: linear-gradient(to right, #f64f59, #f64f59, #f64f59)">
             <div class="card-text">
