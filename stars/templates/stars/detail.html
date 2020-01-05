@@ -35,20 +35,18 @@
         <h5 class="card-title">{{ star }}
           {% if user in star.user_set.all %}
           <button id="like-button" class="btn btn-danger btn-link btn-fab btn-fab-mini btn-round">
-            <i  data-id="{{ star.pk }}" class="material-icons">favorite</i></button>
+            <i data-id="{{ star.pk }}" class="material-icons">favorite</i></button>
           {% else %}
           <button id="like-button" class="btn btn-danger btn-link btn-fab btn-fab-mini btn-round">
-            <i data-id="{{ star.pk }}" 
-            class="material-icons" 
-            style="color: transparent;
+            <i data-id="{{ star.pk }}" class="material-icons" style="color: transparent;
             -webkit-text-stroke-width: 1px;
             -webkit-text-stroke-color: red;">favorite</i></button>
           {% endif %}
-          <span id="like-count">{{ star.user_set.count }} likes</span> 
+          <span id="like-count">{{ star.user_set.count }} likes</span>
         </h5>
         <p class="card-text">
-          
-          
+
+
           {% if star.birthday|date:'Y-m-d' != '1111-11-11' %}
           birthday : {{ star.birthday }}
           {% endif %}
@@ -74,8 +72,6 @@
     </div>
   </div>
 
-
-  <h2 class="title">Gallery</h2>
   <div>
     {% if star.tagedimg_set.all %}
     <h3>Tagged Image</h3>
@@ -89,26 +85,25 @@
       </div>
       {% endfor %}
       {% endif %}
-
     </div>
-  </div>
-
-  <div>
-    {% if posters %}
-    <h3 class="title">Movies</h3>
-    <div class="row">
-      {% for poster in posters %}
-      <div class="col-3">
-        <a href="{% url 'movies:detail' poster.movie_id %}"><img src="{{ poster.url }}" alt="{{ star.name }}"
-            width="200px"></a>
-        <p></p>{{ poster.movie }}</p>
-        <div><span style="color: goldenrod;">★</span><span>{{ poster.movie.vote_average }}</span></div>
+    <div>
+      {% if posters %}
+      <h3 class="title">Movies</h3>
+      <div class="row">
+        {% for poster in posters %}
+        <div class="col-3">
+          <a href="{% url 'movies:detail' poster.movie_id %}"><img src="{{ poster.url }}" alt="{{ star.name }}"
+              width="200px"></a>
+          <p></p>{{ poster.movie }}</p>
+          <div><span style="color: goldenrod;">★</span><span>{{ poster.movie.vote_average }}</span></div>
+        </div>
+        {% endfor %}
       </div>
-      {% endfor %}
-    </div>
-    {% endif %}
+      {% endif %}
 
+    </div>
   </div>
+
 </div>
 <script>
   const likeButton = document.querySelector('#like-button')
@@ -123,7 +118,7 @@
         } else {
           // like button
           e.target.setAttribute(
-          "style", "color: transparent; -webkit-text-stroke-width: 1px; -webkit-text-stroke-color: red;");
+            "style", "color: transparent; -webkit-text-stroke-width: 1px; -webkit-text-stroke-color: red;");
         }
         likeCount.innerText = res.data.count
       })
