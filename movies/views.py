@@ -27,10 +27,14 @@ def detail(request, movie_id):
     posters = Poster.objects.filter(movie=movie_id)
     videos = Video.objects.filter(movie=movie_id)
     comments = Comment.objects.filter(movie=movie_id)
-    if Score.objects.filter(movie=movie, stalker=request.user).exists():
-        score = Score.objects.get(movie=movie, stalker=request.user).score
+
+    if request.user.is_authenticated:
+        if Score.objects.filter(movie=movie, stalker=request.user).exists():
+            score = Score.objects.get(movie=movie, stalker=request.user).score
+        else:
+            score = 0
     else:
-        score = 0
+        score=0
 
     comment_form = CommentForm()
 
