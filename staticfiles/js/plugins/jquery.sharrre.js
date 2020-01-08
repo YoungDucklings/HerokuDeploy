@@ -282,7 +282,6 @@
     tracking = {
       googlePlus: function() {},
       facebook: function() {
-        //console.log('facebook');
         fb = window.setInterval(function() {
           if (typeof FB !== 'undefined') {
             FB.Event.subscribe('edge.create', function(targetUrl) {
@@ -294,13 +293,11 @@
             FB.Event.subscribe('message.send', function(targetUrl) {
               _gaq.push(['_trackSocial', 'facebook', 'send', targetUrl]);
             });
-            //console.log('ok');
             clearInterval(fb);
           }
         }, 1000);
       },
       twitter: function() {
-        //console.log('twitter');
         tw = window.setInterval(function() {
           if (typeof twttr !== 'undefined') {
             twttr.events.bind('tweet', function(event) {
@@ -308,7 +305,6 @@
                 _gaq.push(['_trackSocial', 'twitter', 'tweet']);
               }
             });
-            //console.log('ok');
             clearInterval(tw);
           }
         }, 1000);

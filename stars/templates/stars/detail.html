@@ -16,6 +16,7 @@
       <!-- like button & counter -->
       <div class="card">
         <div class="card-body">
+          {% if request.user == user %}
           {% if user in star.user_set.all %}
           <button id="like-button" class="btn btn-danger btn-link btn-fab" style="width: 201px; height: 101px;">
             <i data-id="{{ star.pk }}" class="fas fa-heart" style="font-size: 100px;"></i></button>
@@ -25,6 +26,11 @@
           -webkit-text-stroke-width: 1px;
           -webkit-text-stroke-color: red; font-size: 100px;"></i></button>
           {% endif %}
+          {% else %}
+          <button class="btn btn-danger btn-link btn-fab" style="width: 201px; height: 101px;">
+            <i data-id="{{ star.pk }}" class="fas fa-heart" style="font-size: 100px;"></i></button>
+          {% endif %}
+
           <h4 id="like-alert" class="title">
             {% if star.user_set.count != 0 %}
             You like this star
@@ -58,7 +64,7 @@
           <hr>
           {% endif %}
           {% if star.deathday|date:'Y-m-d' != '1111-11-11' %}
-          <h4 class="card-title"></h4>deathday</h4>
+          <h4 class="card-title">deathday</h4>
           <p class="card-text">{{ star.deathday }}</p>
           <hr>
           {% endif %}
@@ -106,7 +112,7 @@
         </a>
       </div>
       {% else %}
-      <img class="card-img-top d-block w-100" src="{% static 'img/default.png' %}" alt="{{ star }}">
+      <img class="myimg" src="{% static 'img/star.png' %}" alt="{{ star }}">
       {% endif %}
     </div>
 
@@ -163,35 +169,5 @@
   </div>
 </div>
 
-<script>
-  const likeButton = document.querySelector('#like-button')
-  const likeCount = document.querySelector('#like-count')
-  const likeAlert = document.querySelector('#like-alert')
-  const starName = document.querySelector('#star-name').innerText
-  likeButton.addEventListener('click', e => {
-    const starId = e.target.dataset.id
-    axios.get(`/stars/${starId}/like/`)
-      .then(res => {
-        if (res.data.liked) {
-          // unlike button
-          e.target.removeAttribute("style")
-          e.target.setAttribute("style", "font-size: 100px;")
-          likeAlert.innerText = "You like this star"
-        } else {
-          // like button
-          e.target.setAttribute(
-            "style", "color: transparent; -webkit-text-stroke-width: 1px; -webkit-text-stroke-color: red; font-size: 100px;");
-          likeAlert.innerText = "Pick this star"
-        }
-        console.log(starName)
-        if (res.data.count == 1) {
-          likeCount.innerText = `${res.data.count} person likes "${starName}" already!`
-        } else if (res.data.count != 0) {
-          likeCount.innerText = `${res.data.count} people like "${starName}" already!`
-        } else {
-          likeCount.innerText = `Become the first liker of this star!`
-        }
-      })
-  })
-</script>
+<script src="{% static 'js/stardetail.js' %}" type="text/javascript"></script>
 {% endblock %}

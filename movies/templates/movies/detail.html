@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load bootstrap4 %}
+{% load static %}
 
 {% block body %}
 {% include '_nav.html' %}
@@ -179,14 +180,19 @@
       </div>
 
       <!-- comment list -->
-      <h3 class="title">Comment</h3>
+      <div class="card">
       {% if request.user.is_authenticated %}
-      <form action="{% url 'movies:comment_create' movie.id %}" method="POST">
-        {% csrf_token %}
-        {% bootstrap_form comment_form %}
-        <button class="btn btn-primary" type="submit">save</button>
-      </form>
+        <div class="card-body">
+          <h4 class="card-title">comments</h4>
+          <form action="{% url 'movies:comment_create' movie.id %}" method="POST">
+            {% csrf_token %}
+            {% bootstrap_form comment_form %}
+          </form>
+          <button class="btn mypurple" type="submit">save</button>
+        </div>
       {% endif %}
+      </div>
+
       {% if comments %}
       <div class="card">
         <ul class="list-group list-group-flush">
@@ -197,7 +203,7 @@
             {% if request.user == comment.stalker %}
             <form class="d-inline" action="{% url 'movies:comment_delete' movie.pk comment.pk %}" method="POST">
               {% csrf_token %}
-              <button class="btn btn-primary btn-sm">delete</button>
+              <button class="btn btn-sm myred">x</button>
             </form>
             {% endif %}
           </li>
@@ -206,42 +212,5 @@
       </div>
       {% endif %}
     </div>
-    <script>
-
-      function mouseClick(n) {
-        for (let i = n; i > 0; i--) {
-          console.log(i)
-          document.getElementById(i).setAttribute(
-            "style", "color: gold; text-shadow: 3px 5px grey");
-        }
-        for (let i = n + 1; i < 6; i++) {
-          console.log(i)
-          document.getElementById(i).removeAttribute(
-            "style");
-        }
-        movie_id = document.querySelector('#score-box').dataset.id
-        axios.get(`/movies/${movie_id}/${n}/rate/`)
-      }
-
-      function castInfo(n) {
-        document.getElementById(`cast${n}`).removeAttribute("style");
-      }
-
-      function hideCastInfo(n) {
-        document.getElementById(`cast${n}`).setAttribute("style", "display:none");
-      }
-
-      function buttonClick(e, tabName) {
-        let tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(tabName).style.display = "block";
-        e.currentTarget.className += " active";
-      }
-    </script>
+    <script src="{% static 'js/moviedetail.js' %}" type="text/javascript"></script>
     {% endblock %}
