@@ -54,94 +54,81 @@
 <!-- END SIGMA IMPORTS -->
 <script src="{% static 'sigma/plugins/sigma.plugins.dragNodes/sigma.plugins.dragNodes.js' %}"></script>
 <script src="{% static 'sigma/plugins/sigma.plugins.neighborhoods/sigma.plugins.neighborhoods.js' %}"></script>
-<style>
-  #graph-container {
-    height: 50vh;
-    min-height: 280px;
-    min-width: 280px;
-    margin: auto;
-  }
 
-  .staravatar {
-    object-fit: cover;
-    width: 30vw;
-    height: 30vw;
-    max-width: 150px;
-    max-height: 150px;
-    border-radius: 50%;
-  }
-
-  .neighboravatar {
-    object-fit: cover;
-    width: 30vw;
-    height: 30vw;
-    max-width: 150px;
-    max-height: 150px;
-    border-radius: 50%;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-  }
-
-  .movieposter {
-    width: 30vw;
-    max-width: 180px;
-    min-width: 120px;
-  }
-
-  .gradebar {
-    height: 10px;
-    align-self: flex-end;
-    width: 30px;
-    background-image: linear-gradient(to bottom, #12c2e9, #c471ed, #f64f59);
-    margin-left: 5px;
-  }
-</style>
+<link href="{% static 'css/userdetail.css' %}" rel="stylesheet" />
+<link href="{% static 'css/menu.css' %}" rel="stylesheet" />
 
 {% include '_nav.html' %}
 
-<div id="content-container" class="container">
+<div id="content-container" data-id="{{ finished }}" class="container">
   <div class="row">
     <div class="row col-lg-6 col-12">
-      <div class="card col-12 p-0 mb-0" style="height: 15rem;">
-        <div class="card-body d-flex justify-content-around">
-          <div class="col-6 p-0 d-flex align-self-center">
-            <img src="{% static 'img/duck.png' %}" alt="Circle Image" class="rounded-circle img-fluid">
-          </div>
-          <div class="col-6 p-0 text-center" style="line-height: 50%;">
-            <h2 class="card-title">{{ user.username }}</h2>
-            <div class="card-subtitle d-flex flex-column justify-content-center">
-              <button class="btn btn-round" data-toggle="modal" data-target="#userDetailModal"
-                style="background-image: linear-gradient(to right, #c471ed, #c471ed, #c471ed)">Information</button>
-              {% if request.user != user %}
-              {% if request.user in user.followers.all %}
-              <a href="{% url 'accounts:follow' user.pk %}" class="btn btn-round" style="background-image: linear-gradient(to right, #a7a7a7, #a7a7a7, #a7a7a7)">unflock</a>
-              {% else %}
-              <a href="{% url 'accounts:follow' user.pk %}" class="btn btn-round" style="background-image: linear-gradient(to right, #c471ed, #c471ed, #c471ed)">flock</a>
-              {% endif %}
-              {% endif %}
-            </div>
-          </div>
+      <div class="card col-12 p-0 mb-0 myblue">
+        <div class="card-body">
+          <h3 class="card-title text-white">
+            {{user.username}}
+            <button class="btn btn-round text-white btn-link p-0" data-toggle="modal" data-target="#userDetailModal">
+              <i class="material-icons">personsearch</i>
+            </button>
+            {% if request.user != user%}
+            {% if request.user in user.followers.all %}
+            <a href="{% url 'accounts:follow' user.pk %}" class="btn btn-default btn-link p-0">
+              <i class="material-icons">personadd</i> </a>
+            {% else %}
+            <a href="{% url 'accounts:follow' user.pk %}" class="btn btn-primary btn-link p-0">
+              <i class="material-icons">personadd</i> </a>
+            {% endif %}
+            {% endif %}
+          </h3>
         </div>
       </div>
+
       <!-- Who you are followings -->
       <div class="card w-100">
-        <div class="card-body py-0 mt-0">
-          <h4 class="card-title">Who you are followings</h4>
+        <div class="card-body py-0 mt-0 mb-0">
+          <h4 class="card-title">{{user.username}}'s Star Container</h4>
+          
           <div class="mb-2">
-            <div class="defaultarray array-container" style="display:flex; overflow-x: auto;">
+            <div class="defaultarray array-container" >
               {% for star in stars %}
-              <div class="mx-2" style="display:flex; flex-direction:column;">
+              <div class="mx-2 renderingarray">
                 <img src="{{ star.profileimg_set.first }}" class="staravatar card-img">
                 <a href="{% url 'stars:detail' star.pk %}">
-                  <button class="btn btn-primary btn-sm w-100"
+                  {% if star.pk in finished %}
+                  <button class="btn btn-sm w-100"
+                    style="background-image: linear-gradient(to right, #12c2e9, #c471ed, #f64f59)">
+                    {{ star }}
+                  </button>
+                  {% else %}
+                  <button class="btn btn-sm w-100"
                     style="background-image: linear-gradient(to right, #c471ed, #c471ed, #c471ed)">
                     {{ star }}
                   </button>
+                  {% endif %}
                 </a>
               </div>
               {% endfor %}
             </div>
-            <div id="stararray" class="mx-3" style="display:flex; overflow-x: auto;"></div>
+            <div id="stararray" class="mx-3 array-container" ></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card w-100 mt-0">
+        <div class="card-body py-0 mt-0">
+          <h4 class="card-title">{{ user.username }}'s Movie container</h4>
+          
+          <div class="mb-2">
+            <div class="defaultarray array-container" >
+              {% for movie in movies %}
+              <div class="mx-2 renderingarray">
+                <a href="{% url 'movies:detail' movie.pk %}">
+                  <img src="{{ movie.poster_set.first }}" alt="Card image" class="movieposter">
+                </a>
+              </div>
+              {% endfor %}
+            </div>
+            <div id="moviearray" class="mx-3 array-container" ></div>
           </div>
         </div>
       </div>
@@ -150,7 +137,7 @@
 
     <!-- dashboard -->
     <div class="col-lg-6 col-12">
-      <div class="card col-12 mx-auto" style="height: 35rem;">
+      <div class="card col-12 mx-auto" style="height: 45rem;">
         <div class="card-header card-header-text mt-3"
           style="background-image: linear-gradient(to right, #12c2e9, #c471ed, #f64f59)">
           <div class="card-text text-center">
@@ -205,67 +192,23 @@
 
   <div class="row my-0">
     <div class="card col-12 mx-auto">
-      <!-- dropdown menu -->
       <div class="dropdown">
         <button class="btn dropdown-toggle col-12" type="button" id="dropdownMenu2" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false" style="background-image: linear-gradient(to right, #c471ed, #c471ed, #c471ed)">
-          Menu
+          Recommendation Option
         </button>
         <div class="dropdown-menu col-12" aria-labelledby="dropdownMenu2">
-          <button class="dropdown-item w-100 justify-content-center tablinks"
-            onclick="buttonClick(event, 'seen-movie')">
-            What you've seen before
-          </button>
-          <button class="dropdown-item w-100 justify-content-center tablinks"
-            onclick="buttonClick(event, 'missed-movie')">
-            Check out which movie you have missed of your stars
-          </button>
           <button class="dropdown-item w-100 justify-content-center tablinks"
             onclick="buttonClick(event, 'popular-movie')">
             People also love these movies
           </button>
         </div>
       </div>
-      <!-- menu 1 -->
-      <div id="seen-movie" class="card-body tabcontent" style="display: block;">
-        <h4 class="card-title">What you've seen before</h4>
-        <div class="mb-2">
-          <div class="defaultarray array-container" style="display:flex; overflow-x: auto;">
-            {% for movie in movies %}
-            <div class="mx-2">
-              <a href="{% url 'movies:detail' movie.pk %}">
-                <img src="{{ movie.poster_set.first }}" alt="Card image" class="movieposter">
-              </a>
-            </div>
-            {% endfor %}
-          </div>
-          <div id="moviearray" style="display:flex; overflow-x: auto;"></div>
-        </div>
-      </div>
-      <!-- menu 2 -->
-      <div id="missed-movie" class="card-body tabcontent" style="display: none;">
-        <h4 class="card-title">Check out which movie you have missed of your stars</h4>
-        <div class="mb-2">
-          <div class="defaultarray array-container" style="display:flex; overflow-x: auto;">
-            {% for star in stars %}
-            {% for cast in star.cast_set.all %}
-            {% if cast.movie not in movies %}
-            <div class="mx-2">
-              <a href="{% url 'movies:detail' cast.movie.pk %}">
-                <img src="{{ cast.movie.poster_set.first }}" class="movieposter">
-              </a>
-            </div>
-            {% endif %}
-            {% endfor %}
-            {% endfor %}
-          </div>
-        </div>
-      </div>
-      <!-- menu 3 -->
-      <div id="popular-movie" class="card-body tabcontent" style="display: none;">
+
+      <div id="popular-movie" class="card-body tabcontent" style="display: block;">
         <h4 class="card-title">People also love these movies</h4>
         <div class="mb-2">
-          <div class="defaultarray array-container" style="display:flex; overflow-x: auto;">
+          <div class="defaultarray array-container" >
             {% for pop in popular %}
             {% if pop not in movies %}
             {% if pop.poster_set.all %}
@@ -274,7 +217,7 @@
             </a>
             {% else %}
             <a href="{% url 'movies:detail' pop.pk %}">
-              <img src="{% static 'img/default.png' %}" class="movieposter mx-2">
+              <img src="{% static 'img/poster.png' %}" class="movieposter mx-2">
             </a>
             {% endif %}
             {% endif %}
@@ -286,225 +229,6 @@
   </div>
 </div>
 <!-- menu js -->
-<script>
-  function buttonClick(e, tabName) {
-    let tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(tabName).style.display = "block";
-    e.currentTarget.className += " active";
-  }
-</script>
+<script src="{% static 'js/userdetail.js' %}" type="text/javascript"></script>
 
-<!-- dashboard js -->
-<script>
-  const userpk = document.querySelector('#graph-container').dataset.id
-  const likestarset = []
-  const movieset = []
-  const starObject = {}
-  const movieObject = {}
-  const starArray = document.querySelector('#stararray')
-  const movieArray = document.querySelector('#moviearray')
-  axios.get(`/api/v1/accounts/${userpk}/`)
-    .then(res => {
-      const stars = res.data.likestars
-      const movies = res.data.likemovies
-      const myStarColor = '#F64F59'
-      const neighborColor = '#c471ed'
-      const movieColor = '#12c2e9'
-      const background = '#eeeeee'
-      const edgeColor = '#D3D3D3'
-      let graph = {
-        nodes: [],
-        edges: []
-      }
-      const db = new sigma.plugins.neighborhoods();
-
-      // add nodes for likestars
-      for (let i = 0; i < stars.length; i++) {
-        graph.nodes.push({
-          id: stars[i].pk,
-          label: stars[i].name,
-          x: Math.random(),
-          y: Math.random(),
-          size: 15,
-          color: myStarColor
-        })
-        likestarset.push(stars[i].pk)
-        starObject[stars[i].pk] = stars[i].profileimg_set[0]
-      }
-      // for iteration again to avoid overlapping of starnodes
-      for (let i = 0; i < stars.length; i++) {
-        if (stars[i].coworker_from) {
-          // add nodes for coworker & movies of likestars
-          for (let j = 0; j < stars[i].coworker_from.length; j++) {
-            // add nodes for movies of likestars, which is not added
-            const mfound = graph.nodes.some(el => el.id === stars[i].coworker_from[j].movie.pk)
-            if (!mfound) {
-              graph.nodes.push({
-                id: stars[i].coworker_from[j].movie.pk,
-                label: stars[i].coworker_from[j].movie.title,
-                x: Math.random(),
-                y: Math.random(),
-                size: 5,
-                color: movieColor,
-              })
-              movieset.push(stars[i].coworker_from[j].movie.pk)
-              movieObject[stars[i].coworker_from[j].movie.pk] = stars[i].coworker_from[j].movie.poster_set[0]
-            } else {
-              graph.nodes.find(x => x.id === stars[i].coworker_from[j].movie.pk).size = 10
-            }
-            // add nodes for coworker of likestars, who is not added
-            const sfound = graph.nodes.some(el => el.id === stars[i].coworker_from[j].to_star.pk)
-            if (!sfound) {
-              graph.nodes.push({
-                id: stars[i].coworker_from[j].to_star.pk,
-                label: stars[i].coworker_from[j].to_star.name,
-                x: Math.random(),
-                y: Math.random(),
-                size: 7,
-                color: neighborColor
-              })
-              starObject[stars[i].coworker_from[j].to_star.pk] = stars[i].coworker_from[j].to_star.profileimg_set[0]
-            } else {
-              graph.nodes.find(x => x.id === stars[i].coworker_from[j].to_star.pk).size += 2
-            }
-          }
-        }
-      }
-      for (let i = 0; i < stars.length; i++) {
-        if (stars[i].coworker_from) {
-          for (let j = 0; j < stars[i].coworker_from.length; j++) {
-            const efound = graph.edges.some(el => el.id === stars[i].pk + '_' + stars[i].coworker_from[j].movie.pk)
-            // add an edge likestar -> movie
-            if (!efound) {
-              graph.edges.push({
-                id: stars[i].pk + '_' + stars[i].coworker_from[j].movie.pk,
-                source: stars[i].pk,
-                target: stars[i].coworker_from[j].movie.pk,
-                size: 1,
-                color: edgeColor
-              })
-            }
-            // add edges movie -> to_stars
-            const eefound = graph.edges.some(el => el.id === stars[i].coworker_from[j].movie.pk + '_' + stars[i].coworker_from[j].to_star.pk)
-            if (!eefound) {
-              graph.edges.push({
-                id: stars[i].coworker_from[j].movie.pk + '_' + stars[i].coworker_from[j].to_star.pk,
-                source: stars[i].coworker_from[j].movie.pk,
-                target: stars[i].coworker_from[j].to_star.pk,
-                size: 1,
-                color: edgeColor
-              })
-            }
-          }
-        }
-      }
-      // sigma.renderers.def = sigma.renderers.canvas
-      // Instantiate sigma:
-      s = new sigma({
-        graph: graph,
-        container: 'graph-container',
-        type: 'canvas'
-      });
-
-      // find all neighborhood
-      function dfs(nArray) {
-        let nStack = nArray.map(el => el.id)
-        let point = 1
-        while (point < nStack.length) {
-          s.graph.neighborhood(nStack[point]).nodes.forEach(el => {
-            if (!(nStack.includes(el.id))) { nStack.push(el.id) }
-          })
-          point += 1
-        }
-        return nStack
-      }
-
-      // Initialize the dragNodes plugin:
-      let dragListener = sigma.plugins.dragNodes(s, s.renderers[0]);
-      dragListener.bind('startdrag', function (event) { });
-      dragListener.bind('drag', function (event) { });
-      dragListener.bind('drop', function (event) { });
-      dragListener.bind('dragend', function (event) { });
-
-      // initialize the neighborhood
-      s.bind('clickNode', function (e) {
-        document.querySelectorAll('div.defaultarray').forEach(el => el.style.display = "none")
-        starArray.innerHTML = ""
-        movieArray.innerHTML = ""
-        let nodeId = e.data.node.id,
-          toKeep = dfs(s.graph.neighborhood(nodeId).nodes);
-
-        s.graph.nodes().forEach(function (n) {
-          if (toKeep.includes(n.id)) {
-            let starimg = document.createElement("a")
-            starimg.href = `/stars/${n.id}/`
-            if (likestarset.includes(n.id)) {
-              n.color = myStarColor
-              starimg.innerHTML = `<div style="display:flex; flex-direction:column;">
-              <img src="${starObject[n.id]}" class="staravatar"/>
-              <button class="btn btn-primary btn-sm">${n.label}</button></div>`
-            } else if (!movieset.includes(n.id)) {
-              n.color = neighborColor
-              starimg.innerHTML = `<div style="display:flex; flex-direction:column;">
-              <img src="${starObject[n.id]}" class="neighboravatar"/>
-              <button class="btn btn-default btn-sm">${n.label}</button></div>`
-            } else {
-              n.color = movieColor
-              let movieimg = document.createElement("a")
-              movieimg.href = `/movies/${n.id}/`
-              if (movies.includes(n.id)) {
-                movieimg.innerHTML = `<div class="mx-1">
-                <img class="movieposter" src="${movieObject[n.id]}" alt="Card image"></div>`
-              } else {
-                movieimg.innerHTML = `<div class="mx-1">
-                <img class="movieposter" src="${movieObject[n.id]}" alt="Card image" style="-webkit-filter: grayscale(100%);
-                filter: grayscale(100%);"></div>`
-              }
-
-              movieArray.appendChild(movieimg)
-            }
-            starArray.appendChild(starimg)
-          } else {
-            n.color = '#eee'
-          }
-        });
-
-        s.graph.edges().forEach(function (e) {
-          if ((toKeep.includes(e.source)) && (toKeep.includes(e.target))) {
-            e.color = edgeColor
-          } else {
-            e.color = background
-          }
-        });
-
-        s.refresh()
-      })
-      s.bind('clickStage', function (e) {
-        starArray.innerHTML = ""
-        movieArray.innerHTML = ""
-        document.querySelectorAll('div.defaultarray').forEach(el => el.style.display = "flex")
-        s.graph.nodes().forEach(function (n) {
-          if (likestarset.includes(n.id)) {
-            n.color = myStarColor
-          } else if (movieset.includes(n.id)) {
-            n.color = movieColor
-          } else {
-            n.color = neighborColor
-          }
-        });
-        s.graph.edges().forEach(function (e) {
-          e.color = edgeColor;
-        });
-        s.refresh();
-      });
-    })
-
-</script>
 {% endblock %}

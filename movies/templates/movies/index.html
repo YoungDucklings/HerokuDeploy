@@ -6,24 +6,22 @@
 <div id="content-container" class="container">
   <div class="my-3">
     <h1 class="title d-inline">Movie List</h1>
-    <a class="mx-3" href="{% url 'movies:create' %}"><button class="btn btn-primary">Add Movie</button></a>
+    <a class="mx-3" href="{% url 'movies:create' %}"><button class="btn mypurple">Add Movie</button></a>
   </div>
   <div class="row">
     {% for movie in movies %}
-    <div class="col-lg-2 col-md-4 col-sm-12">
+    <div class="col-lg-2 col-md-4 col-sm-6 myimgbox">
       {% if movie.poster_set.all %}
-      <a href="{% url 'movies:detail' movie.pk %}"><img src="{{ movie.poster_set.first }}" alt="{{ movie }}"
-          width="150px"></a>
+      <a href="{% url 'movies:detail' movie.pk %}"><img src="{{ movie.poster_set.first }}" alt="{{ movie }}"></a>
       {% else %}
-      <a href="{% url 'movies:detail' movie.pk %}"><img src="{% static 'img/default.png' %}" alt="{{ movie }}"
-          width="150px">
+      <a href="{% url 'movies:detail' movie.pk %}"><img src="{% static 'img/poster.png' %}" alt="{{ movie }}" class="myimg">
       {% endif %}    
       <br>
       {{ movie }}<br>
       <a href="{% url 'movies:update' movie.pk %}" class="btn btn-dark btn-sm">edit</a>
       <form class="d-inline" action="{% url 'movies:delete' movie.pk %}" method="POST">
         {% csrf_token %}
-        <button class="btn btn-danger btn-sm">delete</button>
+        <button class="btn myred btn-sm">delete</button>
       </form>
     </div>
     {% endfor %}

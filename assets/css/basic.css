@@ -1,0 +1,26 @@
+.mypurple {
+    background-color:#c471ed
+}
+
+.myblue {
+    background-color:#12c2e9
+}
+
+.myred {
+    background-color: #f64f59;
+}
+
+.myimg {
+    display: block;
+    margin: auto;
+}
+
+.myimgbox {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mycontentbox {
+    height: min-content;
+}

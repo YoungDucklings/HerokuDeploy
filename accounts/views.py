@@ -40,6 +40,15 @@ def detail(request, user_pk):
         average = 0
         scoreli = [10,10,10,10,10]
     stars = user.likestars.all()
+    finished = []
+    for s in stars:
+        sms = s.cast_set.all()
+        cnt = len(sms)
+        for sm in sms:
+            if sm.movie in movies:
+                cnt -= 1
+        if not cnt and len(sms):
+            finished.append(s.pk)
     comment = user.comment_set.first()
     if comment:
         comment_casts = comment.movie.cast_set.all()
@@ -54,6 +63,7 @@ def detail(request, user_pk):
         'comment_stars': comment_casts,
         'scoreli':scoreli,
         'average':average,
+        'finished':finished
     }
     return render(request, 'accounts/detail.html', context)
 

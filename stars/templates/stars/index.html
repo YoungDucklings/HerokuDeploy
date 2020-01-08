@@ -6,16 +6,16 @@
 <div id="content-container" class="container">
   <div class="my-3">
     <h1 class="title d-inline">Star List</h1>
-    <a class="m-3" href="{% url 'stars:create' %}"><button class="btn btn-primary">Add Star</button></a>
+    <a class="m-3" href="{% url 'stars:create' %}"><button class="btn mypruple">Add Star</button></a>
   </div>
   <div class="row">
     {% for star in stars %}
-    <div class="col-lg-2 col-md-4 col-sm-12">
+    <div class="col-lg-2 col-md-4 col-sm-12 myimgbox">
       <a href="{% url 'stars:detail' star.pk %}">
         {% if star.profileimg_set.all %}
         <img src="{{ star.profileimg_set.first }}" alt="{{ star }}" width="150px">
         {% else %}
-        <img src="{% static 'img/default.png' %}" alt="{{ star }}" width="150px">
+        <img class="myimg" src="{% static 'img/star.png' %}" alt="{{ star }}" width="150px">
         {% endif %}
       </a>
       <br>
@@ -24,7 +24,7 @@
       <a href="{% url 'stars:update' star.pk %}" class="btn btn-dark btn-sm">edit</a>
       <form class="d-inline" action="{% url 'stars:delete' star.pk %}" method="POST">
         {% csrf_token %}
-        <button class="btn btn-danger btn-sm">delete</button>
+        <button class="btn myred btn-sm">delete</button>
       </form>
     </div>
     {% endfor %}

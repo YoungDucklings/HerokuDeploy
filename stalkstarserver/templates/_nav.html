@@ -1,7 +1,7 @@
 {% load static %}
 {% load bootstrap4 %}
 
-<nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100"
+<nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg text-white" color-on-scroll="100"
   id="sectionsNav" style="background-image: linear-gradient(to right, #12c2e9, #c471ed, #f64f59)">
   <div class="container">
     <div class="navbar-translate">
@@ -29,8 +29,6 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="{% url 'stars:index' %}">Stars</a>
             <a class="dropdown-item" href="{% url 'movies:index' %}">Movies</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item disabled" href="#" aria-disabled="true">options</a>
           </div>
         </li>
         {% endif %}
@@ -48,15 +46,15 @@
           <a class="nav-link" href="{% url 'accounts:signup' %}">SignUp</a>
         </li>
         {% endif %}
-        <li class="nav-item d-lg-none">
+        <li class="nav-item d-lg-none p-1">
           <form action="{% url 'info:search' %}" class="form-inline ml-auto">
             <div class="row mx-3">
               <div class="form-group no-border">
                 <input name="query" type="text" class="form-control" placeholder="Search">
+                <button type="submit" class="btn btn-white btn-just-icon btn-round">
+                  <i class="material-icons">search</i>
+                </button>
               </div>
-              <button type="submit" class="btn btn-white btn-just-icon btn-round">
-                <i class="material-icons">search</i>
-              </button>
             </div>
           </form>
         </li>
