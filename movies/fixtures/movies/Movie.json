@@ -1,26 +1,668 @@
 [
 	{
+		"pk": 419704,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Ad Astra",
+			"original_title": "Ad Astra",
+			"genres": [
+				878,
+				18,
+				53,
+				12,
+				9648
+			],
+			"release_date": "2019-09-17",
+			"runtime": 123,
+			"status": "Released",
+			"vote_average": 6.0,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.foxmovies.com/movies/ad-astra",
+			"overview": "The near future, a time when both hope and hardships drive humanity to look to the stars and beyond. While a mysterious phenomenon menaces to destroy life on planet Earth, astronaut Roy McBride undertakes a mission across the immensity of space and its many perils to uncover the truth about a lost expedition that decades before boldly faced emptiness and silence in search of the unknown."
+		}
+	},
+	{
+		"pk": 181812,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Star Wars: The Rise of Skywalker",
+			"original_title": "Star Wars: The Rise of Skywalker",
+			"genres": [
+				28,
+				12,
+				878
+			],
+			"release_date": "2019-12-18",
+			"runtime": 142,
+			"status": "Released",
+			"vote_average": 6.6,
+			"adult": false,
+			"belongs_to_collection": 10,
+			"original_language": "en",
+			"homepage": "https://www.starwars.com/films/star-wars-episode-ix-the-rise-of-skywalker",
+			"overview": "The surviving Resistance faces the First Order once again as the journey of Rey, Finn and Poe Dameron continues. With the power and knowledge of generations behind them, the final battle begins."
+		}
+	},
+	{
+		"pk": 475557,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Joker",
+			"original_title": "Joker",
+			"genres": [
+				80,
+				53,
+				18
+			],
+			"release_date": "2019-10-02",
+			"runtime": 122,
+			"status": "Released",
+			"vote_average": 8.3,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://www.jokermovie.net/",
+			"overview": "During the 1980s, a failed stand-up comedian is driven insane and turns to a life of crime and chaos in Gotham City while becoming an infamous psychopathic crime figure."
+		}
+	},
+	{
+		"pk": 512200,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Jumanji: The Next Level",
+			"original_title": "Jumanji: The Next Level",
+			"genres": [
+				28,
+				12,
+				35,
+				14
+			],
+			"release_date": "2019-12-04",
+			"runtime": 123,
+			"status": "Released",
+			"vote_average": 6.7,
+			"adult": false,
+			"belongs_to_collection": 495527,
+			"original_language": "en",
+			"homepage": "http://jumanjimovie.com",
+			"overview": "As the gang return to Jumanji to rescue one of their own, they discover that nothing is as they expect. The players will have to brave parts unknown and unexplored in order to escape the world’s most dangerous game."
+		}
+	},
+	{
+		"pk": 420809,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Maleficent: Mistress of Evil",
+			"original_title": "Maleficent: Mistress of Evil",
+			"genres": [
+				14,
+				10751,
+				12
+			],
+			"release_date": "2019-10-16",
+			"runtime": 118,
+			"status": "Released",
+			"vote_average": 7.2,
+			"adult": false,
+			"belongs_to_collection": 531331,
+			"original_language": "en",
+			"homepage": "https://movies.disney.com/maleficent-mistress-of-evil",
+			"overview": "Maleficent and her goddaughter Aurora begin to question the complex family ties that bind them as they are pulled in different directions by impending nuptials, unexpected allies, and dark new forces at play."
+		}
+	},
+	{
+		"pk": 449924,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Ip Man 4: The Finale",
+			"original_title": "葉問4",
+			"genres": [
+				28,
+				18,
+				36
+			],
+			"release_date": "2019-12-20",
+			"runtime": 105,
+			"status": "Released",
+			"vote_average": 5.8,
+			"adult": false,
+			"belongs_to_collection": 70068,
+			"original_language": "cn",
+			"homepage": "",
+			"overview": "Following the death of his wife, Ip Man travels to San Francisco to ease tensions between the local kung fu masters and his star student, Bruce Lee, while searching for a better future for his son."
+		}
+	},
+	{
 		"pk": 330457,
 		"model": "movies.Movie",
 		"fields": {
 			"title": "Frozen II",
 			"original_title": "Frozen II",
 			"genres": [
-				12,
 				16,
-				35,
 				10751,
-				10402
+				10402,
+				12
 			],
 			"release_date": "2019-11-20",
 			"runtime": 104,
 			"status": "Released",
-			"vote_average": 6.9,
+			"vote_average": 7.0,
 			"adult": false,
 			"belongs_to_collection": 386382,
 			"original_language": "en",
 			"homepage": "https://movies.disney.com/frozen-2",
-			"overview": "Elsa, Anna, Kristoff and Olaf are going far in the forest to know the truth about an ancient mystery of their kingdom."
+			"overview": "Elsa, Anna, Kristoff and Olaf head far into the forest to learn the truth about an ancient mystery of their kingdom."
+		}
+	},
+	{
+		"pk": 453405,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Gemini Man",
+			"original_title": "Gemini Man",
+			"genres": [
+				28,
+				53
+			],
+			"release_date": "2019-10-02",
+			"runtime": 117,
+			"status": "Released",
+			"vote_average": 5.8,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "",
+			"overview": "Ageing assassin, Henry Brogen tries to get out of the business but finds himself in the ultimate battle—fighting his own clone who is 25 years younger than him, and at the peak of his abilities."
+		}
+	},
+	{
+		"pk": 516700,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Gundala",
+			"original_title": "Gundala",
+			"genres": [
+				28,
+				80,
+				18
+			],
+			"release_date": "2019-08-29",
+			"runtime": 119,
+			"status": "Released",
+			"vote_average": 5.4,
+			"adult": false,
+			"belongs_to_collection": 632905,
+			"original_language": "id",
+			"homepage": "",
+			"overview": "Sancaka has lived on the streets since his parents left him. Living a hard life, Sancaka survives by thinking about his own safety. When the condition of the city gets worse and injustice rages throughout the country, Sancaka must decide whether he continues to live to look after himself or rise to become their oppressed hero."
+		}
+	},
+	{
+		"pk": 466272,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Once Upon a Time… in Hollywood",
+			"original_title": "Once Upon a Time… in Hollywood",
+			"genres": [
+				18,
+				35,
+				53
+			],
+			"release_date": "2019-07-25",
+			"runtime": 162,
+			"status": "Released",
+			"vote_average": 7.5,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.onceuponatimeinhollywood.movie",
+			"overview": "Los Angeles, 1969. TV star Rick Dalton, a struggling actor specializing in westerns, and stuntman Cliff Booth, his best friend, try to survive in a constantly changing movie industry. Dalton is the neighbor of the young and promising actress and model Sharon Tate, who has just married the prestigious Polish director Roman Polanski…"
+		}
+	},
+	{
+		"pk": 546554,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Knives Out",
+			"original_title": "Knives Out",
+			"genres": [
+				9648,
+				53,
+				35,
+				80,
+				18
+			],
+			"release_date": "2019-11-27",
+			"runtime": 130,
+			"status": "Released",
+			"vote_average": 7.8,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.knivesout.movie/",
+			"overview": "When renowned crime novelist Harlan Thrombey is found dead at his estate just after his 85th birthday, the inquisitive and debonair Detective Benoit Blanc is mysteriously enlisted to investigate. From Harlan's dysfunctional family to his devoted staff, Blanc sifts through a web of red herrings and self-serving lies to uncover the truth behind Harlan's untimely death."
+		}
+	},
+	{
+		"pk": 496243,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Parasite",
+			"original_title": "기생충",
+			"genres": [
+				35,
+				53,
+				18
+			],
+			"release_date": "2019-05-30",
+			"runtime": 132,
+			"status": "Released",
+			"vote_average": 8.6,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "ko",
+			"homepage": "https://www.parasite-movie.com/",
+			"overview": "All unemployed, Ki-taek's family takes peculiar interest in the wealthy and glamorous Parks for their livelihood until they get entangled in an unexpected incident."
+		}
+	},
+	{
+		"pk": 593402,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Tolo Tolo",
+			"original_title": "Tolo Tolo",
+			"genres": [
+				35
+			],
+			"release_date": "2020-01-01",
+			"runtime": 90,
+			"status": "Released",
+			"vote_average": 6.4,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "it",
+			"homepage": "",
+			"overview": "Checco is a young Apulian entrepreneur dreamer who has opened a sushi restaurant in his Apulia. However, after one month, the restaurant went bankrupt and he chose to emigrate to Africa to escape from debt. Here he adapts to being a waiter in a resort in Kenya, but at the outbreak of a civil war he decides to embark on a stowaway trip on a boat for migrants to Europe and chooses to do it with his African friends. However, he would not like to return to Italy, but rather to go to Liechtenstein where banking secrecy is in force and there is a lower tax burden than in Italy."
+		}
+	},
+	{
+		"pk": 509967,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "6 Underground",
+			"original_title": "6 Underground",
+			"genres": [
+				28,
+				53,
+				35
+			],
+			"release_date": "2019-12-13",
+			"runtime": 127,
+			"status": "Released",
+			"vote_average": 6.2,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.netflix.com/title/81001887",
+			"overview": "After faking his death, a tech billionaire recruits a team of international operatives for a bold and bloody mission to take down a brutal dictator."
+		}
+	},
+	{
+		"pk": 486589,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Red Shoes and the Seven Dwarfs",
+			"original_title": "Red Shoes and the Seven Dwarfs",
+			"genres": [
+				16,
+				10749
+			],
+			"release_date": "2019-07-25",
+			"runtime": 92,
+			"status": "Released",
+			"vote_average": 6.6,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "",
+			"overview": "Princes who have been turned into Dwarfs seek the red shoes of a lady in order to break the spell, although it will not be easy."
+		}
+	},
+	{
+		"pk": 443791,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Underwater",
+			"original_title": "Underwater",
+			"genres": [
+				27,
+				878,
+				53
+			],
+			"release_date": "2020-01-08",
+			"runtime": 95,
+			"status": "Released",
+			"vote_average": 5.9,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "",
+			"overview": "After an earthquake destroys their underwater station, six researchers must navigate two miles along the dangerous, unknown depths of the ocean floor to make it to safety in a race against time."
+		}
+	},
+	{
+		"pk": 359724,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Ford v Ferrari",
+			"original_title": "Ford v Ferrari",
+			"genres": [
+				18,
+				36,
+				28
+			],
+			"release_date": "2019-11-13",
+			"runtime": 152,
+			"status": "Released",
+			"vote_average": 7.8,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.foxmovies.com/movies/ford-v-ferrari",
+			"overview": "American car designer Carroll Shelby and the British-born driver Ken Miles work together to battle corporate interference, the laws of physics, and their own personal demons to build a revolutionary race car for Ford Motor Company and take on the dominating race cars of Enzo Ferrari at the 24 Hours of Le Mans in France in 1966."
+		}
+	},
+	{
+		"pk": 530915,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "1917",
+			"original_title": "1917",
+			"genres": [
+				10752,
+				18,
+				36
+			],
+			"release_date": "2019-12-10",
+			"runtime": 119,
+			"status": "Released",
+			"vote_average": 7.6,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.1917.movie/",
+			"overview": "At the height of the First World War, two young British soldiers, Schofield and Blake are given a seemingly impossible mission. In a race against time, they must cross enemy territory and deliver a message that will stop a deadly attack on hundreds of soldiers—Blake's own brother among them."
+		}
+	},
+	{
+		"pk": 181808,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Star Wars: The Last Jedi",
+			"original_title": "Star Wars: The Last Jedi",
+			"genres": [
+				14,
+				12,
+				878,
+				28
+			],
+			"release_date": "2017-12-13",
+			"runtime": 152,
+			"status": "Released",
+			"vote_average": 7.0,
+			"adult": false,
+			"belongs_to_collection": 10,
+			"original_language": "en",
+			"homepage": "https://www.starwars.com/films/star-wars-episode-viii-the-last-jedi",
+			"overview": "Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares to do battle with the First Order."
+		}
+	},
+	{
+		"pk": 503919,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Lighthouse",
+			"original_title": "The Lighthouse",
+			"genres": [
+				27,
+				18,
+				14,
+				9648
+			],
+			"release_date": "2019-10-18",
+			"runtime": 110,
+			"status": "Released",
+			"vote_average": 7.9,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://a24films.com/films/the-lighthouse",
+			"overview": "Two lighthouse keepers try to maintain their sanity while living on a remote and mysterious New England island in the 1890s."
+		}
+	},
+	{
+		"pk": 423204,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Angel Has Fallen",
+			"original_title": "Angel Has Fallen",
+			"genres": [
+				28,
+				53
+			],
+			"release_date": "2019-08-21",
+			"runtime": 122,
+			"status": "Released",
+			"vote_average": 5.9,
+			"adult": false,
+			"belongs_to_collection": 386534,
+			"original_language": "en",
+			"homepage": "https://angelhasfallen.movie",
+			"overview": "After a treacherous attack, Secret Service agent Mike Banning is charged with attempting to assassinate President Trumbull. Chased by his own colleagues and the FBI, Banning begins a race against the clock to clear his name."
+		}
+	},
+	{
+		"pk": 461130,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Code 8",
+			"original_title": "Code 8",
+			"genres": [
+				878,
+				28,
+				80,
+				53,
+				18
+			],
+			"release_date": "2019-12-06",
+			"runtime": 99,
+			"status": "Released",
+			"vote_average": 6.3,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.thefyzz.com/project/code-8",
+			"overview": "In Lincoln City, some inhabitants have extraordinary abilities. Most live below the poverty line, under the close surveillance of a heavily militarized police force. Connor, a construction worker with powers, involves with a criminal gang to help his ailing mother. (Based on the short film “Code 8,” 2016.)"
+		}
+	},
+	{
+		"pk": 481084,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Addams Family",
+			"original_title": "The Addams Family",
+			"genres": [
+				16,
+				35,
+				10751,
+				14
+			],
+			"release_date": "2019-10-10",
+			"runtime": 86,
+			"status": "Released",
+			"vote_average": 6.1,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.addamsfamily.movie/",
+			"overview": "The Addams family's lives begin to unravel when they face-off against a treacherous, greedy crafty reality-TV host while also preparing for their extended family to arrive for a major celebration."
+		}
+	},
+	{
+		"pk": 567609,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Ready or Not",
+			"original_title": "Ready or Not",
+			"genres": [
+				27,
+				53,
+				9648,
+				35
+			],
+			"release_date": "2019-08-21",
+			"runtime": 95,
+			"status": "Released",
+			"vote_average": 6.8,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://www.foxsearchlight.com/readyornot/",
+			"overview": "A bride's wedding night takes a sinister turn when her eccentric new in-laws force her to take part in a terrifying game."
+		}
+	},
+	{
+		"pk": 299536,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Avengers: Infinity War",
+			"original_title": "Avengers: Infinity War",
+			"genres": [
+				12,
+				28,
+				878
+			],
+			"release_date": "2018-04-25",
+			"runtime": 149,
+			"status": "Released",
+			"vote_average": 8.3,
+			"adult": false,
+			"belongs_to_collection": 86311,
+			"original_language": "en",
+			"homepage": "https://www.marvel.com/movies/avengers-infinity-war",
+			"overview": "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain."
+		}
+	},
+	{
+		"pk": 492188,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Marriage Story",
+			"original_title": "Marriage Story",
+			"genres": [
+				18
+			],
+			"release_date": "2019-11-06",
+			"runtime": 137,
+			"status": "Released",
+			"vote_average": 8.1,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.marriagestorymovie.com/",
+			"overview": "A stage director and an actress struggle through a grueling, coast-to-coast divorce that pushes them to their personal extremes."
+		}
+	},
+	{
+		"pk": 431693,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Spies in Disguise",
+			"original_title": "Spies in Disguise",
+			"genres": [
+				16,
+				28,
+				12,
+				35
+			],
+			"release_date": "2019-12-24",
+			"runtime": 102,
+			"status": "Released",
+			"vote_average": 7.4,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://family.foxmovies.com/movies/spies-in-disguise",
+			"overview": "When the world's best spy is turned into a pigeon, he must rely on his nerdy tech officer to save the world."
+		}
+	},
+	{
+		"pk": 7451,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "xXx",
+			"original_title": "xXx",
+			"genres": [
+				28,
+				12,
+				53,
+				9648
+			],
+			"release_date": "2002-08-09",
+			"runtime": 124,
+			"status": "Released",
+			"vote_average": 5.8,
+			"adult": false,
+			"belongs_to_collection": 52785,
+			"original_language": "en",
+			"homepage": "http://www.sonypictures.com/movies/xxx/",
+			"overview": "Xander Cage is your standard adrenaline junkie with no fear and a lousy attitude. When the US Government \"recruits\" him to go on a mission, he's not exactly thrilled. His mission: to gather information on an organization that may just be planning the destruction of the world, led by the nihilistic Yorgi."
+		}
+	},
+	{
+		"pk": 465086,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Grudge",
+			"original_title": "The Grudge",
+			"genres": [
+				27,
+				9648
+			],
+			"release_date": "2020-01-02",
+			"runtime": 93,
+			"status": "Released",
+			"vote_average": 5.7,
+			"adult": false,
+			"belongs_to_collection": 1974,
+			"original_language": "en",
+			"homepage": "",
+			"overview": "A house is cursed by a vengeful ghost that dooms those who enter it with a violent death."
+		}
+	},
+	{
+		"pk": 539892,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Freaks",
+			"original_title": "Freaks",
+			"genres": [
+				878,
+				53,
+				18
+			],
+			"release_date": "2019-09-13",
+			"runtime": 105,
+			"status": "Released",
+			"vote_average": 6.8,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://freaksfilm.com",
+			"overview": "Kept locked inside the house by her father, 7-year-old Chloe lives in fear and fascination of the outside world, where Abnormals create a constant threat - or so she believes. When a mysterious stranger offers her a glimpse of what's really happening outside, Chloe soon finds that while the truth isn't so simple, the danger is very real."
 		}
 	},
 	{
@@ -46,109 +688,178 @@
 		}
 	},
 	{
-		"pk": 475557,
+		"pk": 398978,
 		"model": "movies.Movie",
 		"fields": {
-			"title": "Joker",
-			"original_title": "Joker",
+			"title": "The Irishman",
+			"original_title": "The Irishman",
 			"genres": [
 				80,
-				53,
+				36,
 				18
 			],
-			"release_date": "2019-10-02",
-			"runtime": 122,
+			"release_date": "2019-11-01",
+			"runtime": 209,
 			"status": "Released",
-			"vote_average": 8.4,
+			"vote_average": 7.9,
 			"adult": false,
 			"belongs_to_collection": 0,
 			"original_language": "en",
-			"homepage": "http://www.jokermovie.net/",
-			"overview": "During the 1980s, a failed stand-up comedian is driven insane and turns to a life of crime and chaos in Gotham City while becoming an infamous psychopathic crime figure."
+			"homepage": "https://www.theirishman-movie.com",
+			"overview": "Pennsylvania, 1956. Frank Sheeran, a war veteran of Irish origin who works as a truck driver, accidentally meets mobster Russell Bufalino. Once Frank becomes his trusted man, Bufalino sends him to Chicago with the task of helping Jimmy Hoffa, a powerful union leader related to organized crime, with whom Frank will maintain a close friendship for nearly twenty years."
 		}
 	},
 	{
-		"pk": 420818,
+		"pk": 11,
 		"model": "movies.Movie",
 		"fields": {
-			"title": "The Lion King",
-			"original_title": "The Lion King",
+			"title": "Star Wars",
+			"original_title": "Star Wars",
 			"genres": [
 				12,
-				18
-			],
-			"release_date": "2019-07-12",
-			"runtime": 118,
-			"status": "Released",
-			"vote_average": 7.1,
-			"adult": false,
-			"belongs_to_collection": 0,
-			"original_language": "en",
-			"homepage": "https://movies.disney.com/the-lion-king-2019",
-			"overview": "Simba idolizes his father, King Mufasa, and takes to heart his own royal destiny. But not everyone in the kingdom celebrates the new cub's arrival. Scar, Mufasa's brother—and former heir to the throne—has plans of his own. The battle for Pride Rock is ravaged with betrayal, tragedy and drama, ultimately resulting in Simba's exile. With help from a curious pair of newfound friends, Simba will have to figure out how to grow up and take back what is rightfully his."
-		}
-	},
-	{
-		"pk": 466272,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "Once Upon a Time... in Hollywood",
-			"original_title": "Once Upon a Time... in Hollywood",
-			"genres": [
-				18,
-				35,
-				53
-			],
-			"release_date": "2019-07-25",
-			"runtime": 161,
-			"status": "Released",
-			"vote_average": 7.6,
-			"adult": false,
-			"belongs_to_collection": 0,
-			"original_language": "en",
-			"homepage": "https://www.onceuponatimeinhollywood.movie/",
-			"overview": "A faded television actor and his stunt double strive to achieve fame and success in the film industry during the final years of Hollywood's Golden Age in 1969 Los Angeles."
-		}
-	},
-	{
-		"pk": 645541,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "Ellipse",
-			"original_title": "Ellipse",
-			"genres": [
-				878
-			],
-			"release_date": "2019-11-05",
-			"runtime": 76,
-			"status": "Released",
-			"vote_average": 3.6,
-			"adult": false,
-			"belongs_to_collection": 0,
-			"original_language": "en",
-			"homepage": " ",
-			"overview": "A man and his dog are stranded on a volatile, oval-shaped planet and are forced to adapt and escape before time destroys them both."
-		}
-	},
-	{
-		"pk": 290859,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "Terminator: Dark Fate",
-			"original_title": "Terminator: Dark Fate",
-			"genres": [
 				28,
 				878
 			],
-			"release_date": "2019-10-23",
-			"runtime": 128,
+			"release_date": "1977-05-25",
+			"runtime": 121,
 			"status": "Released",
-			"vote_average": 6.3,
+			"vote_average": 8.2,
 			"adult": false,
-			"belongs_to_collection": 528,
+			"belongs_to_collection": 10,
 			"original_language": "en",
-			"homepage": " ",
-			"overview": "Decades after Sarah Connor prevented Judgment Day, a lethal new Terminator is sent to eliminate the future leader of the resistance. In a fight to save mankind, battle-hardened Sarah Connor teams up with an unexpected ally and an enhanced super soldier to stop the deadliest Terminator yet."
+			"homepage": "http://www.starwars.com/films/star-wars-episode-iv-a-new-hope",
+			"overview": "Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire."
+		}
+	},
+	{
+		"pk": 384018,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Fast & Furious Presents: Hobbs & Shaw",
+			"original_title": "Fast & Furious Presents: Hobbs & Shaw",
+			"genres": [
+				28,
+				12,
+				35
+			],
+			"release_date": "2019-08-01",
+			"runtime": 137,
+			"status": "Released",
+			"vote_average": 6.6,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.hobbsandshawmovie.com",
+			"overview": "Ever since US Diplomatic Security Service Agent Hobbs and lawless outcast Shaw first faced off, they just have swapped smacks and bad words. But when cyber-genetically enhanced anarchist Brixton's ruthless actions threaten the future of humanity, both join forces to defeat him. (A spin-off of “The Fate of the Furious,” focusing on Johnson's Luke Hobbs and Statham's Deckard Shaw.)"
+		}
+	},
+	{
+		"pk": 331482,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Little Women",
+			"original_title": "Little Women",
+			"genres": [
+				18,
+				10749
+			],
+			"release_date": "2019-12-25",
+			"runtime": 134,
+			"status": "Released",
+			"vote_average": 8.2,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.littlewomen.movie/",
+			"overview": "Four sisters come of age in America in the aftermath of the Civil War."
+		}
+	},
+	{
+		"pk": 522938,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Rambo: Last Blood",
+			"original_title": "Rambo: Last Blood",
+			"genres": [
+				28,
+				53,
+				18
+			],
+			"release_date": "2019-09-19",
+			"runtime": 89,
+			"status": "Released",
+			"vote_average": 5.9,
+			"adult": false,
+			"belongs_to_collection": 5039,
+			"original_language": "en",
+			"homepage": "https://rambo.movie",
+			"overview": "After fighting his demons for decades, John Rambo now lives in peace on his family ranch in Arizona, but his rest is interrupted when Gabriela, the granddaughter of his housekeeper María, disappears after crossing the border into Mexico to meet her biological father. Rambo, who has become a true father figure for Gabriela over the years, undertakes a desperate and dangerous journey to find her."
+		}
+	},
+	{
+		"pk": 575094,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Abigail",
+			"original_title": "Abigail",
+			"genres": [
+				12,
+				14
+			],
+			"release_date": "2019-08-22",
+			"runtime": 100,
+			"status": "Released",
+			"vote_average": 6.1,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://en.kinodanz.ru/movies/abigail/",
+			"overview": "A young girl Abigail lives in a city whose borders were closed many years ago because of an epidemic of a mysterious disease. Abby's father was one of the sick - and he was taken when she was six years old. Going against the authorities to find his father, Abby learns that her city is actually full of magic. And she discovers in herself extraordinary magical abilities."
+		}
+	},
+	{
+		"pk": 551332,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Two Popes",
+			"original_title": "The Two Popes",
+			"genres": [
+				18,
+				35,
+				36
+			],
+			"release_date": "2019-11-27",
+			"runtime": 125,
+			"status": "Released",
+			"vote_average": 7.7,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.thetwopopesmovie.com/",
+			"overview": "Frustrated with the direction of the church, Cardinal Bergoglio requests permission to retire in 2012 from Pope Benedict. Instead, facing scandal and self-doubt, the introspective Pope Benedict summons his harshest critic and future successor to Rome to reveal a secret that would shake the foundations of the Catholic Church. Behind Vatican walls, a struggle commences between both tradition and progress, guilt and forgiveness, as these two very different men confront their pasts in order to find common ground and forge a future for a billion followers around the world."
+		}
+	},
+	{
+		"pk": 578189,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Black and Blue",
+			"original_title": "Black and Blue",
+			"genres": [
+				28,
+				80,
+				18,
+				53
+			],
+			"release_date": "2019-10-25",
+			"runtime": 109,
+			"status": "Released",
+			"vote_average": 5.8,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.blackandblue.movie/",
+			"overview": "A fast-paced action thriller about a rookie cop who inadvertently captures the murder of a young drug dealer on her body cam. After realizing that the murder was committed by corrupt cops, she teams up with the one person from her community who is willing to help her as she tries to escape both the criminals out for revenge and the police who are desperate to destroy the incriminating footage."
 		}
 	},
 	{
@@ -159,7 +870,8 @@
 			"original_title": "It Chapter Two",
 			"genres": [
 				27,
-				18
+				18,
+				14
 			],
 			"release_date": "2019-09-04",
 			"runtime": 169,
@@ -173,87 +885,27 @@
 		}
 	},
 	{
-		"pk": 568012,
+		"pk": 420817,
 		"model": "movies.Movie",
 		"fields": {
-			"title": "One Piece: Stampede",
-			"original_title": "ワンピーススタンピード",
+			"title": "Aladdin",
+			"original_title": "Aladdin",
 			"genres": [
-				16,
-				28,
-				12
+				12,
+				14,
+				10749,
+				35,
+				10751
 			],
-			"release_date": "2019-08-09",
-			"runtime": 101,
+			"release_date": "2019-05-22",
+			"runtime": 128,
 			"status": "Released",
-			"vote_average": 7.4,
-			"adult": false,
-			"belongs_to_collection": 23456,
-			"original_language": "ja",
-			"homepage": "https://one-piece.com/comicsanime/movie/detail/14.html",
-			"overview": "One Piece: Stampede is a stand-alone film that celebrates the anime's 20th Anniversary and takes place outside the canon of the \"One Piece\" TV series. Monkey D. Luffy and his Straw Hat pirate crew are invited to a massive Pirate Festival that brings many of the most iconic characters from throughout the franchise to participate in competition with the Straw Hats to find Roger's treasure. It also pits the Straw Hats against a new enemy named Bullet, a former member of Roger's crew."
-		}
-	},
-	{
-		"pk": 453405,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "Gemini Man",
-			"original_title": "Gemini Man",
-			"genres": [
-				28,
-				53
-			],
-			"release_date": "2019-10-02",
-			"runtime": 117,
-			"status": "Released",
-			"vote_average": 5.7,
+			"vote_average": 7.0,
 			"adult": false,
 			"belongs_to_collection": 0,
 			"original_language": "en",
-			"homepage": " ",
-			"overview": "Ageing assassin, Henry Brogen tries to get out of the business but finds himself in the ultimate battle—fighting his own clone who is 25 years younger than him, and at the peak of his abilities."
-		}
-	},
-	{
-		"pk": 480042,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "Escape Plan: The Extractors",
-			"original_title": "Escape Plan: The Extractors",
-			"genres": [
-				28,
-				53
-			],
-			"release_date": "2019-06-20",
-			"runtime": 97,
-			"status": "Released",
-			"vote_average": 4.7,
-			"adult": false,
-			"belongs_to_collection": 525891,
-			"original_language": "en",
-			"homepage": "https://www.lionsgate.com/movies/escape-plan-the-extractors",
-			"overview": "After security expert Ray Breslin is hired to rescue the kidnapped daughter of a Hong Kong tech mogul from a formidable Latvian prison, Breslin's girlfriend is also captured. Now he and his team must pull off a deadly rescue mission to confront their sadistic foe and save the hostages before time runs out."
-		}
-	},
-	{
-		"pk": 423204,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "Angel Has Fallen",
-			"original_title": "Angel Has Fallen",
-			"genres": [
-				28
-			],
-			"release_date": "2019-08-21",
-			"runtime": 121,
-			"status": "Released",
-			"vote_average": 5.8,
-			"adult": false,
-			"belongs_to_collection": 386534,
-			"original_language": "en",
-			"homepage": "https://angelhasfallen.movie/",
-			"overview": "After the events in the previous film, Secret Service agent Mike Banning finds himself framed for an assassination attempt on the President. Pursued by his own agency and the FBI, Banning races to clear his name and uncover the real terrorist threat which has set its sights on Air Force One."
+			"homepage": "https://movies.disney.com/aladdin-2019",
+			"overview": "A kindhearted street urchin named Aladdin embarks on a magical adventure after finding a lamp that releases a wisecracking genie while a power-hungry Grand Vizier vies for the same lamp that has the power to make their deepest wishes come true."
 		}
 	},
 	{
@@ -280,287 +932,398 @@
 		}
 	},
 	{
-		"pk": 486589,
+		"pk": 338967,
 		"model": "movies.Movie",
 		"fields": {
-			"title": "Red Shoes 2019",
-			"original_title": "Red Shoes 2019",
+			"title": "Zombieland: Double Tap",
+			"original_title": "Zombieland: Double Tap",
 			"genres": [
+				27,
+				28,
+				35
+			],
+			"release_date": "2019-10-09",
+			"runtime": 99,
+			"status": "Released",
+			"vote_average": 7.0,
+			"adult": false,
+			"belongs_to_collection": 537982,
+			"original_language": "en",
+			"homepage": "https://www.zombieland.com/",
+			"overview": "Columbus, Tallahassee, Wichita, and Little Rock move to the American heartland as they face off against evolved zombies, fellow survivors, and the growing pains of the snarky makeshift family."
+		}
+	},
+	{
+		"pk": 245891,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "John Wick",
+			"original_title": "John Wick",
+			"genres": [
+				28,
+				53
+			],
+			"release_date": "2014-10-22",
+			"runtime": 101,
+			"status": "Released",
+			"vote_average": 7.2,
+			"adult": false,
+			"belongs_to_collection": 404609,
+			"original_language": "en",
+			"homepage": "http://www.johnwickthemovie.com/",
+			"overview": "Ex-hitman John Wick comes out of retirement to track down the gangsters that took everything from him."
+		}
+	},
+	{
+		"pk": 122917,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Hobbit: The Battle of the Five Armies",
+			"original_title": "The Hobbit: The Battle of the Five Armies",
+			"genres": [
+				28,
+				12,
+				14
+			],
+			"release_date": "2014-12-10",
+			"runtime": 144,
+			"status": "Released",
+			"vote_average": 7.3,
+			"adult": false,
+			"belongs_to_collection": 121938,
+			"original_language": "en",
+			"homepage": "https://www.warnerbros.com/movies/hobbit-battle-five-armies/",
+			"overview": "Immediately after the events of The Desolation of Smaug, Bilbo and the dwarves try to defend Erebor's mountain of treasure from others who claim it: the men of the ruined Laketown and the elves of Mirkwood. Meanwhile an army of Orcs led by Azog the Defiler is marching on Erebor, fueled by the rise of the dark lord Sauron. Dwarves, elves and men must unite, and the hope for Middle-Earth falls into Bilbo's hands."
+		}
+	},
+	{
+		"pk": 10020,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Beauty and the Beast",
+			"original_title": "Beauty and the Beast",
+			"genres": [
+				10749,
+				10751,
 				16,
+				14
+			],
+			"release_date": "1991-11-13",
+			"runtime": 84,
+			"status": "Released",
+			"vote_average": 7.7,
+			"adult": false,
+			"belongs_to_collection": 153010,
+			"original_language": "en",
+			"homepage": "http://disney.go.com/disneyvideos/animatedfilms/beauty/?cmp=dcom_VAN_WDSHE_BEA_van_batb__Extl",
+			"overview": "Follow the adventures of Belle, a bright young woman who finds herself in the castle of a prince who's been turned into a mysterious beast. With the help of the castle's enchanted staff, Belle soon learns the most important lesson of all -- that true beauty comes from within."
+		}
+	},
+	{
+		"pk": 448119,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Dolittle",
+			"original_title": "Dolittle",
+			"genres": [
+				10751,
+				35,
+				14
+			],
+			"release_date": "2020-01-01",
+			"runtime": 101,
+			"status": "Released",
+			"vote_average": 9.0,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "",
+			"overview": "A physician discovers that he can talk to animals."
+		}
+	},
+	{
+		"pk": 102651,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Maleficent",
+			"original_title": "Maleficent",
+			"genres": [
+				14,
+				12,
+				28,
+				10751,
 				10749
 			],
-			"release_date": "2019-07-25",
-			"runtime": 0,
-			"status": "Released",
-			"vote_average": 5.9,
-			"adult": false,
-			"belongs_to_collection": 0,
-			"original_language": "en",
-			"homepage": " ",
-			"overview": "Princes who have been turned into Dwarfs seek the red shoes of a lady in order to break the spell, although it will not be easy."
-		}
-	},
-	{
-		"pk": 458897,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "Charlie's Angels",
-			"original_title": "Charlie's Angels",
-			"genres": [
-				28,
-				12,
-				35
-			],
-			"release_date": "2019-11-14",
-			"runtime": 118,
-			"status": "Released",
-			"vote_average": 6.2,
-			"adult": false,
-			"belongs_to_collection": 86029,
-			"original_language": "en",
-			"homepage": "https://www.charliesangels.movie/",
-			"overview": "When a systems engineer blows the whistle on a dangerous technology, Charlie's Angels from across the globe are called into action, putting their lives on the line to protect society."
-		}
-	},
-	{
-		"pk": 359724,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "Ford v Ferrari",
-			"original_title": "Ford v Ferrari",
-			"genres": [
-				18,
-				36
-			],
-			"release_date": "2019-10-10",
-			"runtime": 152,
-			"status": "Released",
-			"vote_average": 8,
-			"adult": false,
-			"belongs_to_collection": 0,
-			"original_language": "en",
-			"homepage": "https://www.foxmovies.com/movies/ford-v-ferrari",
-			"overview": "American car designer Carroll Shelby and the British-born driver Ken Miles work together to battle corporate interference, the laws of physics, and their own personal demons to build a revolutionary race car for Ford Motor Company and take on the dominating race cars of Enzo Ferrari at the 24 Hours of Le Mans in France in 1966."
-		}
-	},
-	{
-		"pk": 384018,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "Fast & Furious Presents: Hobbs & Shaw",
-			"original_title": "Fast & Furious Presents: Hobbs & Shaw",
-			"genres": [
-				28,
-				12,
-				35
-			],
-			"release_date": "2019-08-01",
-			"runtime": 137,
-			"status": "Released",
-			"vote_average": 6.6,
-			"adult": false,
-			"belongs_to_collection": 0,
-			"original_language": "en",
-			"homepage": "https://www.hobbsandshawmovie.com",
-			"overview": "Ever since US Diplomatic Security Service Agent Hobbs and lawless outcast Shaw first faced off, they just have swapped smacks and bad words. But when cyber-genetically enhanced anarchist Brixton's ruthless actions threaten the future of humanity, both join forces to defeat him. (A spin-off of “The Fate of the Furious,” focusing on Johnson's Luke Hobbs and Statham's Deckard Shaw.)"
-		}
-	},
-	{
-		"pk": 449924,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "Ip Man 4: The Finale",
-			"original_title": "葉問4",
-			"genres": [
-				28,
-				18,
-				36
-			],
-			"release_date": "2019-12-20",
-			"runtime": 0,
-			"status": "Post Production",
-			"vote_average": 0,
-			"adult": false,
-			"belongs_to_collection": 70068,
-			"original_language": "cn",
-			"homepage": " ",
-			"overview": "Ip Man 4 is an upcoming Hong Kong biographical martial arts film directed by Wilson Yip and produced by Raymond Wong. It is the fourth in the Ip Man film series based on the life of the Wing Chun grandmaster of the same name and features Donnie Yen reprising the role. The film began production in April 2018 and ended in July the same year."
-		}
-	},
-	{
-		"pk": 420817,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "Aladdin",
-			"original_title": "Aladdin",
-			"genres": [
-				12,
-				14,
-				10749,
-				35,
-				10751
-			],
-			"release_date": "2019-05-22",
-			"runtime": 128,
+			"release_date": "2014-05-28",
+			"runtime": 97,
 			"status": "Released",
 			"vote_average": 7.1,
 			"adult": false,
-			"belongs_to_collection": 0,
+			"belongs_to_collection": 531331,
 			"original_language": "en",
-			"homepage": "https://movies.disney.com/aladdin-2019",
-			"overview": "A kindhearted street urchin named Aladdin embarks on a magical adventure after finding a lamp that releases a wisecracking genie while a power-hungry Grand Vizier vies for the same lamp that has the power to make their deepest wishes come true."
+			"homepage": "http://movies.disney.com/maleficent",
+			"overview": "A beautiful, pure-hearted young woman, Maleficent has an idyllic life growing up in a peaceable forest kingdom, until one day when an invading army threatens the harmony of the land.  Maleficent rises to be the land's fiercest protector, but she ultimately suffers a ruthless betrayal – an act that begins to turn her heart into stone. Bent on revenge, Maleficent faces an epic battle with the invading King's successor and, as a result, places a curse upon his newborn infant Aurora. As the child grows, Maleficent realizes that Aurora holds the key to peace in the kingdom – and to Maleficent's true happiness as well."
 		}
 	},
 	{
-		"pk": 476631,
+		"pk": 291805,
 		"model": "movies.Movie",
 		"fields": {
-			"title": "Barbie: Dolphin Magic",
-			"original_title": "Barbie: Dolphin Magic",
+			"title": "Now You See Me 2",
+			"original_title": "Now You See Me 2",
+			"genres": [
+				28,
+				35,
+				53
+			],
+			"release_date": "2016-06-02",
+			"runtime": 129,
+			"status": "Released",
+			"vote_average": 6.8,
+			"adult": false,
+			"belongs_to_collection": 382685,
+			"original_language": "en",
+			"homepage": "http://nowyouseeme.movie",
+			"overview": "One year after outwitting the FBI and winning the public’s adulation with their mind-bending spectacles, the Four Horsemen resurface only to find themselves face to face with a new enemy who enlists them to pull off their most dangerous heist yet."
+		}
+	},
+	{
+		"pk": 420818,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Lion King",
+			"original_title": "The Lion King",
+			"genres": [
+				12,
+				10751
+			],
+			"release_date": "2019-07-12",
+			"runtime": 118,
+			"status": "Released",
+			"vote_average": 7.1,
+			"adult": false,
+			"belongs_to_collection": 94032,
+			"original_language": "en",
+			"homepage": "https://movies.disney.com/the-lion-king-2019",
+			"overview": "Simba idolizes his father, King Mufasa, and takes to heart his own royal destiny. But not everyone in the kingdom celebrates the new cub's arrival. Scar, Mufasa's brother—and former heir to the throne—has plans of his own. The battle for Pride Rock is ravaged with betrayal, tragedy and drama, ultimately resulting in Simba's exile. With help from a curious pair of newfound friends, Simba will have to figure out how to grow up and take back what is rightfully his."
+		}
+	},
+	{
+		"pk": 75656,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Now You See Me",
+			"original_title": "Now You See Me",
+			"genres": [
+				53,
+				80
+			],
+			"release_date": "2013-05-29",
+			"runtime": 116,
+			"status": "Released",
+			"vote_average": 7.4,
+			"adult": false,
+			"belongs_to_collection": 382685,
+			"original_language": "en",
+			"homepage": "",
+			"overview": "An FBI agent and an Interpol detective track a team of illusionists who pull off bank heists during their performances and reward their audiences with the money."
+		}
+	},
+	{
+		"pk": 591237,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Bulletproof 2",
+			"original_title": "Bulletproof 2",
+			"genres": [
+				28,
+				35
+			],
+			"release_date": "2020-01-07",
+			"runtime": 0,
+			"status": "Released",
+			"vote_average": 0.0,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "",
+			"overview": "Special Agent Jack Carter reluctantly assumes the identity of criminal Archie Moses to take down a powerful South African crime family. But when the real Moses is put in danger, he and Carter must work together to foil the scheme for good."
+		}
+	},
+	{
+		"pk": 109445,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Frozen",
+			"original_title": "Frozen",
 			"genres": [
 				16,
 				12,
-				10751,
-				14
+				10751
 			],
-			"release_date": "2017-10-13",
-			"runtime": 63,
+			"release_date": "2013-11-27",
+			"runtime": 102,
 			"status": "Released",
-			"vote_average": 6.5,
+			"vote_average": 7.3,
 			"adult": false,
-			"belongs_to_collection": 517758,
+			"belongs_to_collection": 386382,
 			"original_language": "en",
-			"homepage": " ",
-			"overview": "Barbie and her sisters take off on another exciting, global adventure to visit their friend Ken at his summer internship at a beautiful and exotic coral reef."
+			"homepage": "http://movies.disney.com/frozen",
+			"overview": "Young princess Anna of Arendelle dreams about finding true love at her sister Elsa’s coronation. Fate takes her on a dangerous journey in an attempt to end the eternal winter that has fallen over the kingdom. She's accompanied by ice delivery man Kristoff, his reindeer Sven, and snowman Olaf. On an adventure where she will find out what friendship, courage, family, and true love really means."
 		}
 	},
 	{
-		"pk": 453075,
+		"pk": 458156,
 		"model": "movies.Movie",
 		"fields": {
-			"title": "One Summer Night",
-			"original_title": "어느 여름날 밤에",
+			"title": "John Wick: Chapter 3 - Parabellum",
+			"original_title": "John Wick: Chapter 3 - Parabellum",
 			"genres": [
+				28,
+				53,
+				80
+			],
+			"release_date": "2019-05-15",
+			"runtime": 131,
+			"status": "Released",
+			"vote_average": 7.1,
+			"adult": false,
+			"belongs_to_collection": 404609,
+			"original_language": "en",
+			"homepage": "https://www.johnwick.movie",
+			"overview": "Super-assassin John Wick returns with a $14 million price tag on his head and an army of bounty-hunting killers on his trail. After killing a member of the shadowy international assassin’s guild, the High Table, John Wick is excommunicado, but the world’s most ruthless hit men and women await his every turn."
+		}
+	},
+	{
+		"pk": 540901,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Hustlers",
+			"original_title": "Hustlers",
+			"genres": [
+				35,
+				80,
 				18
 			],
-			"release_date": "2017-04-06",
-			"runtime": 98,
+			"release_date": "2019-09-12",
+			"runtime": 107,
 			"status": "Released",
-			"vote_average": 7.5,
-			"adult": false,
-			"belongs_to_collection": 0,
-			"original_language": "ko",
-			"homepage": " ",
-			"overview": "In the winter of 2013, Yong-jun and Jae-sung, a member of the Korean People’s Army, Their sex scene is caught by the superior. After all, Yong-jun decided to defect from North Korea leaving Jae-sung."
-		}
-	},
-	{
-		"pk": 611207,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "The Knight Before Christmas",
-			"original_title": "The Knight Before Christmas",
-			"genres": [
-				10749,
-				35
-			],
-			"release_date": "2019-11-21",
-			"runtime": 92,
-			"status": "Released",
-			"vote_average": 6.7,
+			"vote_average": 6.2,
 			"adult": false,
 			"belongs_to_collection": 0,
 			"original_language": "en",
-			"homepage": "https://www.netflix.com/title/81026188",
-			"overview": "A movie about a medieval English knight who is magically transported to present day where he ends up falling for a high school science teacher."
+			"homepage": "https://www.hustlers.movie/",
+			"overview": "A crew of savvy former strip club employees band together to turn the tables on their Wall Street clients."
 		}
 	},
 	{
-		"pk": 508965,
+		"pk": 120,
 		"model": "movies.Movie",
 		"fields": {
-			"title": "Klaus",
-			"original_title": "Klaus",
-			"genres": [
-				16,
-				10751,
-				12,
-				35
-			],
-			"release_date": "2019-11-08",
-			"runtime": 97,
-			"status": "Released",
-			"vote_average": 8.5,
-			"adult": false,
-			"belongs_to_collection": 0,
-			"original_language": "en",
-			"homepage": "https://www.netflix.com/title/80183187",
-			"overview": "When Jesper distinguishes himself as the Postal Academy's worst student, he is sent to Smeerensburg, a small village located on a icy island above the Arctic Circle, where grumpy inhabitants barely exchange words, let alone letters. Jesper is about to give up and abandon his duty as a postman when he meets local teacher Alva and Klaus, a mysterious carpenter who lives alone in a cabin full of handmade toys."
-		}
-	},
-	{
-		"pk": 299536,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "Avengers: Infinity War",
-			"original_title": "Avengers: Infinity War",
+			"title": "The Lord of the Rings: The Fellowship of the Ring",
+			"original_title": "The Lord of the Rings: The Fellowship of the Ring",
 			"genres": [
 				12,
-				28,
-				878
+				14,
+				28
 			],
-			"release_date": "2018-04-25",
-			"runtime": 149,
+			"release_date": "2001-12-18",
+			"runtime": 178,
 			"status": "Released",
 			"vote_average": 8.3,
 			"adult": false,
-			"belongs_to_collection": 86311,
+			"belongs_to_collection": 119,
 			"original_language": "en",
-			"homepage": "http://marvel.com/movies/movie/223/avengers_infinity_war_part_1",
-			"overview": "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain."
+			"homepage": "http://www.lordoftherings.net/",
+			"overview": "Young hobbit Frodo Baggins, after inheriting a mysterious ring from his uncle Bilbo, must leave his home in order to keep it from falling into the hands of its evil creator. Along the way, a fellowship is formed to protect the ringbearer and make sure that the ring arrives at its final destination: Mt. Doom, the only place where it can be destroyed."
 		}
 	},
 	{
-		"pk": 540247,
+		"pk": 536869,
 		"model": "movies.Movie",
 		"fields": {
-			"title": "Jurassic Galaxy",
-			"original_title": "Jurassic Galaxy",
+			"title": "Cats",
+			"original_title": "Cats",
 			"genres": [
-				878,
+				35,
+				18,
+				14,
+				10402
+			],
+			"release_date": "2019-12-19",
+			"runtime": 110,
+			"status": "Released",
+			"vote_average": 4.6,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.catsmovie.com/",
+			"overview": "A tribe of cats called the Jellicles must decide yearly which one will ascend to the Heaviside Layer and come back to a new Jellicle life."
+		}
+	},
+	{
+		"pk": 157336,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Interstellar",
+			"original_title": "Interstellar",
+			"genres": [
+				12,
+				18,
+				878
+			],
+			"release_date": "2014-11-05",
+			"runtime": 169,
+			"status": "Released",
+			"vote_average": 8.3,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://www.interstellarmovie.net/",
+			"overview": "Interstellar chronicles the adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage."
+		}
+	},
+	{
+		"pk": 38700,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Bad Boys for Life",
+			"original_title": "Bad Boys for Life",
+			"genres": [
+				53,
 				28,
-				12
+				80
 			],
-			"release_date": "2018-08-20",
-			"runtime": 76,
-			"status": "Released",
-			"vote_average": 2.7,
+			"release_date": "2020-01-15",
+			"runtime": 124,
+			"status": "Post Production",
+			"vote_average": 0.0,
 			"adult": false,
-			"belongs_to_collection": 0,
+			"belongs_to_collection": 14890,
 			"original_language": "en",
-			"homepage": " ",
-			"overview": "In the near future, a ship of space explorers crash land on an unknown planet. They're soon met with some of their worst fears as they discover the planet is inhabited by monstrous dinosaurs."
+			"homepage": "https://www.badboysforlife.movie/",
+			"overview": "Marcus Burnett is now a police inspector and Mike Lowery is in a midlife crisis. They unite again when an Albanian mercenary, whose brother they killed, promises them an important bonus."
 		}
 	},
 	{
-		"pk": 101411,
+		"pk": 68718,
 		"model": "movies.Movie",
 		"fields": {
-			"title": "23-F: la película",
-			"original_title": "23-F: la película",
+			"title": "Django Unchained",
+			"original_title": "Django Unchained",
 			"genres": [
-				36,
-				18
+				18,
+				37
 			],
-			"release_date": "2011-02-23",
-			"runtime": 105,
+			"release_date": "2012-12-25",
+			"runtime": 165,
 			"status": "Released",
-			"vote_average": 5.5,
+			"vote_average": 8.1,
 			"adult": false,
 			"belongs_to_collection": 0,
-			"original_language": "es",
-			"homepage": " ",
-			"overview": "The failed coup d'état of February 23, 1981, which began with the capture of the Congress of Deputies and ended with the release of parliamentarians, put at serious risk the Spanish democracy."
+			"original_language": "en",
+			"homepage": "http://www.unchainedmovie.com",
+			"overview": "With the help of a German bounty hunter, a freed slave sets out to rescue his wife from a brutal Mississippi plantation owner."
 		}
 	},
 	{
@@ -572,12 +1335,13 @@
 			"genres": [
 				80,
 				18,
-				53
+				53,
+				28
 			],
 			"release_date": "2019-10-11",
 			"runtime": 123,
 			"status": "Released",
-			"vote_average": 7,
+			"vote_average": 7.0,
 			"adult": false,
 			"belongs_to_collection": 0,
 			"original_language": "en",
@@ -586,133 +1350,68 @@
 		}
 	},
 	{
-		"pk": 420809,
+		"pk": 606856,
 		"model": "movies.Movie",
 		"fields": {
-			"title": "Maleficent: Mistress of Evil",
-			"original_title": "Maleficent: Mistress of Evil",
+			"title": "Togo",
+			"original_title": "Togo",
 			"genres": [
-				14,
-				10751,
+				18,
+				12,
+				10751
+			],
+			"release_date": "2019-12-20",
+			"runtime": 113,
+			"status": "Released",
+			"vote_average": 7.5,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.disneyplus.com/movies/togo/7jEeXqS5aEVr",
+			"overview": "The untold true story set in the winter of 1925 that takes you across the treacherous terrain of the Alaskan tundra for an exhilarating and uplifting adventure that will test the strength, courage and determination of one man, Leonhard Seppala, and his lead sled dog, Togo."
+		}
+	},
+	{
+		"pk": 459992,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Long Shot",
+			"original_title": "Long Shot",
+			"genres": [
+				35,
+				10749
+			],
+			"release_date": "2019-05-02",
+			"runtime": 125,
+			"status": "Released",
+			"vote_average": 6.7,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://longshot.movie",
+			"overview": "Fred Flarsky is a gifted and free-spirited journalist who has a knack for getting into trouble. Charlotte Field is one of the most influential women in the world -- a smart, sophisticated and accomplished politician. When Fred unexpectedly runs into Charlotte, he soon realizes that she was his former baby sitter and childhood crush. When Charlotte decides to make a run for the presidency, she impulsively hires Fred as her speechwriter -- much to the dismay of her trusted advisers."
+		}
+	},
+	{
+		"pk": 27205,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Inception",
+			"original_title": "Inception",
+			"genres": [
+				28,
+				878,
 				12
 			],
-			"release_date": "2019-10-16",
-			"runtime": 118,
+			"release_date": "2010-07-15",
+			"runtime": 148,
 			"status": "Released",
-			"vote_average": 7.2,
-			"adult": false,
-			"belongs_to_collection": 531331,
-			"original_language": "en",
-			"homepage": "https://movies.disney.com/maleficent-mistress-of-evil",
-			"overview": "Maleficent and her goddaughter Aurora begin to question the complex family ties that bind them as they are pulled in different directions by impending nuptials, unexpected allies, and dark new forces at play."
-		}
-	},
-	{
-		"pk": 484641,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "Anna",
-			"original_title": "Anna",
-			"genres": [
-				53,
-				28
-			],
-			"release_date": "2019-06-19",
-			"runtime": 119,
-			"status": "Released",
-			"vote_average": 6.4,
-			"adult": false,
-			"belongs_to_collection": 0,
-			"original_language": "fr",
-			"homepage": "https://anna.movie",
-			"overview": "Beneath Anna Poliatova's striking beauty lies a secret that will unleash her indelible strength and skill to become one of the world's most feared government assassins."
-		}
-	},
-	{
-		"pk": 11,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "Star Wars",
-			"original_title": "Star Wars",
-			"genres": [
-				12,
-				28,
-				878
-			],
-			"release_date": "1977-05-25",
-			"runtime": 121,
-			"status": "Released",
-			"vote_average": 8.2,
-			"adult": false,
-			"belongs_to_collection": 10,
-			"original_language": "en",
-			"homepage": "http://www.starwars.com/films/star-wars-episode-iv-a-new-hope",
-			"overview": "Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire."
-		}
-	},
-	{
-		"pk": 522938,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "Rambo: Last Blood",
-			"original_title": "Rambo: Last Blood",
-			"genres": [
-				28,
-				53
-			],
-			"release_date": "2019-09-19",
-			"runtime": 89,
-			"status": "Released",
-			"vote_average": 5.9,
-			"adult": false,
-			"belongs_to_collection": 5039,
-			"original_language": "en",
-			"homepage": "https://rambo.movie/",
-			"overview": "When John Rambo's niece travels to Mexico to find the father that abandoned her and her mother, she finds herself in the grasps of Calle Mexican sex traffickers. When she doesn't return home as expected, John learns she's crossed into Mexico and sets out to get her back and make them pay."
-		}
-	},
-	{
-		"pk": 487616,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "Curiosa",
-			"original_title": "Curiosa",
-			"genres": [
-				36,
-				18
-			],
-			"release_date": "2019-04-03",
-			"runtime": 107,
-			"status": "Released",
-			"vote_average": 6.3,
-			"adult": false,
-			"belongs_to_collection": 0,
-			"original_language": "fr",
-			"homepage": " ",
-			"overview": "A passionate love story set against a backdrop of sexual freedom, loosely based on the relationship between 19th century authors Pierre Louÿs and Marie de Régnier"
-		}
-	},
-	{
-		"pk": 567609,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "Ready or Not",
-			"original_title": "Ready or Not",
-			"genres": [
-				27,
-				53,
-				9648,
-				35
-			],
-			"release_date": "2019-08-21",
-			"runtime": 95,
-			"status": "Released",
-			"vote_average": 6.9,
+			"vote_average": 8.3,
 			"adult": false,
 			"belongs_to_collection": 0,
 			"original_language": "en",
-			"homepage": "http://www.foxsearchlight.com/readyornot/",
-			"overview": "A bride's wedding night takes a sinister turn when her eccentric new in-laws force her to take part in a terrifying game."
+			"homepage": "http://inceptionmovie.warnerbros.com/",
+			"overview": "Cobb, a skilled thief who commits corporate espionage by infiltrating the subconscious of his targets is offered a chance to regain his old life as payment for a task considered to be impossible: \"inception\", the implantation of another person's idea into a target's subconscious."
 		}
 	},
 	{
@@ -739,69 +1438,294 @@
 		}
 	},
 	{
-		"pk": 496243,
+		"pk": 671,
 		"model": "movies.Movie",
 		"fields": {
-			"title": "Parasite",
-			"original_title": "기생충",
-			"genres": [
-				53,
-				18,
-				35
-			],
-			"release_date": "2019-05-30",
-			"runtime": 132,
-			"status": "Released",
-			"vote_average": 8.5,
-			"adult": false,
-			"belongs_to_collection": 0,
-			"original_language": "ko",
-			"homepage": "https://www.parasite-movie.com/",
-			"overview": "All unemployed, Ki-taek's family takes peculiar interest in the wealthy and glamorous Parks for their livelihood until they get entangled in an unexpected incident."
-		}
-	},
-	{
-		"pk": 458156,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "John Wick: Chapter 3 - Parabellum",
-			"original_title": "John Wick: Chapter 3 - Parabellum",
-			"genres": [
-				28,
-				53,
-				80
-			],
-			"release_date": "2019-05-15",
-			"runtime": 131,
-			"status": "Released",
-			"vote_average": 7.1,
-			"adult": false,
-			"belongs_to_collection": 404609,
-			"original_language": "en",
-			"homepage": "https://www.johnwick.movie",
-			"overview": "Super-assassin John Wick returns with a $14 million price tag on his head and an army of bounty-hunting killers on his trail. After killing a member of the shadowy international assassin’s guild, the High Table, John Wick is excommunicado, but the world’s most ruthless hit men and women await his every turn."
-		}
-	},
-	{
-		"pk": 499701,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "Dora and the Lost City of Gold",
-			"original_title": "Dora and the Lost City of Gold",
+			"title": "Harry Potter and the Philosopher's Stone",
+			"original_title": "Harry Potter and the Philosopher's Stone",
 			"genres": [
 				12,
-				35,
+				14,
 				10751
 			],
-			"release_date": "2019-08-08",
-			"runtime": 102,
+			"release_date": "2001-11-16",
+			"runtime": 152,
 			"status": "Released",
-			"vote_average": 6.4,
+			"vote_average": 7.8,
+			"adult": false,
+			"belongs_to_collection": 1241,
+			"original_language": "en",
+			"homepage": "https://www.warnerbros.com/movies/harry-potter-and-sorcerers-stone/",
+			"overview": "Harry Potter has lived under the stairs at his aunt and uncle's house his whole life. But on his 11th birthday, he learns he's a powerful wizard -- with a place waiting for him at the Hogwarts School of Witchcraft and Wizardry. As he learns to harness his newfound powers with the help of the school's kindly headmaster, Harry uncovers the truth about his parents' deaths -- and about the villain who's to blame."
+		}
+	},
+	{
+		"pk": 617400,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Kiss Me at the Stroke of Midnight",
+			"original_title": "午前0時、キスしに来てよ",
+			"genres": [
+				35,
+				10749
+			],
+			"release_date": "2019-12-06",
+			"runtime": 115,
+			"status": "Released",
+			"vote_average": 0.0,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "ja",
+			"homepage": "",
+			"overview": "A stern young girl who yearns for romance, finds herself involved with a celebrity whose image reveals a hidden persona."
+		}
+	},
+	{
+		"pk": 87101,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Terminator Genisys",
+			"original_title": "Terminator Genisys",
+			"genres": [
+				878,
+				28,
+				53,
+				12
+			],
+			"release_date": "2015-06-23",
+			"runtime": 126,
+			"status": "Released",
+			"vote_average": 5.9,
+			"adult": false,
+			"belongs_to_collection": 528,
+			"original_language": "en",
+			"homepage": "http://www.terminatormovie.com/",
+			"overview": "The year is 2029. John Connor, leader of the resistance continues the war against the machines. At the Los Angeles offensive, John's fears of the unknown future begin to emerge when TECOM spies reveal a new plot by SkyNet that will attack him from both fronts; past and future, and will ultimately change warfare forever."
+		}
+	},
+	{
+		"pk": 348350,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Solo: A Star Wars Story",
+			"original_title": "Solo: A Star Wars Story",
+			"genres": [
+				28,
+				12,
+				878
+			],
+			"release_date": "2018-05-15",
+			"runtime": 135,
+			"status": "Released",
+			"vote_average": 6.6,
 			"adult": false,
 			"belongs_to_collection": 0,
 			"original_language": "en",
-			"homepage": "https://www.paramount.com/movies/dora-and-lost-city-gold",
-			"overview": "Dora, a girl who has spent most of her life exploring the jungle with her parents, now must navigate her most dangerous adventure yet: high school. Always the explorer, Dora quickly finds herself leading Boots (her best friend, a monkey), Diego, and a rag tag group of teens on an adventure to save her parents and solve the impossible mystery behind a lost Inca civilization."
+			"homepage": "https://www.starwars.com/films/solo",
+			"overview": "Through a series of daring escapades deep within a dark and dangerous criminal underworld, Han Solo meets his mighty future copilot Chewbacca and encounters the notorious gambler Lando Calrissian."
+		}
+	},
+	{
+		"pk": 177572,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Big Hero 6",
+			"original_title": "Big Hero 6",
+			"genres": [
+				12,
+				10751,
+				16,
+				28,
+				35
+			],
+			"release_date": "2014-10-24",
+			"runtime": 102,
+			"status": "Released",
+			"vote_average": 7.8,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://movies.disney.com/big-hero-6",
+			"overview": "The special bond that develops between plus-sized inflatable robot Baymax, and prodigy Hiro Hamada, who team up with a group of friends to form a band of high-tech heroes."
+		}
+	},
+	{
+		"pk": 324857,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Spider-Man: Into the Spider-Verse",
+			"original_title": "Spider-Man: Into the Spider-Verse",
+			"genres": [
+				28,
+				12,
+				16,
+				878,
+				35
+			],
+			"release_date": "2018-12-06",
+			"runtime": 117,
+			"status": "Released",
+			"vote_average": 8.4,
+			"adult": false,
+			"belongs_to_collection": 573436,
+			"original_language": "en",
+			"homepage": "http://www.intothespiderverse.movie",
+			"overview": "Miles Morales is juggling his life between being a high school student and being a spider-man. When Wilson \"Kingpin\" Fisk uses a super collider, others from across the Spider-Verse are transported to this dimension."
+		}
+	},
+	{
+		"pk": 297802,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Aquaman",
+			"original_title": "Aquaman",
+			"genres": [
+				28,
+				12,
+				14
+			],
+			"release_date": "2018-12-07",
+			"runtime": 144,
+			"status": "Released",
+			"vote_average": 6.8,
+			"adult": false,
+			"belongs_to_collection": 573693,
+			"original_language": "en",
+			"homepage": "http://www.aquamanmovie.com",
+			"overview": "Once home to the most advanced civilization on Earth, Atlantis is now an underwater kingdom ruled by the power-hungry King Orm. With a vast army at his disposal, Orm plans to conquer the remaining oceanic people and then the surface world. Standing in his way is Arthur Curry, Orm's half-human, half-Atlantean brother and true heir to the throne."
+		}
+	},
+	{
+		"pk": 22,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+			"original_title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+			"genres": [
+				12,
+				14,
+				28
+			],
+			"release_date": "2003-07-09",
+			"runtime": 143,
+			"status": "Released",
+			"vote_average": 7.7,
+			"adult": false,
+			"belongs_to_collection": 295,
+			"original_language": "en",
+			"homepage": "http://disney.go.com/disneyvideos/liveaction/pirates/main_site/main.html",
+			"overview": "Jack Sparrow, a freewheeling 18th-century pirate, quarrels with a rival pirate bent on pillaging Port Royal. When the governor's daughter is kidnapped, Sparrow decides to help the girl's love save her."
+		}
+	},
+	{
+		"pk": 150689,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Cinderella",
+			"original_title": "Cinderella",
+			"genres": [
+				10749,
+				14,
+				10751,
+				18
+			],
+			"release_date": "2015-03-12",
+			"runtime": 105,
+			"status": "Released",
+			"vote_average": 6.7,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://movies.disney.com/cinderella",
+			"overview": "When her father unexpectedly passes away, young Ella finds herself at the mercy of her cruel stepmother and her daughters. Never one to give up hope, Ella's fortunes begin to change after meeting a dashing stranger in the woods."
+		}
+	},
+	{
+		"pk": 473033,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Uncut Gems",
+			"original_title": "Uncut Gems",
+			"genres": [
+				80,
+				53
+			],
+			"release_date": "2019-12-13",
+			"runtime": 135,
+			"status": "Released",
+			"vote_average": 7.6,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://a24films.com/films/uncut-gems",
+			"overview": "Howard Ratner, a charismatic New York City jeweler always on the lookout for the next big score, makes a series of high-stakes bets that could lead to the windfall of a lifetime."
+		}
+	},
+	{
+		"pk": 98,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Gladiator",
+			"original_title": "Gladiator",
+			"genres": [
+				28,
+				18,
+				12
+			],
+			"release_date": "2000-05-01",
+			"runtime": 155,
+			"status": "Released",
+			"vote_average": 8.1,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "",
+			"overview": "In the year 180, the death of emperor Marcus Aurelius throws the Roman Empire into chaos.  Maximus is one of the Roman army's most capable and trusted generals and a key advisor to the emperor.  As Marcus' devious son Commodus ascends to the throne, Maximus is set to be executed.  He escapes, but is captured by slave traders.  Renamed Spaniard and forced to become a gladiator, Maximus must battle to the death with other men for the amusement of paying audiences."
+		}
+	},
+	{
+		"pk": 287947,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Shazam!",
+			"original_title": "Shazam!",
+			"genres": [
+				28,
+				35,
+				14
+			],
+			"release_date": "2019-03-29",
+			"runtime": 132,
+			"status": "Released",
+			"vote_average": 7.0,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://www.shazammovie.com",
+			"overview": "A boy is given the ability to become an adult superhero in times of need with a single magic word."
+		}
+	},
+	{
+		"pk": 140607,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Star Wars: The Force Awakens",
+			"original_title": "Star Wars: The Force Awakens",
+			"genres": [
+				28,
+				12,
+				878,
+				14
+			],
+			"release_date": "2015-12-15",
+			"runtime": 136,
+			"status": "Released",
+			"vote_average": 7.4,
+			"adult": false,
+			"belongs_to_collection": 10,
+			"original_language": "en",
+			"homepage": "http://www.starwars.com/films/star-wars-episode-vii",
+			"overview": "Thirty years after defeating the Galactic Empire, Han Solo and his allies face a new threat from the evil Kylo Ren and his army of Stormtroopers."
 		}
 	},
 	{
@@ -829,353 +1753,112 @@
 		}
 	},
 	{
-		"pk": 501907,
+		"pk": 505954,
 		"model": "movies.Movie",
 		"fields": {
-			"title": "A Beautiful Day in the Neighborhood",
-			"original_title": "A Beautiful Day in the Neighborhood",
+			"title": "T-34",
+			"original_title": "T-34",
 			"genres": [
-				18
+				10752,
+				28
 			],
-			"release_date": "2019-11-22",
-			"runtime": 107,
+			"release_date": "2018-12-27",
+			"runtime": 139,
 			"status": "Released",
-			"vote_average": 7,
+			"vote_average": 5.5,
 			"adult": false,
 			"belongs_to_collection": 0,
-			"original_language": "en",
-			"homepage": "https://www.abeautifulday.movie/",
-			"overview": "An award-winning cynical journalist, Lloyd Vogel, begrudgingly accepts an assignment to write an Esquire profile piece on the beloved television icon Fred Rogers. After his encounter with Rogers, Vogel's perspective on life is transformed."
+			"original_language": "ru",
+			"homepage": "",
+			"overview": "In 1944, a courageous group of Russian soldiers managed to escape from German captivity in a half-destroyed legendary T-34 tank. Those were the times of unforgettable bravery, fierce fighting, unbreakable love, and legendary miracles."
 		}
 	},
 	{
-		"pk": 245891,
+		"pk": 262500,
 		"model": "movies.Movie",
 		"fields": {
-			"title": "John Wick",
-			"original_title": "John Wick",
-			"genres": [
-				28,
-				53
-			],
-			"release_date": "2014-10-22",
-			"runtime": 101,
-			"status": "Released",
-			"vote_average": 7.2,
-			"adult": false,
-			"belongs_to_collection": 404609,
-			"original_language": "en",
-			"homepage": "http://www.johnwickthemovie.com/",
-			"overview": "Ex-hitman John Wick comes out of retirement to track down the gangsters that took everything from him."
-		}
-	},
-	{
-		"pk": 109445,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "Frozen",
-			"original_title": "Frozen",
-			"genres": [
-				16,
-				12,
-				10751
-			],
-			"release_date": "2013-11-27",
-			"runtime": 102,
-			"status": "Released",
-			"vote_average": 7.3,
-			"adult": false,
-			"belongs_to_collection": 386382,
-			"original_language": "en",
-			"homepage": "http://movies.disney.com/frozen",
-			"overview": "Young princess Anna of Arendelle dreams about finding true love at her sister Elsa’s coronation. Fate takes her on a dangerous journey in an attempt to end the eternal winter that has fallen over the kingdom. She's accompanied by ice delivery man Kristoff, his reindeer Sven, and snowman Olaf. On an adventure where she will find out what friendship, courage, family, and true love really means."
-		}
-	},
-	{
-		"pk": 501170,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "Doctor Sleep",
-			"original_title": "Doctor Sleep",
-			"genres": [
-				27
-			],
-			"release_date": "2019-10-30",
-			"runtime": 152,
-			"status": "Released",
-			"vote_average": 7.1,
-			"adult": false,
-			"belongs_to_collection": 530064,
-			"original_language": "en",
-			"homepage": "http://www.doctorsleepmovie.net/",
-			"overview": "A traumatized, alcoholic Dan Torrance meets Abra, a kid who also has the ability to \"shine.\" He tries to protect her from the True Knot, a cult whose goal is to feed off of people like them in order to remain immortal."
-		}
-	},
-	{
-		"pk": 246655,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "X-Men: Apocalypse",
-			"original_title": "X-Men: Apocalypse",
+			"title": "Insurgent",
+			"original_title": "Insurgent",
 			"genres": [
 				28,
 				12,
 				878,
-				14
-			],
-			"release_date": "2016-05-18",
-			"runtime": 144,
-			"status": "Released",
-			"vote_average": 6.5,
-			"adult": false,
-			"belongs_to_collection": 748,
-			"original_language": "en",
-			"homepage": "http://www.foxmovies.com/movies/x-men-apocalypse",
-			"overview": "After the re-emergence of the world's first mutant, world-destroyer Apocalypse, the X-Men must unite to defeat his extinction level plan."
-		}
-	},
-	{
-		"pk": 155,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "The Dark Knight",
-			"original_title": "The Dark Knight",
-			"genres": [
-				18,
-				28,
-				80,
 				53
 			],
-			"release_date": "2008-07-16",
-			"runtime": 152,
+			"release_date": "2015-03-18",
+			"runtime": 119,
 			"status": "Released",
-			"vote_average": 8.4,
+			"vote_average": 6.3,
 			"adult": false,
-			"belongs_to_collection": 263,
+			"belongs_to_collection": 283579,
 			"original_language": "en",
-			"homepage": "http://thedarkknight.warnerbros.com/dvdsite/",
-			"overview": "Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker."
+			"homepage": "http://www.thedivergentseries.movie/#insurgent",
+			"overview": "Beatrice Prior must confront her inner demons and continue her fight against a powerful alliance which threatens to tear her society apart."
 		}
 	},
 	{
-		"pk": 299534,
+		"pk": 339964,
 		"model": "movies.Movie",
 		"fields": {
-			"title": "Avengers: Endgame",
-			"original_title": "Avengers: Endgame",
+			"title": "Valerian and the City of a Thousand Planets",
+			"original_title": "Valerian and the City of a Thousand Planets",
 			"genres": [
 				12,
 				878,
 				28
 			],
-			"release_date": "2019-04-24",
-			"runtime": 181,
+			"release_date": "2017-07-20",
+			"runtime": 136,
 			"status": "Released",
-			"vote_average": 8.3,
-			"adult": false,
-			"belongs_to_collection": 86311,
-			"original_language": "en",
-			"homepage": "https://www.marvel.com/movies/avengers-endgame",
-			"overview": "After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos' actions and restore order to the universe once and for all, no matter what consequences may be in store."
-		}
-	},
-	{
-		"pk": 398978,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "The Irishman",
-			"original_title": "The Irishman",
-			"genres": [
-				80,
-				36
-			],
-			"release_date": "2019-11-01",
-			"runtime": 209,
-			"status": "Released",
-			"vote_average": 8.5,
+			"vote_average": 6.6,
 			"adult": false,
 			"belongs_to_collection": 0,
 			"original_language": "en",
-			"homepage": "https://www.theirishman-movie.com/",
-			"overview": "World War II veteran and mob hitman Frank \"The Irishman\" Sheeran recalls his possible involvement with the slaying of union leader Jimmy Hoffa."
+			"homepage": "",
+			"overview": "In the 28th century, Valerian and Laureline are special operatives charged with keeping order throughout the human territories. On assignment from the Minister of Defense, the two undertake a mission to Alpha, an ever-expanding metropolis where species from across the universe have converged over centuries to share knowledge, intelligence, and cultures. At the center of Alpha is a mysterious dark force which threatens the peaceful existence of the City of a Thousand Planets, and Valerian and Laureline must race to identify the menace and safeguard not just Alpha, but the future of the universe."
 		}
 	},
 	{
-		"pk": 671,
+		"pk": 290859,
 		"model": "movies.Movie",
 		"fields": {
-			"title": "Harry Potter and the Philosopher's Stone",
-			"original_title": "Harry Potter and the Philosopher's Stone",
-			"genres": [
-				12,
-				14,
-				10751
-			],
-			"release_date": "2001-11-16",
-			"runtime": 152,
-			"status": "Released",
-			"vote_average": 7.8,
-			"adult": false,
-			"belongs_to_collection": 1241,
-			"original_language": "en",
-			"homepage": "http://harrypotter.warnerbros.com/harrypotterandthedeathlyhallows/mainsite/index.html",
-			"overview": "Harry Potter has lived under the stairs at his aunt and uncle's house his whole life. But on his 11th birthday, he learns he's a powerful wizard -- with a place waiting for him at the Hogwarts School of Witchcraft and Wizardry. As he learns to harness his newfound powers with the help of the school's kindly headmaster, Harry uncovers the truth about his parents' deaths -- and about the villain who's to blame."
-		}
-	},
-	{
-		"pk": 283995,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "Guardians of the Galaxy Vol. 2",
-			"original_title": "Guardians of the Galaxy Vol. 2",
+			"title": "Terminator: Dark Fate",
+			"original_title": "Terminator: Dark Fate",
 			"genres": [
 				28,
-				12,
-				35,
 				878
 			],
-			"release_date": "2017-04-19",
-			"runtime": 137,
+			"release_date": "2019-10-23",
+			"runtime": 128,
 			"status": "Released",
-			"vote_average": 7.7,
-			"adult": false,
-			"belongs_to_collection": 284433,
-			"original_language": "en",
-			"homepage": "http://marvel.com/movies/movie/221/guardians_of_the_galaxy_vol_2",
-			"overview": "The Guardians must fight to keep their newfound family together as they unravel the mysteries of Peter Quill's true parentage."
-		}
-	},
-	{
-		"pk": 551807,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "Untitled Fox/Marvel Film II",
-			"original_title": "Untitled Fox/Marvel Film II",
-			"genres": [
-				28,
-				12,
-				878
-			],
-			"release_date": "1111-11-11",
-			"runtime": 0,
-			"status": "Released",
-			"vote_average": 0,
-			"adult": false,
-			"belongs_to_collection": 0,
-			"original_language": "en",
-			"homepage": " ",
-			"overview": "An unknown Untitled Fox/Marvel Film."
-		}
-	},
-	{
-		"pk": 87101,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "Terminator Genisys",
-			"original_title": "Terminator Genisys",
-			"genres": [
-				878,
-				28,
-				53,
-				12
-			],
-			"release_date": "2015-06-23",
-			"runtime": 126,
-			"status": "Released",
-			"vote_average": 5.9,
+			"vote_average": 6.2,
 			"adult": false,
 			"belongs_to_collection": 528,
 			"original_language": "en",
-			"homepage": "http://www.terminatormovie.com/",
-			"overview": "The year is 2029. John Connor, leader of the resistance continues the war against the machines. At the Los Angeles offensive, John's fears of the unknown future begin to emerge when TECOM spies reveal a new plot by SkyNet that will attack him from both fronts; past and future, and will ultimately change warfare forever."
+			"homepage": "",
+			"overview": "Decades after Sarah Connor prevented Judgment Day, a lethal new Terminator is sent to eliminate the future leader of the resistance. In a fight to save mankind, battle-hardened Sarah Connor teams up with an unexpected ally and an enhanced super soldier to stop the deadliest Terminator yet."
 		}
 	},
 	{
-		"pk": 297802,
+		"pk": 206647,
 		"model": "movies.Movie",
 		"fields": {
-			"title": "Aquaman",
-			"original_title": "Aquaman",
+			"title": "Spectre",
+			"original_title": "Spectre",
 			"genres": [
 				28,
 				12,
-				14
+				80
 			],
-			"release_date": "2018-12-07",
-			"runtime": 144,
+			"release_date": "2015-10-26",
+			"runtime": 148,
 			"status": "Released",
-			"vote_average": 6.8,
+			"vote_average": 6.4,
 			"adult": false,
-			"belongs_to_collection": 573693,
+			"belongs_to_collection": 645,
 			"original_language": "en",
-			"homepage": "http://www.aquamanmovie.com",
-			"overview": "Once home to the most advanced civilization on Earth, Atlantis is now an underwater kingdom ruled by the power-hungry King Orm. With a vast army at his disposal, Orm plans to conquer the remaining oceanic people and then the surface world. Standing in his way is Arthur Curry, Orm's half-human, half-Atlantean brother and true heir to the throne."
-		}
-	},
-	{
-		"pk": 320288,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "Dark Phoenix",
-			"original_title": "Dark Phoenix",
-			"genres": [
-				878,
-				28,
-				12
-			],
-			"release_date": "2019-06-05",
-			"runtime": 114,
-			"status": "Released",
-			"vote_average": 6.1,
-			"adult": false,
-			"belongs_to_collection": 748,
-			"original_language": "en",
-			"homepage": "http://darkphoenix.com",
-			"overview": "The X-Men face their most formidable and powerful foe when one of their own, Jean Grey, starts to spiral out of control. During a rescue mission in outer space, Jean is nearly killed when she's hit by a mysterious cosmic force. Once she returns home, this force not only makes her infinitely more powerful, but far more unstable. The X-Men must now band together to save her soul and battle aliens that want to use Grey's new abilities to rule the galaxy."
-		}
-	},
-	{
-		"pk": 71805,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "Shipwrecked",
-			"original_title": "Håkon Håkonsen",
-			"genres": [
-				12,
-				10751
-			],
-			"release_date": "1990-10-03",
-			"runtime": 92,
-			"status": "Released",
-			"vote_average": 6.5,
-			"adult": false,
-			"belongs_to_collection": 0,
-			"original_language": "no",
-			"homepage": " ",
-			"overview": "A young Norwegian boy in 1850s England goes to work as a cabin boy and discovers some of his shipmates are actually pirates."
-		}
-	},
-	{
-		"pk": 513409,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "Earthquake Bird",
-			"original_title": "Earthquake Bird",
-			"genres": [
-				18,
-				9648,
-				10749,
-				53
-			],
-			"release_date": "2019-11-01",
-			"runtime": 107,
-			"status": "Released",
-			"vote_average": 5.6,
-			"adult": false,
-			"belongs_to_collection": 0,
-			"original_language": "en",
-			"homepage": "https://www.netflix.com/title/80244457",
-			"overview": "Tokyo, Japan, 1989. Lucy Fly, a foreigner who works as a translator, begins a passionate relationship with Teiji, a mysterious man obsessed with photography."
+			"homepage": "http://www.sonypictures.com/movies/spectre/",
+			"overview": "A cryptic message from Bond’s past sends him on a trail to uncover a sinister organization. While M battles political forces to keep the secret service alive, Bond peels back the layers of deceit to reveal the terrible truth behind SPECTRE."
 		}
 	},
 	{
@@ -1201,73 +1884,6 @@
 		}
 	},
 	{
-		"pk": 535292,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "21 Bridges",
-			"original_title": "21 Bridges",
-			"genres": [
-				80,
-				28,
-				53,
-				18
-			],
-			"release_date": "2019-10-24",
-			"runtime": 99,
-			"status": "Released",
-			"vote_average": 7.1,
-			"adult": false,
-			"belongs_to_collection": 0,
-			"original_language": "en",
-			"homepage": "https://depelis.co/pelicula/21-bridges/online-gratis-completa.html",
-			"overview": "A disgraced NYPD detective after being thrust into a citywide manhunt for a cop killer, is given a shot at redemption."
-		}
-	},
-	{
-		"pk": 122917,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "The Hobbit: The Battle of the Five Armies",
-			"original_title": "The Hobbit: The Battle of the Five Armies",
-			"genres": [
-				28,
-				12,
-				14
-			],
-			"release_date": "2014-12-10",
-			"runtime": 144,
-			"status": "Released",
-			"vote_average": 7.3,
-			"adult": false,
-			"belongs_to_collection": 121938,
-			"original_language": "en",
-			"homepage": "https://www.warnerbros.com/movies/hobbit-battle-five-armies/",
-			"overview": "Immediately after the events of The Desolation of Smaug, Bilbo and the dwarves try to defend Erebor's mountain of treasure from others who claim it: the men of the ruined Laketown and the elves of Mirkwood. Meanwhile an army of Orcs led by Azog the Defiler is marching on Erebor, fueled by the rise of the dark lord Sauron. Dwarves, elves and men must unite, and the hope for Middle-Earth falls into Bilbo's hands."
-		}
-	},
-	{
-		"pk": 546554,
-		"model": "movies.Movie",
-		"fields": {
-			"title": "Knives Out",
-			"original_title": "Knives Out",
-			"genres": [
-				9648,
-				53,
-				35
-			],
-			"release_date": "2019-11-27",
-			"runtime": 130,
-			"status": "Released",
-			"vote_average": 8.3,
-			"adult": false,
-			"belongs_to_collection": 0,
-			"original_language": "en",
-			"homepage": "https://www.knivesout.movie/",
-			"overview": "When renowned crime novelist Harlan Thrombey is found dead at his estate just after his 85th birthday, the inquisitive and debonair Detective Benoit Blanc is mysteriously enlisted to investigate. From Harlan's dysfunctional family to his devoted staff, Blanc sifts through a web of red herrings and self-serving lies to uncover the truth behind Harlan's untimely death."
-		}
-	},
-	{
 		"pk": 528888,
 		"model": "movies.Movie",
 		"fields": {
@@ -1281,32 +1897,2517 @@
 			"release_date": "2019-09-07",
 			"runtime": 118,
 			"status": "Released",
-			"vote_average": 7.1,
+			"vote_average": 7.2,
 			"adult": false,
 			"belongs_to_collection": 0,
 			"original_language": "en",
-			"homepage": " ",
+			"homepage": "",
 			"overview": "The story of Rudy Ray Moore, who created the iconic big screen pimp character Dolemite in the 1970s."
 		}
 	},
 	{
-		"pk": 521777,
+		"pk": 480105,
 		"model": "movies.Movie",
 		"fields": {
-			"title": "Good Boys",
-			"original_title": "Good Boys",
+			"title": "47 Meters Down: Uncaged",
+			"original_title": "47 Meters Down: Uncaged",
 			"genres": [
-				35
+				53,
+				27,
+				12
 			],
-			"release_date": "2019-08-14",
-			"runtime": 89,
+			"release_date": "2019-08-15",
+			"runtime": 90,
+			"status": "Released",
+			"vote_average": 4.9,
+			"adult": false,
+			"belongs_to_collection": 635922,
+			"original_language": "en",
+			"homepage": "https://www.47metersdownuncagedmovie.com",
+			"overview": "A group of backpackers diving in a ruined underwater city discover that they have stumbled into the territory of the ocean's deadliest shark species."
+		}
+	},
+	{
+		"pk": 537061,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Steven Universe: The Movie",
+			"original_title": "Steven Universe: The Movie",
+			"genres": [
+				16,
+				10770,
+				12,
+				35,
+				10751,
+				10402
+			],
+			"release_date": "2019-09-02",
+			"runtime": 82,
+			"status": "Released",
+			"vote_average": 8.8,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "",
+			"overview": "Two years after the events of \"Change Your Mind\", Steven (now 16 years old) and his friends are ready to enjoy the rest of their lives peacefully. However, all of that changes when a new sinister Gem arrives, armed with a giant drill that saps the life force of all living things on Earth. In their biggest challenge ever, the Crystal Gems must work together to save all organic life on Earth within 48 hours."
+		}
+	},
+	{
+		"pk": 283366,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Miss Peregrine's Home for Peculiar Children",
+			"original_title": "Miss Peregrine's Home for Peculiar Children",
+			"genres": [
+				18,
+				14,
+				12,
+				10751
+			],
+			"release_date": "2016-09-28",
+			"runtime": 127,
+			"status": "Released",
+			"vote_average": 6.7,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://www.foxmovies.com/movies/miss-peregrines-home-for-peculiar-children",
+			"overview": "A teenager finds himself transported to an island where he must help protect a group of orphans with special powers from creatures intent on destroying them."
+		}
+	},
+	{
+		"pk": 466081,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Informer",
+			"original_title": "The Informer",
+			"genres": [
+				80,
+				18
+			],
+			"release_date": "2019-08-30",
+			"runtime": 113,
 			"status": "Released",
 			"vote_average": 6.5,
 			"adult": false,
 			"belongs_to_collection": 0,
 			"original_language": "en",
-			"homepage": "https://www.goodboysmovie.com/",
-			"overview": "A group of young boys on the cusp of becoming teenagers embark on an epic quest to fix their broken drone before their parents get home."
+			"homepage": "https://www.theinformerfilm.com/",
+			"overview": "An ex-convict working undercover intentionally gets himself incarcerated again in order to infiltrate the mob at a maximum security prison."
+		}
+	},
+	{
+		"pk": 272,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Batman Begins",
+			"original_title": "Batman Begins",
+			"genres": [
+				28,
+				80,
+				18
+			],
+			"release_date": "2005-06-10",
+			"runtime": 140,
+			"status": "Released",
+			"vote_average": 7.6,
+			"adult": false,
+			"belongs_to_collection": 263,
+			"original_language": "en",
+			"homepage": "https://www.warnerbros.com/movies/batman-begins/",
+			"overview": "Driven by tragedy, billionaire Bruce Wayne dedicates his life to uncovering and defeating the corruption that plagues his home, Gotham City.  Unable to work within the system, he instead creates a new identity, a symbol of fear for the criminal underworld - The Batman."
+		}
+	},
+	{
+		"pk": 118340,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Guardians of the Galaxy",
+			"original_title": "Guardians of the Galaxy",
+			"genres": [
+				28,
+				878,
+				12
+			],
+			"release_date": "2014-07-30",
+			"runtime": 121,
+			"status": "Released",
+			"vote_average": 7.9,
+			"adult": false,
+			"belongs_to_collection": 284433,
+			"original_language": "en",
+			"homepage": "http://marvel.com/guardians",
+			"overview": "Light years from Earth, 26 years after being abducted, Peter Quill finds himself the prime target of a manhunt after discovering an orb wanted by Ronan the Accuser."
+		}
+	},
+	{
+		"pk": 549053,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Last Christmas",
+			"original_title": "Last Christmas",
+			"genres": [
+				35,
+				10749,
+				18
+			],
+			"release_date": "2019-11-07",
+			"runtime": 102,
+			"status": "Released",
+			"vote_average": 7.1,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "",
+			"overview": "Kate is a young woman subscribed to bad decisions. Her last date with disaster? That of having accepted to work as Santa's elf for a department store. However, she meets Tom there. Her life takes a new turn. For Kate, it seems too good to be true."
+		}
+	},
+	{
+		"pk": 155,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Dark Knight",
+			"original_title": "The Dark Knight",
+			"genres": [
+				18,
+				28,
+				80,
+				53
+			],
+			"release_date": "2008-07-16",
+			"runtime": 152,
+			"status": "Released",
+			"vote_average": 8.4,
+			"adult": false,
+			"belongs_to_collection": 263,
+			"original_language": "en",
+			"homepage": "https://www.warnerbros.com/movies/dark-knight/",
+			"overview": "Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker."
+		}
+	},
+	{
+		"pk": 550,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Fight Club",
+			"original_title": "Fight Club",
+			"genres": [
+				18
+			],
+			"release_date": "1999-10-15",
+			"runtime": 139,
+			"status": "Released",
+			"vote_average": 8.4,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://www.foxmovies.com/movies/fight-club",
+			"overview": "A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground \"fight clubs\" forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion."
+		}
+	},
+	{
+		"pk": 24428,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Avengers",
+			"original_title": "The Avengers",
+			"genres": [
+				878,
+				28,
+				12
+			],
+			"release_date": "2012-04-25",
+			"runtime": 143,
+			"status": "Released",
+			"vote_average": 7.7,
+			"adult": false,
+			"belongs_to_collection": 86311,
+			"original_language": "en",
+			"homepage": "http://marvel.com/avengers_movie/",
+			"overview": "When an unexpected enemy emerges and threatens global safety and security, Nick Fury, director of the international peacekeeping agency known as S.H.I.E.L.D., finds himself in need of a team to pull the world back from the brink of disaster. Spanning the globe, a daring recruitment effort begins!"
+		}
+	},
+	{
+		"pk": 122,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Lord of the Rings: The Return of the King",
+			"original_title": "The Lord of the Rings: The Return of the King",
+			"genres": [
+				12,
+				14,
+				28
+			],
+			"release_date": "2003-12-01",
+			"runtime": 201,
+			"status": "Released",
+			"vote_average": 8.4,
+			"adult": false,
+			"belongs_to_collection": 119,
+			"original_language": "en",
+			"homepage": "http://www.lordoftherings.net",
+			"overview": "Aragorn is revealed as the heir to the ancient kings as he, Gandalf and the other members of the broken fellowship struggle to save Gondor from Sauron's forces. Meanwhile, Frodo and Sam take the ring closer to the heart of Mordor, the dark lord's realm."
+		}
+	},
+	{
+		"pk": 218,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Terminator",
+			"original_title": "The Terminator",
+			"genres": [
+				28,
+				53,
+				878
+			],
+			"release_date": "1984-10-26",
+			"runtime": 108,
+			"status": "Released",
+			"vote_average": 7.5,
+			"adult": false,
+			"belongs_to_collection": 528,
+			"original_language": "en",
+			"homepage": "http://www.mgm.com/#/our-titles/1970/The-Terminator/",
+			"overview": "In the post-apocalyptic future, reigning tyrannical supercomputers teleport a cyborg assassin known as the \"Terminator\" back to 1984 to kill Sarah Connor, whose unborn son is destined to lead insurgents against 21st century mechanical hegemony. Meanwhile, the human-resistance movement dispatches a lone warrior to safeguard Sarah. Can he stop the virtually indestructible killing machine?"
+		}
+	},
+	{
+		"pk": 194662,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Birdman",
+			"original_title": "Birdman",
+			"genres": [
+				18,
+				35
+			],
+			"release_date": "2014-08-27",
+			"runtime": 120,
+			"status": "Released",
+			"vote_average": 7.5,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://www.foxsearchlight.com/birdman",
+			"overview": "A fading actor best known for his portrayal of a popular superhero attempts to mount a comeback by appearing in a Broadway play. As opening night approaches, his attempts to become more altruistic, rebuild his career, and reconnect with friends and family prove more difficult than expected."
+		}
+	},
+	{
+		"pk": 680,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Pulp Fiction",
+			"original_title": "Pulp Fiction",
+			"genres": [
+				53,
+				80
+			],
+			"release_date": "1994-09-10",
+			"runtime": 154,
+			"status": "Released",
+			"vote_average": 8.5,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "",
+			"overview": "A burger-loving hit man, his philosophical partner, a drug-addled gangster's moll and a washed-up boxer converge in this sprawling, comedic crime caper. Their adventures unfurl in three stories that ingeniously trip back and forth in time."
+		}
+	},
+	{
+		"pk": 672,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Harry Potter and the Chamber of Secrets",
+			"original_title": "Harry Potter and the Chamber of Secrets",
+			"genres": [
+				12,
+				14
+			],
+			"release_date": "2002-11-13",
+			"runtime": 161,
+			"status": "Released",
+			"vote_average": 7.7,
+			"adult": false,
+			"belongs_to_collection": 1241,
+			"original_language": "en",
+			"homepage": "https://www.warnerbros.com/movies/harry-potter-and-chamber-secrets/",
+			"overview": "Cars fly, trees fight back, and a mysterious house-elf comes to warn Harry Potter at the start of his second year at Hogwarts. Adventure and danger await when bloody writing on a wall announces: The Chamber Of Secrets Has Been Opened. To save Hogwarts will require all of Harry, Ron and Hermione’s magical abilities and courage."
+		}
+	},
+	{
+		"pk": 181533,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Night at the Museum: Secret of the Tomb",
+			"original_title": "Night at the Museum: Secret of the Tomb",
+			"genres": [
+				12,
+				35,
+				14,
+				10751
+			],
+			"release_date": "2014-12-17",
+			"runtime": 97,
+			"status": "Released",
+			"vote_average": 6.1,
+			"adult": false,
+			"belongs_to_collection": 85943,
+			"original_language": "en",
+			"homepage": "",
+			"overview": "When the magic powers of The Tablet of Ahkmenrah begin to die out, Larry Daley spans the globe, uniting favorite and new characters while embarking on an epic quest to save the magic before it is gone forever."
+		}
+	},
+	{
+		"pk": 198663,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Maze Runner",
+			"original_title": "The Maze Runner",
+			"genres": [
+				28,
+				9648,
+				878,
+				53
+			],
+			"release_date": "2014-09-10",
+			"runtime": 113,
+			"status": "Released",
+			"vote_average": 7.1,
+			"adult": false,
+			"belongs_to_collection": 295130,
+			"original_language": "en",
+			"homepage": "http://themazerunnermovie.com",
+			"overview": "Set in a post-apocalyptic world, young Thomas is deposited in a community of boys after his memory is erased, soon learning they're all trapped in a maze that will require him to join forces with fellow “runners” for a shot at escape."
+		}
+	},
+	{
+		"pk": 540247,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Jurassic Galaxy",
+			"original_title": "Jurassic Galaxy",
+			"genres": [
+				878,
+				28,
+				12
+			],
+			"release_date": "2018-08-20",
+			"runtime": 76,
+			"status": "Released",
+			"vote_average": 3.7,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "",
+			"overview": "In the near future, a ship of space explorers crash land on an unknown planet. They're soon met with some of their worst fears as they discover the planet is inhabited by monstrous dinosaurs."
+		}
+	},
+	{
+		"pk": 625489,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Recep İvedik 6",
+			"original_title": "Recep İvedik 6",
+			"genres": [
+				35
+			],
+			"release_date": "2019-11-07",
+			"runtime": 0,
+			"status": "Released",
+			"vote_average": 4.3,
+			"adult": false,
+			"belongs_to_collection": 131989,
+			"original_language": "tr",
+			"homepage": "",
+			"overview": ""
+		}
+	},
+	{
+		"pk": 49530,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "In Time",
+			"original_title": "In Time",
+			"genres": [
+				28,
+				53,
+				878
+			],
+			"release_date": "2011-10-27",
+			"runtime": 109,
+			"status": "Released",
+			"vote_average": 6.8,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://www.intimemovie.com/",
+			"overview": "In the not-too-distant future the aging gene has been switched off. To avoid overpopulation, time has become the currency and the way people pay for luxuries and necessities. The rich can live forever, while the rest try to negotiate for their immortality. A poor young man who comes into a fortune of time, though too late to help his mother from dying. He ends up on the run from a corrupt police force known as 'time keepers'."
+		}
+	},
+	{
+		"pk": 431580,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Abominable",
+			"original_title": "Abominable",
+			"genres": [
+				16,
+				12,
+				35,
+				10751
+			],
+			"release_date": "2019-09-19",
+			"runtime": 92,
+			"status": "Released",
+			"vote_average": 6.9,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "",
+			"overview": "A group of misfits encounter a young Yeti named Everest, and they set off to reunite the magical creature with his family on the mountain of his namesake."
+		}
+	},
+	{
+		"pk": 576235,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Elise",
+			"original_title": "Elise",
+			"genres": [
+				10749,
+				35
+			],
+			"release_date": "2019-02-06",
+			"runtime": 112,
+			"status": "Released",
+			"vote_average": 0.0,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "tl",
+			"homepage": "",
+			"overview": "As their paths cross again several years later, Bert has a hard time acknowledging that he is still in love with Elise."
+		}
+	},
+	{
+		"pk": 320288,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Dark Phoenix",
+			"original_title": "Dark Phoenix",
+			"genres": [
+				878,
+				28,
+				12
+			],
+			"release_date": "2019-06-05",
+			"runtime": 114,
+			"status": "Released",
+			"vote_average": 6.0,
+			"adult": false,
+			"belongs_to_collection": 748,
+			"original_language": "en",
+			"homepage": "http://darkphoenix.com",
+			"overview": "The X-Men face their most formidable and powerful foe when one of their own, Jean Grey, starts to spiral out of control. During a rescue mission in outer space, Jean is nearly killed when she's hit by a mysterious cosmic force. Once she returns home, this force not only makes her infinitely more powerful, but far more unstable. The X-Men must now band together to save her soul and battle aliens that want to use Grey's new abilities to rule the galaxy."
+		}
+	},
+	{
+		"pk": 299534,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Avengers: Endgame",
+			"original_title": "Avengers: Endgame",
+			"genres": [
+				12,
+				878,
+				28
+			],
+			"release_date": "2019-04-24",
+			"runtime": 181,
+			"status": "Released",
+			"vote_average": 8.3,
+			"adult": false,
+			"belongs_to_collection": 86311,
+			"original_language": "en",
+			"homepage": "https://www.marvel.com/movies/avengers-endgame",
+			"overview": "After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos' actions and restore order to the universe once and for all, no matter what consequences may be in store."
+		}
+	},
+	{
+		"pk": 59961,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Safe House",
+			"original_title": "Safe House",
+			"genres": [
+				28,
+				53
+			],
+			"release_date": "2012-02-09",
+			"runtime": 115,
+			"status": "Released",
+			"vote_average": 6.4,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://www.nooneissafe.com",
+			"overview": "A dangerous CIA renegade resurfaces after a decade on the run. When the safe house he's remanded to is attacked by mercenaries, a rookie operative escapes with him. Now, the unlikely allies must stay alive long enough to uncover who wants them dead."
+		}
+	},
+	{
+		"pk": 228150,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Fury",
+			"original_title": "Fury",
+			"genres": [
+				10752,
+				18,
+				28
+			],
+			"release_date": "2014-10-15",
+			"runtime": 135,
+			"status": "Released",
+			"vote_average": 7.4,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "",
+			"overview": "In the last months of World War II, as the Allies make their final push in the European theatre, a battle-hardened U.S. Army sergeant named 'Wardaddy' commands a Sherman tank called 'Fury' and its five-man crew on a deadly mission behind enemy lines. Outnumbered and outgunned, Wardaddy and his men face overwhelming odds in their heroic attempts to strike at the heart of Nazi Germany."
+		}
+	},
+	{
+		"pk": 101,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Léon: The Professional",
+			"original_title": "Léon: The Professional",
+			"genres": [
+				80,
+				18,
+				28
+			],
+			"release_date": "1994-09-14",
+			"runtime": 111,
+			"status": "Released",
+			"vote_average": 8.3,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "",
+			"overview": "Léon, the top hit man in New York, has earned a rep as an effective \"cleaner\". But when his next-door neighbors are wiped out by a loose-cannon DEA agent, he becomes the unwilling custodian of 12-year-old Mathilda. Before long, Mathilda's thoughts turn to revenge, and she considers following in Léon's footsteps."
+		}
+	},
+	{
+		"pk": 299537,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Captain Marvel",
+			"original_title": "Captain Marvel",
+			"genres": [
+				28,
+				12,
+				878
+			],
+			"release_date": "2019-03-06",
+			"runtime": 124,
+			"status": "Released",
+			"vote_average": 7.0,
+			"adult": false,
+			"belongs_to_collection": 623911,
+			"original_language": "en",
+			"homepage": "https://www.marvel.com/movies/captain-marvel",
+			"overview": "The story follows Carol Danvers as she becomes one of the universe’s most powerful heroes when Earth is caught in the middle of a galactic war between two alien races. Set in the 1990s, Captain Marvel is an all-new adventure from a previously unseen period in the history of the Marvel Cinematic Universe."
+		}
+	},
+	{
+		"pk": 450001,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Master Z: Ip Man Legacy",
+			"original_title": "葉問外傳：張天志",
+			"genres": [
+				28
+			],
+			"release_date": "2018-12-20",
+			"runtime": 107,
+			"status": "Released",
+			"vote_average": 5.4,
+			"adult": false,
+			"belongs_to_collection": 70068,
+			"original_language": "cn",
+			"homepage": "",
+			"overview": "Following his defeat by Master Ip, Cheung Tin Chi (Zhang) tries to make a life with his young son in Hong Kong, waiting tables at a bar that caters to expats. But it s not long before the mix of foreigners, money, and triad leaders draw him once again to the fight."
+		}
+	},
+	{
+		"pk": 210577,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Gone Girl",
+			"original_title": "Gone Girl",
+			"genres": [
+				9648,
+				53,
+				18
+			],
+			"release_date": "2014-10-01",
+			"runtime": 149,
+			"status": "Released",
+			"vote_average": 7.9,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://www.gonegirlmovie.com/",
+			"overview": "With his wife's disappearance having become the focus of an intense media circus, a man sees the spotlight turned on him when it's suspected that he may not be innocent."
+		}
+	},
+	{
+		"pk": 514921,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Aeronauts",
+			"original_title": "The Aeronauts",
+			"genres": [
+				12,
+				18,
+				10749
+			],
+			"release_date": "2019-11-04",
+			"runtime": 101,
+			"status": "Released",
+			"vote_average": 6.7,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "",
+			"overview": "In 1862, daredevil balloon pilot Amelia Wren teams up with pioneering meteorologist James Glaisher  to advance human knowledge of the weather and fly higher than anyone in history. While breaking records and advancing scientific discovery, their voyage to the very edge of existence helps the unlikely pair find their place in the world they have left far below them. But they face physical and emotional challenges in the thin air, as the ascent becomes a fight for survival."
+		}
+	},
+	{
+		"pk": 46853,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Playing with Love",
+			"original_title": "Maladolescenza",
+			"genres": [
+				18
+			],
+			"release_date": "1977-05-17",
+			"runtime": 94,
+			"status": "Released",
+			"vote_average": 5.1,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "it",
+			"homepage": "",
+			"overview": "Laura and Fabrizio have been meeting every summer in the forest by her parent's summer home. Fabrizio is a solitary boy with only his dog for company; Laura a sweet but unconfident child. This summer new aspects enter into their story as both are growing up. Laura is falling in love with Fabrizio, while he displays a new sexual awareness of her masked by his malice. Things develop further when they meet Sylvia who, unlike the innocent Laura, is confident and assertive. Fabrizio develops a fascination with her, eventually bribing Laura to fetch her to the forest to join them in play."
+		}
+	},
+	{
+		"pk": 205596,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Imitation Game",
+			"original_title": "The Imitation Game",
+			"genres": [
+				36,
+				18,
+				53,
+				10752
+			],
+			"release_date": "2014-11-14",
+			"runtime": 113,
+			"status": "Released",
+			"vote_average": 8.1,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "",
+			"overview": "Based on the real life story of legendary cryptanalyst Alan Turing, the film portrays the nail-biting race against time by Turing and his brilliant team of code-breakers at Britain's top-secret Government Code and Cypher School at Bletchley Park, during the darkest days of World War II."
+		}
+	},
+	{
+		"pk": 238636,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Purge: Anarchy",
+			"original_title": "The Purge: Anarchy",
+			"genres": [
+				27,
+				53
+			],
+			"release_date": "2014-07-17",
+			"runtime": 104,
+			"status": "Released",
+			"vote_average": 6.6,
+			"adult": false,
+			"belongs_to_collection": 256322,
+			"original_language": "en",
+			"homepage": "",
+			"overview": "One night per year, the government sanctions a 12-hour period in which citizens can commit any crime they wish -- including murder -- without fear of punishment or imprisonment. Leo, a sergeant who lost his son, plans a vigilante mission of revenge during the mayhem. However, instead of a death-dealing avenger, he becomes the unexpected protector of four innocent strangers who desperately need his help if they are to survive the night."
+		}
+	},
+	{
+		"pk": 284053,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Thor: Ragnarok",
+			"original_title": "Thor: Ragnarok",
+			"genres": [
+				28,
+				12,
+				35,
+				14
+			],
+			"release_date": "2017-10-25",
+			"runtime": 131,
+			"status": "Released",
+			"vote_average": 7.5,
+			"adult": false,
+			"belongs_to_collection": 131296,
+			"original_language": "en",
+			"homepage": "https://marvel.com/movies/movie/222/thor_ragnarok",
+			"overview": "Thor is imprisoned on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the destruction of his home-world and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela."
+		}
+	},
+	{
+		"pk": 383498,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Deadpool 2",
+			"original_title": "Deadpool 2",
+			"genres": [
+				28,
+				35,
+				12
+			],
+			"release_date": "2018-05-10",
+			"runtime": 121,
+			"status": "Released",
+			"vote_average": 7.5,
+			"adult": false,
+			"belongs_to_collection": 448150,
+			"original_language": "en",
+			"homepage": "https://www.foxmovies.com/movies/deadpool-2",
+			"overview": "Wisecracking mercenary Deadpool battles the evil and powerful Cable and other bad guys to save a boy's life."
+		}
+	},
+	{
+		"pk": 491283,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Judy",
+			"original_title": "Judy",
+			"genres": [
+				18,
+				10749,
+				36
+			],
+			"release_date": "2019-09-27",
+			"runtime": 118,
+			"status": "Released",
+			"vote_average": 6.8,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "",
+			"overview": "Winter 1968 and showbiz legend Judy Garland arrives in Swinging London to perform a five-week sold-out run at The Talk of the Town. It is 30 years since she shot to global stardom in The Wizard of Oz, but if her voice has weakened, its dramatic intensity has only grown. As she prepares for the show, battles with management, charms musicians and reminisces with friends and adoring fans, her wit and warmth shine through. Even her dreams of love seem undimmed as she embarks on a whirlwind romance with Mickey Deans, her soon-to-be fifth husband."
+		}
+	},
+	{
+		"pk": 597,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Titanic",
+			"original_title": "Titanic",
+			"genres": [
+				18,
+				10749,
+				53
+			],
+			"release_date": "1997-11-18",
+			"runtime": 194,
+			"status": "Released",
+			"vote_average": 7.8,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "",
+			"overview": "101-year-old Rose DeWitt Bukater tells the story of her life aboard the Titanic, 84 years later. A young Rose boards the ship with her mother and fiancé. Meanwhile, Jack Dawson and Fabrizio De Rossi win third-class tickets aboard the ship. Rose tells the whole story from Titanic's departure through to its death—on its first and last voyage—on April 15, 1912."
+		}
+	},
+	{
+		"pk": 19995,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Avatar",
+			"original_title": "Avatar",
+			"genres": [
+				28,
+				12,
+				14,
+				878
+			],
+			"release_date": "2009-12-10",
+			"runtime": 162,
+			"status": "Released",
+			"vote_average": 7.4,
+			"adult": false,
+			"belongs_to_collection": 87096,
+			"original_language": "en",
+			"homepage": "http://www.avatarmovie.com/",
+			"overview": "In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following orders and protecting an alien civilization."
+		}
+	},
+	{
+		"pk": 43074,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Ghostbusters",
+			"original_title": "Ghostbusters",
+			"genres": [
+				28,
+				14,
+				35
+			],
+			"release_date": "2016-07-14",
+			"runtime": 116,
+			"status": "Released",
+			"vote_average": 5.4,
+			"adult": false,
+			"belongs_to_collection": 2980,
+			"original_language": "en",
+			"homepage": "http://www.ghostbusters.com/",
+			"overview": "Following a ghost invasion of Manhattan, paranormal enthusiasts Erin Gilbert and Abby Yates, nuclear engineer Jillian Holtzmann, and subway worker Patty Tolan band together to stop the otherworldly threat."
+		}
+	},
+	{
+		"pk": 36955,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "True Lies",
+			"original_title": "True Lies",
+			"genres": [
+				28,
+				53
+			],
+			"release_date": "1994-07-15",
+			"runtime": 141,
+			"status": "Released",
+			"vote_average": 6.9,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "",
+			"overview": "A fearless, globe-trotting, terrorist-battling secret agent has his life turned upside down when he discovers his wife might be having an affair with a used car salesman while terrorists smuggle nuclear war heads into the United States."
+		}
+	},
+	{
+		"pk": 284054,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Black Panther",
+			"original_title": "Black Panther",
+			"genres": [
+				28,
+				12,
+				14,
+				878
+			],
+			"release_date": "2018-02-13",
+			"runtime": 134,
+			"status": "Released",
+			"vote_average": 7.4,
+			"adult": false,
+			"belongs_to_collection": 529892,
+			"original_language": "en",
+			"homepage": "https://marvel.com/movies/movie/224/black_panther",
+			"overview": "King T'Challa returns home from America to the reclusive, technologically advanced African nation of Wakanda to serve as his country's new leader. However, T'Challa soon finds that he is challenged for the throne by factions within his own country as well as without. Using powers reserved to Wakandan kings, T'Challa assumes the Black Panther mantel to join with girlfriend Nakia, the queen-mother, his princess-kid sister, members of the Dora Milaje (the Wakandan 'special forces') and an American secret agent, to prevent Wakanda from being dragged into a world war."
+		}
+	},
+	{
+		"pk": 157350,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Divergent",
+			"original_title": "Divergent",
+			"genres": [
+				28,
+				12,
+				878
+			],
+			"release_date": "2014-03-14",
+			"runtime": 139,
+			"status": "Released",
+			"vote_average": 6.9,
+			"adult": false,
+			"belongs_to_collection": 283579,
+			"original_language": "en",
+			"homepage": "http://www.thedivergentseries.movie/#divergent",
+			"overview": "In a world divided into factions based on personality types, Tris learns that she's been classified as Divergent and won't fit in. When she discovers a plot to destroy Divergents, Tris and the mysterious Four must find out what makes Divergents dangerous before it's too late."
+		}
+	},
+	{
+		"pk": 339403,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Baby Driver",
+			"original_title": "Baby Driver",
+			"genres": [
+				28,
+				80
+			],
+			"release_date": "2017-06-28",
+			"runtime": 113,
+			"status": "Released",
+			"vote_average": 7.4,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://www.babydriver-movie.com",
+			"overview": "After being coerced into working for a crime boss, a young getaway driver finds himself taking part in a heist doomed to fail."
+		}
+	},
+	{
+		"pk": 129,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Spirited Away",
+			"original_title": "千と千尋の神隠し",
+			"genres": [
+				16,
+				10751,
+				14
+			],
+			"release_date": "2001-07-20",
+			"runtime": 125,
+			"status": "Released",
+			"vote_average": 8.5,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "ja",
+			"homepage": "http://movies.disney.com/spirited-away",
+			"overview": "A young girl, Chihiro, becomes trapped in a strange new world of spirits. When her parents undergo a mysterious transformation, she must call upon the courage she never knew she had to free her family."
+		}
+	},
+	{
+		"pk": 575771,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Same Blood",
+			"original_title": "La misma sangre",
+			"genres": [
+				53,
+				18,
+				9648
+			],
+			"release_date": "2019-02-28",
+			"runtime": 113,
+			"status": "Released",
+			"vote_average": 6.6,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "es",
+			"homepage": "",
+			"overview": "Thriller about a family whose ties are put to the test when the patriarch’s wife dies."
+		}
+	},
+	{
+		"pk": 335984,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Blade Runner 2049",
+			"original_title": "Blade Runner 2049",
+			"genres": [
+				878,
+				18
+			],
+			"release_date": "2017-10-04",
+			"runtime": 163,
+			"status": "Released",
+			"vote_average": 7.4,
+			"adult": false,
+			"belongs_to_collection": 422837,
+			"original_language": "en",
+			"homepage": "http://bladerunnermovie.com/",
+			"overview": "Thirty years after the events of the first film, a new blade runner, LAPD Officer K, unearths a long-buried secret that has the potential to plunge what's left of society into chaos. K's discovery leads him on a quest to find Rick Deckard, a former LAPD blade runner who has been missing for 30 years."
+		}
+	},
+	{
+		"pk": 150540,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Inside Out",
+			"original_title": "Inside Out",
+			"genres": [
+				18,
+				35,
+				16,
+				10751
+			],
+			"release_date": "2015-06-09",
+			"runtime": 95,
+			"status": "Released",
+			"vote_average": 7.9,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://movies.disney.com/inside-out",
+			"overview": "Growing up can be a bumpy road, and it's no exception for Riley, who is uprooted from her Midwest life when her father starts a new job in San Francisco. Riley's guiding emotions— Joy, Fear, Anger, Disgust and Sadness—live in Headquarters, the control centre inside Riley's mind, where they help advise her through everyday life and tries to keep things positive, but the emotions conflict on how best to navigate a new city, house and school."
+		}
+	},
+	{
+		"pk": 428045,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Mystery of the Dragon’s Seal",
+			"original_title": "Тайна Печати Дракона",
+			"genres": [
+				12,
+				14
+			],
+			"release_date": "2019-08-16",
+			"runtime": 121,
+			"status": "Released",
+			"vote_average": 4.7,
+			"adult": false,
+			"belongs_to_collection": 428046,
+			"original_language": "ru",
+			"homepage": "",
+			"overview": "The Russian Czar Peter the Great commissions Jonathan Green, an English traveller, to map the Far East territories of the Russian Empire. Green sets off on yet another long journey, full of unbelievable adventures, which eventually leads him to China. On his way, the famous cartographer makes breath-taking discoveries, meets mysterious creatures, Chinese princesses, deadly masters of oriental martial arts, and even Lun Van, the King of Dragons, himself. What could be more perilous than looking into the eyes of Viy? Only meeting him again… What will prevail this time — the unflinching scepticism of the scientist or ancient black magic, which has already gained influence over the Far East Lands?"
+		}
+	},
+	{
+		"pk": 293660,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Deadpool",
+			"original_title": "Deadpool",
+			"genres": [
+				28,
+				12,
+				35
+			],
+			"release_date": "2016-02-09",
+			"runtime": 108,
+			"status": "Released",
+			"vote_average": 7.6,
+			"adult": false,
+			"belongs_to_collection": 448150,
+			"original_language": "en",
+			"homepage": "http://www.foxmovies.com/movies/deadpool",
+			"overview": "Deadpool tells the origin story of former Special Forces operative turned mercenary Wade Wilson, who after being subjected to a rogue experiment that leaves him with accelerated healing powers, adopts the alter ego Deadpool. Armed with his new abilities and a dark, twisted sense of humor, Deadpool hunts down the man who nearly destroyed his life."
+		}
+	},
+	{
+		"pk": 335983,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Venom",
+			"original_title": "Venom",
+			"genres": [
+				878,
+				28
+			],
+			"release_date": "2018-09-28",
+			"runtime": 112,
+			"status": "Released",
+			"vote_average": 6.6,
+			"adult": false,
+			"belongs_to_collection": 558216,
+			"original_language": "en",
+			"homepage": "http://www.venom.movie/site/",
+			"overview": "Investigative journalist Eddie Brock attempts a comeback following a scandal, but accidentally becomes the host of Venom, a violent, super powerful alien symbiote. Soon, he must rely on his newfound powers to protect the world from a shadowy organization looking for a symbiote of their own."
+		}
+	},
+	{
+		"pk": 812,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Aladdin",
+			"original_title": "Aladdin",
+			"genres": [
+				16,
+				10751,
+				12,
+				14,
+				10749
+			],
+			"release_date": "1992-11-25",
+			"runtime": 90,
+			"status": "Released",
+			"vote_average": 7.6,
+			"adult": false,
+			"belongs_to_collection": 86027,
+			"original_language": "en",
+			"homepage": "http://movies.disney.com/aladdin",
+			"overview": "Princess Jasmine grows tired of being forced to remain in the palace, so she sneaks out into the marketplace, in disguise, where she meets street-urchin Aladdin.  The couple falls in love, although Jasmine may only marry a prince.  After being thrown in jail, Aladdin becomes embroiled in a plot to find a mysterious lamp, with which the evil Jafar hopes to rule the land."
+		}
+	},
+	{
+		"pk": 141052,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Justice League",
+			"original_title": "Justice League",
+			"genres": [
+				28,
+				12,
+				14,
+				878
+			],
+			"release_date": "2017-11-15",
+			"runtime": 120,
+			"status": "Released",
+			"vote_average": 6.2,
+			"adult": false,
+			"belongs_to_collection": 468551,
+			"original_language": "en",
+			"homepage": "http://www.justiceleaguethemovie.com",
+			"overview": "Fuelled by his restored faith in humanity and inspired by Superman's selfless act, Bruce Wayne and Diana Prince assemble a team of metahumans consisting of Barry Allen, Arthur Curry and Victor Stone to face the catastrophic threat of Steppenwolf and the Parademons who are on the hunt for three Mother Boxes on Earth."
+		}
+	},
+	{
+		"pk": 490132,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Green Book",
+			"original_title": "Green Book",
+			"genres": [
+				18,
+				35
+			],
+			"release_date": "2018-11-16",
+			"runtime": 130,
+			"status": "Released",
+			"vote_average": 8.3,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://GreenBookFilm.com",
+			"overview": "Tony Lip, a bouncer in 1962, is hired to drive pianist Don Shirley on a tour through the Deep South in the days when African Americans, forced to find alternate accommodations and services due to segregation laws below the Mason-Dixon Line, relied on a guide called The Negro Motorist Green Book."
+		}
+	},
+	{
+		"pk": 373571,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Godzilla: King of the Monsters",
+			"original_title": "Godzilla: King of the Monsters",
+			"genres": [
+				878,
+				28
+			],
+			"release_date": "2019-05-29",
+			"runtime": 132,
+			"status": "Released",
+			"vote_average": 6.2,
+			"adult": false,
+			"belongs_to_collection": 535313,
+			"original_language": "en",
+			"homepage": "http://www.godzillamovie.com",
+			"overview": "Follows the heroic efforts of the crypto-zoological agency Monarch as its members face off against a battery of god-sized monsters, including the mighty Godzilla, who collides with Mothra, Rodan, and his ultimate nemesis, the three-headed King Ghidorah. When these ancient super-species - thought to be mere myths - rise again, they all vie for supremacy, leaving humanity's very existence hanging in the balance."
+		}
+	},
+	{
+		"pk": 156022,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Equalizer",
+			"original_title": "The Equalizer",
+			"genres": [
+				53,
+				28,
+				80
+			],
+			"release_date": "2014-09-24",
+			"runtime": 132,
+			"status": "Released",
+			"vote_average": 7.2,
+			"adult": false,
+			"belongs_to_collection": 523855,
+			"original_language": "en",
+			"homepage": "http://www.sonypictures.com/movies/theequalizer/discanddigital/",
+			"overview": "McCall believes he has put his mysterious past behind him and dedicated himself to beginning a new, quiet life. But when he meets Teri, a young girl under the control of ultra-violent Russian gangsters, he can’t stand idly by – he has to help her. Armed with hidden skills that allow him to serve vengeance against anyone who would brutalize the helpless, McCall comes out of his self-imposed retirement and finds his desire for justice reawakened. If someone has a problem, if the odds are stacked against them, if they have nowhere else to turn, McCall will help. He is The Equalizer."
+		}
+	},
+	{
+		"pk": 297762,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Wonder Woman",
+			"original_title": "Wonder Woman",
+			"genres": [
+				28,
+				12,
+				14
+			],
+			"release_date": "2017-05-30",
+			"runtime": 141,
+			"status": "Released",
+			"vote_average": 7.3,
+			"adult": false,
+			"belongs_to_collection": 468552,
+			"original_language": "en",
+			"homepage": "http://www.warnerbros.com/wonder-woman",
+			"overview": "An Amazon princess comes to the world of Man in the grips of the First World War to confront the forces of evil and bring an end to human conflict."
+		}
+	},
+	{
+		"pk": 424694,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Bohemian Rhapsody",
+			"original_title": "Bohemian Rhapsody",
+			"genres": [
+				18,
+				10402
+			],
+			"release_date": "2018-10-24",
+			"runtime": 135,
+			"status": "Released",
+			"vote_average": 8.0,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://bohemianrhapsody.com",
+			"overview": "Singer Freddie Mercury, guitarist Brian May, drummer Roger Taylor and bass guitarist John Deacon take the music world by storm when they form the rock 'n' roll band Queen in 1970. Hit songs become instant classics. When Mercury's increasingly wild lifestyle starts to spiral out of control, Queen soon faces its greatest challenge yet – finding a way to keep the band together amid the success and excess."
+		}
+	},
+	{
+		"pk": 259316,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Fantastic Beasts and Where to Find Them",
+			"original_title": "Fantastic Beasts and Where to Find Them",
+			"genres": [
+				12,
+				10751,
+				14
+			],
+			"release_date": "2016-11-16",
+			"runtime": 133,
+			"status": "Released",
+			"vote_average": 7.4,
+			"adult": false,
+			"belongs_to_collection": 435259,
+			"original_language": "en",
+			"homepage": "http://www.fantasticbeasts.com/",
+			"overview": "In 1926, Newt Scamander arrives at the Magical Congress of the United States of America with a magically expanded briefcase, which houses a number of dangerous creatures and their habitats. When the creatures escape from the briefcase, it sends the American wizarding authorities after Newt, and threatens to strain even further the state of magical and non-magical relations."
+		}
+	},
+	{
+		"pk": 45269,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The King's Speech",
+			"original_title": "The King's Speech",
+			"genres": [
+				18,
+				36
+			],
+			"release_date": "2010-09-06",
+			"runtime": 118,
+			"status": "Released",
+			"vote_average": 7.7,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://www.kingsspeech.com/",
+			"overview": "The King's Speech tells the story of the man who became King George VI, the father of Queen Elizabeth II. After his brother abdicates, George ('Bertie') reluctantly assumes the throne. Plagued by a dreaded stutter and considered unfit to be king, Bertie engages the help of an unorthodox speech therapist named Lionel Logue. Through a set of unexpected techniques, and as a result of an unlikely friendship, Bertie is able to find his voice and boldly lead the country into war."
+		}
+	},
+	{
+		"pk": 314365,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Spotlight",
+			"original_title": "Spotlight",
+			"genres": [
+				18,
+				53,
+				36
+			],
+			"release_date": "2015-11-06",
+			"runtime": 129,
+			"status": "Released",
+			"vote_average": 7.8,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://www.spotlightthefilm.com",
+			"overview": "In 2001, editor Marty Baron of The Boston Globe assigns a team of journalists to investigate allegations against John Geoghan, an unfrocked priest accused of molesting more than 80 boys. Led by editor Walter \"Robby\" Robinson, reporters Michael Rezendes, Matt Carroll and Sacha Pfeiffer interview victims and try to unseal sensitive documents. The reporters make it their mission to provide proof of a cover-up of sexual abuse within the Roman Catholic Church."
+		}
+	},
+	{
+		"pk": 515001,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Jojo Rabbit",
+			"original_title": "Jojo Rabbit",
+			"genres": [
+				35,
+				10752,
+				18
+			],
+			"release_date": "2019-10-18",
+			"runtime": 108,
+			"status": "Released",
+			"vote_average": 7.9,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://www.foxsearchlight.com/jojorabbit",
+			"overview": "A World War II satire that follows a lonely German boy whose world view is turned upside down when he discovers his single mother is hiding a young Jewish girl in their attic. Aided only by his idiotic imaginary friend, Adolf Hitler, Jojo must confront his blind nationalism."
+		}
+	},
+	{
+		"pk": 321612,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Beauty and the Beast",
+			"original_title": "Beauty and the Beast",
+			"genres": [
+				10751,
+				14,
+				10749
+			],
+			"release_date": "2017-03-16",
+			"runtime": 129,
+			"status": "Released",
+			"vote_average": 6.9,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://movies.disney.com/beauty-and-the-beast-2017",
+			"overview": "A live-action adaptation of Disney's version of the classic tale of a cursed prince and a beautiful young woman who helps him break the spell."
+		}
+	},
+	{
+		"pk": 269149,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Zootopia",
+			"original_title": "Zootopia",
+			"genres": [
+				16,
+				12,
+				10751,
+				35
+			],
+			"release_date": "2016-02-11",
+			"runtime": 109,
+			"status": "Released",
+			"vote_average": 7.7,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://movies.disney.com/zootopia",
+			"overview": "Determined to prove herself, Officer Judy Hopps, the first bunny on Zootopia's police force, jumps at the chance to crack her first case - even if it means partnering with scam-artist fox Nick Wilde to solve the mystery."
+		}
+	},
+	{
+		"pk": 101411,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "23-F: la película",
+			"original_title": "23-F: la película",
+			"genres": [
+				36,
+				18
+			],
+			"release_date": "2011-02-23",
+			"runtime": 105,
+			"status": "Released",
+			"vote_average": 5.5,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "es",
+			"homepage": "",
+			"overview": "The failed coup d'état of February 23, 1981, which began with the capture of the Congress of Deputies and ended with the release of parliamentarians, put at serious risk the Spanish democracy."
+		}
+	},
+	{
+		"pk": 413518,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Pinocchio",
+			"original_title": "Pinocchio",
+			"genres": [
+				14,
+				10751
+			],
+			"release_date": "2019-12-19",
+			"runtime": 125,
+			"status": "Released",
+			"vote_average": 7.2,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "it",
+			"homepage": "",
+			"overview": "Live-action adaptation of the classic story of a wooden puppet named Pinocchio who comes to life."
+		}
+	},
+	{
+		"pk": 244786,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Whiplash",
+			"original_title": "Whiplash",
+			"genres": [
+				18,
+				10402
+			],
+			"release_date": "2014-10-10",
+			"runtime": 107,
+			"status": "Released",
+			"vote_average": 8.4,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://sonyclassics.com/whiplash/",
+			"overview": "Under the direction of a ruthless instructor, a talented young drummer begins to pursue perfection at any cost, even his humanity."
+		}
+	},
+	{
+		"pk": 286217,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Martian",
+			"original_title": "The Martian",
+			"genres": [
+				18,
+				12,
+				878
+			],
+			"release_date": "2015-09-30",
+			"runtime": 141,
+			"status": "Released",
+			"vote_average": 7.7,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://www.foxmovies.com/movies/the-martian",
+			"overview": "During a manned mission to Mars, Astronaut Mark Watney is presumed dead after a fierce storm and left behind by his crew. But Watney has survived and finds himself stranded and alone on the hostile planet. With only meager supplies, he must draw upon his ingenuity, wit and spirit to subsist and find a way to signal to Earth that he is alive."
+		}
+	},
+	{
+		"pk": 646,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Dr. No",
+			"original_title": "Dr. No",
+			"genres": [
+				12,
+				28,
+				53
+			],
+			"release_date": "1962-10-04",
+			"runtime": 110,
+			"status": "Released",
+			"vote_average": 7.0,
+			"adult": false,
+			"belongs_to_collection": 645,
+			"original_language": "en",
+			"homepage": "http://www.mgm.com/#/our-titles/566/Dr.-No",
+			"overview": "In the film that launched the James Bond saga, Agent 007 battles mysterious Dr. No, a scientific genius bent on destroying the U.S. space program. As the countdown to disaster begins, Bond must go to Jamaica, where he encounters beautiful Honey Ryder, to confront a megalomaniacal villain in his massive island headquarters."
+		}
+	},
+	{
+		"pk": 1893,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Star Wars: Episode I - The Phantom Menace",
+			"original_title": "Star Wars: Episode I - The Phantom Menace",
+			"genres": [
+				12,
+				28,
+				878
+			],
+			"release_date": "1999-05-19",
+			"runtime": 136,
+			"status": "Released",
+			"vote_average": 6.4,
+			"adult": false,
+			"belongs_to_collection": 10,
+			"original_language": "en",
+			"homepage": "http://www.starwars.com/films/star-wars-episode-i-the-phantom-menace",
+			"overview": "Anakin Skywalker, a young slave strong with the Force, is discovered on Tatooine. Meanwhile, the evil Sith have returned, enacting their plot for revenge against the Jedi."
+		}
+	},
+	{
+		"pk": 18,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Fifth Element",
+			"original_title": "The Fifth Element",
+			"genres": [
+				12,
+				14,
+				28,
+				53,
+				878
+			],
+			"release_date": "1997-05-02",
+			"runtime": 126,
+			"status": "Released",
+			"vote_average": 7.4,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "",
+			"overview": "In 2257, a taxi driver is unintentionally given the task of saving a young girl who is part of the key that will ensure the survival of humanity."
+		}
+	},
+	{
+		"pk": 62177,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Brave",
+			"original_title": "Brave",
+			"genres": [
+				16,
+				12,
+				35,
+				10751,
+				28,
+				14
+			],
+			"release_date": "2012-06-21",
+			"runtime": 93,
+			"status": "Released",
+			"vote_average": 6.9,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://disney.go.com/brave/#/home",
+			"overview": "Brave is set in the mystical Scottish Highlands, where Mérida is the princess of a kingdom ruled by King Fergus and Queen Elinor. An unruly daughter and an accomplished archer, Mérida one day defies a sacred custom of the land and inadvertently brings turmoil to the kingdom. In an attempt to set things right, Mérida seeks out an eccentric old Wise Woman and is granted an ill-fated wish. Also figuring into Mérida’s quest — and serving as comic relief — are the kingdom’s three lords: the enormous Lord MacGuffin, the surly Lord Macintosh, and the disagreeable Lord Dingwall."
+		}
+	},
+	{
+		"pk": 12445,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Harry Potter and the Deathly Hallows: Part 2",
+			"original_title": "Harry Potter and the Deathly Hallows: Part 2",
+			"genres": [
+				14,
+				12
+			],
+			"release_date": "2011-07-07",
+			"runtime": 130,
+			"status": "Released",
+			"vote_average": 8.1,
+			"adult": false,
+			"belongs_to_collection": 1241,
+			"original_language": "en",
+			"homepage": "https://www.warnerbros.com/movies/harry-potter-and-deathly-hallows-part-2/",
+			"overview": "Harry, Ron and Hermione continue their quest to vanquish the evil Voldemort once and for all. Just as things begin to look hopeless for the young wizards, Harry discovers a trio of magical objects that endow him with powers to rival Voldemort's formidable skills."
+		}
+	},
+	{
+		"pk": 264660,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Ex Machina",
+			"original_title": "Ex Machina",
+			"genres": [
+				18,
+				878
+			],
+			"release_date": "2015-01-21",
+			"runtime": 108,
+			"status": "Released",
+			"vote_average": 7.6,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://exmachina-movie.com/",
+			"overview": "Caleb, a 26 year old coder at the world's largest internet company, wins a competition to spend a week at a private mountain retreat belonging to Nathan, the reclusive CEO of the company. But when Caleb arrives at the remote location he finds that he will have to participate in a strange and fascinating experiment in which he must interact with the world's first true artificial intelligence, housed in the body of a beautiful robot girl."
+		}
+	},
+	{
+		"pk": 399055,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Shape of Water",
+			"original_title": "The Shape of Water",
+			"genres": [
+				18,
+				14,
+				10749
+			],
+			"release_date": "2017-12-01",
+			"runtime": 123,
+			"status": "Released",
+			"vote_average": 7.2,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://www.foxsearchlight.com/theshapeofwater/",
+			"overview": "An other-worldly story, set against the backdrop of Cold War era America circa 1962, where a mute janitor working at a lab falls in love with an amphibious man being held captive there and devises a plan to help him escape."
+		}
+	},
+	{
+		"pk": 16869,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Inglourious Basterds",
+			"original_title": "Inglourious Basterds",
+			"genres": [
+				18,
+				28,
+				53,
+				10752
+			],
+			"release_date": "2009-08-18",
+			"runtime": 153,
+			"status": "Released",
+			"vote_average": 8.1,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://www.inglouriousbasterds-movie.com/",
+			"overview": "In Nazi-occupied France during World War II, a group of Jewish-American soldiers known as \"The Basterds\" are chosen specifically to spread fear throughout the Third Reich by scalping and brutally killing Nazis. The Basterds, lead by Lt. Aldo Raine soon cross paths with a French-Jewish teenage girl who runs a movie theater in Paris which is targeted by the soldiers."
+		}
+	},
+	{
+		"pk": 76757,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Jupiter Ascending",
+			"original_title": "Jupiter Ascending",
+			"genres": [
+				878,
+				14,
+				28,
+				12
+			],
+			"release_date": "2015-02-04",
+			"runtime": 124,
+			"status": "Released",
+			"vote_average": 5.3,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://www.jupiterascending.com",
+			"overview": "In a universe where human genetic material is the most precious commodity, an impoverished young Earth woman becomes the key to strategic maneuvers and internal strife within a powerful dynasty…"
+		}
+	},
+	{
+		"pk": 459910,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Braven",
+			"original_title": "Braven",
+			"genres": [
+				18,
+				28
+			],
+			"release_date": "2018-02-01",
+			"runtime": 94,
+			"status": "Released",
+			"vote_average": 5.9,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.highlandfilmgroup.com/sale/braven/",
+			"overview": "A logger defends his family from a group of dangerous drug runners."
+		}
+	},
+	{
+		"pk": 244761,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Captive",
+			"original_title": "The Captive",
+			"genres": [
+				18,
+				53,
+				80
+			],
+			"release_date": "2014-06-10",
+			"runtime": 112,
+			"status": "Released",
+			"vote_average": 5.9,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "",
+			"overview": "Eight years after the disappearance of Cassandra, some disturbing incidents seem to indicate that she's still alive. Police, parents and Cassandra herself, will try to unravel the mystery of her disappearance."
+		}
+	},
+	{
+		"pk": 131631,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Hunger Games: Mockingjay - Part 1",
+			"original_title": "The Hunger Games: Mockingjay - Part 1",
+			"genres": [
+				878,
+				12,
+				53
+			],
+			"release_date": "2014-11-18",
+			"runtime": 123,
+			"status": "Released",
+			"vote_average": 6.8,
+			"adult": false,
+			"belongs_to_collection": 131635,
+			"original_language": "en",
+			"homepage": "http://www.thehungergames.movie/",
+			"overview": "Katniss Everdeen reluctantly becomes the symbol of a mass rebellion against the autocratic Capitol."
+		}
+	},
+	{
+		"pk": 608,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Men in Black II",
+			"original_title": "Men in Black II",
+			"genres": [
+				28,
+				12,
+				35,
+				878
+			],
+			"release_date": "2002-07-03",
+			"runtime": 88,
+			"status": "Released",
+			"vote_average": 6.3,
+			"adult": false,
+			"belongs_to_collection": 86055,
+			"original_language": "en",
+			"homepage": "http://www.sonypictures.com/homevideo/meninblackii/",
+			"overview": "Kay and Jay reunite to provide our best, last and only line of defense against a sinister seductress who levels the toughest challenge yet to the MIB's untarnished mission statement – protecting Earth from the scum of the universe. It's been four years since the alien-seeking agents averted an intergalactic disaster of epic proportions. Now it's a race against the clock as Jay must convince Kay – who not only has absolutely no memory of his time spent with the MIB, but is also the only living person left with the expertise to save the galaxy – to reunite with the MIB before the earth submits to ultimate destruction."
+		}
+	},
+	{
+		"pk": 484641,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Anna",
+			"original_title": "Anna",
+			"genres": [
+				53,
+				28
+			],
+			"release_date": "2019-06-19",
+			"runtime": 119,
+			"status": "Released",
+			"vote_average": 6.5,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "fr",
+			"homepage": "https://anna.movie",
+			"overview": "Beneath Anna Poliatova's striking beauty lies a secret that will unleash her indelible strength and skill to become one of the world's most feared government assassins."
+		}
+	},
+	{
+		"pk": 1124,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Prestige",
+			"original_title": "The Prestige",
+			"genres": [
+				18,
+				9648,
+				53
+			],
+			"release_date": "2006-10-19",
+			"runtime": 130,
+			"status": "Released",
+			"vote_average": 8.2,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://wwws.warnerbros.de/theprestige/",
+			"overview": "A mysterious story of two magicians whose intense rivalry leads them on a life-long battle for supremacy -- full of obsession, deceit and jealousy with dangerous and deadly consequences."
+		}
+	},
+	{
+		"pk": 596302,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Crayon Shin-chan: Honeymoon Hurricane ~The Lost Hiroshi~",
+			"original_title": "映画クレヨンしんちゃん 新婚旅行ハリケーン ～失われたひろし～",
+			"genres": [
+				16,
+				12,
+				28,
+				10751
+			],
+			"release_date": "2019-04-19",
+			"runtime": 100,
+			"status": "Released",
+			"vote_average": 5.2,
+			"adult": false,
+			"belongs_to_collection": 117354,
+			"original_language": "ja",
+			"homepage": "",
+			"overview": "Hiroshi and Misae have never been to a honeymoon trip to a foreign country. One day, Misae discovered an inexpensive and family-friendly holiday package to Australia and the Nohara family decided to make it their first honeymoon vacation.\r Hiroshi gets kidnapped upon arrival to Australia, leaving Shinnosuke, Misae and others on a dangerous journey. It turns out that Hiroshi is the key to a secret treasure. The remaining members of the Nohara Family must rescue Hiroshi, while a mysterious masked man and treasure hunters from all over the world are after him. The struggle is among three different groups in this action-filled treasure hunting adventure."
+		}
+	},
+	{
+		"pk": 254128,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "San Andreas",
+			"original_title": "San Andreas",
+			"genres": [
+				28,
+				18,
+				53
+			],
+			"release_date": "2015-05-27",
+			"runtime": 114,
+			"status": "Released",
+			"vote_average": 6.1,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://cutt.ly/websitemovieofficial",
+			"overview": "In the aftermath of a massive earthquake in California, a rescue-chopper pilot makes a dangerous journey across the state in order to rescue his estranged daughter."
+		}
+	},
+	{
+		"pk": 11130,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Princess Diaries 2: Royal Engagement",
+			"original_title": "The Princess Diaries 2: Royal Engagement",
+			"genres": [
+				35,
+				18,
+				10751,
+				10749
+			],
+			"release_date": "2004-08-06",
+			"runtime": 113,
+			"status": "Released",
+			"vote_average": 6.5,
+			"adult": false,
+			"belongs_to_collection": 107674,
+			"original_language": "en",
+			"homepage": "",
+			"overview": "Mia Thermopolis is now a college graduate and on her way to Genovia to take up her duties as princess. Her best friend Lilly also joins her for the summer. Mia continues her 'princess lessons'- riding horses side-saddle, archery, and other royal. But her complicated life is turned upside down once again when she not only learns that she is to take the crown as queen earlier than expected..."
+		}
+	},
+	{
+		"pk": 158852,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Tomorrowland",
+			"original_title": "Tomorrowland",
+			"genres": [
+				12,
+				10751,
+				9648,
+				878
+			],
+			"release_date": "2015-05-19",
+			"runtime": 130,
+			"status": "Released",
+			"vote_average": 6.2,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://movies.disney.com/tomorrowland",
+			"overview": "Bound by a shared destiny, a bright, optimistic teen bursting with scientific curiosity and a former boy-genius inventor jaded by disillusionment embark on a danger-filled mission to unearth the secrets of an enigmatic place somewhere in time and space that exists in their collective memory as \"Tomorrowland.\""
+		}
+	},
+	{
+		"pk": 49051,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Hobbit: An Unexpected Journey",
+			"original_title": "The Hobbit: An Unexpected Journey",
+			"genres": [
+				12,
+				14,
+				28
+			],
+			"release_date": "2012-11-26",
+			"runtime": 169,
+			"status": "Released",
+			"vote_average": 7.2,
+			"adult": false,
+			"belongs_to_collection": 121938,
+			"original_language": "en",
+			"homepage": "http://www.thehobbit.com/",
+			"overview": "Bilbo Baggins, a hobbit enjoying his quiet life, is swept into an epic quest by Gandalf the Grey and thirteen dwarves who seek to reclaim their mountain home from Smaug, the dragon."
+		}
+	},
+	{
+		"pk": 8392,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "My Neighbor Totoro",
+			"original_title": "となりのトトロ",
+			"genres": [
+				14,
+				16,
+				10751
+			],
+			"release_date": "1988-04-16",
+			"runtime": 86,
+			"status": "Released",
+			"vote_average": 8.1,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "ja",
+			"homepage": "",
+			"overview": "Two sisters move to the country with their father in order to be closer to their hospitalized mother, and discover the surrounding trees are inhabited by Totoros, magical spirits of the forest. When the youngest runs away from home, the older sister seeks help from the spirits to find her."
+		}
+	},
+	{
+		"pk": 4638,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Hot Fuzz",
+			"original_title": "Hot Fuzz",
+			"genres": [
+				80,
+				28,
+				35
+			],
+			"release_date": "2007-02-14",
+			"runtime": 121,
+			"status": "Released",
+			"vote_average": 7.5,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://www.universalstudiosentertainment.com/hot-fuzz/",
+			"overview": "As a former London constable, Nicholas Angel finds it difficult to adapt to his new assignment in the sleepy British village of Sandford. Not only does he miss the excitement of the big city, but he also has a well-meaning oaf for a partner. However, when a series of grisly accidents rocks Sandford, Angel smells something rotten in the idyllic village."
+		}
+	},
+	{
+		"pk": 496891,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Girls und Panzer das Finale: Part II",
+			"original_title": "ガールズ＆パンツァー 最終章 第2話",
+			"genres": [
+				28,
+				16,
+				35
+			],
+			"release_date": "2019-06-15",
+			"runtime": 54,
+			"status": "Released",
+			"vote_average": 4.7,
+			"adult": false,
+			"belongs_to_collection": 610041,
+			"original_language": "ja",
+			"homepage": "http://girls-und-panzer-finale.jp",
+			"overview": "Part 2 of 6 for the final chapter of Girls und Panzer series."
+		}
+	},
+	{
+		"pk": 956,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Mission: Impossible III",
+			"original_title": "Mission: Impossible III",
+			"genres": [
+				12,
+				28,
+				53
+			],
+			"release_date": "2006-05-03",
+			"runtime": 126,
+			"status": "Released",
+			"vote_average": 6.6,
+			"adult": false,
+			"belongs_to_collection": 87359,
+			"original_language": "en",
+			"homepage": "http://www.missionimpossible.com/",
+			"overview": "Retired from active duty to train new IMF agents, Ethan Hunt is called back into action to confront sadistic arms dealer, Owen Davian. Hunt must try to protect his girlfriend while working with his new team to complete the mission."
+		}
+	},
+	{
+		"pk": 121,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Lord of the Rings: The Two Towers",
+			"original_title": "The Lord of the Rings: The Two Towers",
+			"genres": [
+				12,
+				14,
+				28
+			],
+			"release_date": "2002-12-18",
+			"runtime": 179,
+			"status": "Released",
+			"vote_average": 8.3,
+			"adult": false,
+			"belongs_to_collection": 119,
+			"original_language": "en",
+			"homepage": "http://www.lordoftherings.net/",
+			"overview": "Frodo and Sam are trekking to Mordor to destroy the One Ring of Power while Gimli, Legolas and Aragorn search for the orc-captured Merry and Pippin. All along, nefarious wizard Saruman awaits the Fellowship members at the Orthanc Tower in Isengard."
+		}
+	},
+	{
+		"pk": 599975,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Countdown",
+			"original_title": "Countdown",
+			"genres": [
+				27,
+				53
+			],
+			"release_date": "2019-10-24",
+			"runtime": 90,
+			"status": "Released",
+			"vote_average": 6.8,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "",
+			"overview": "A young nurse downloads an app that tells her she only has three days to live. With time ticking away and a mysterious figure haunting her, she must find a way to save her life before time runs out."
+		}
+	},
+	{
+		"pk": 37724,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Skyfall",
+			"original_title": "Skyfall",
+			"genres": [
+				28,
+				12,
+				53
+			],
+			"release_date": "2012-10-25",
+			"runtime": 143,
+			"status": "Released",
+			"vote_average": 7.1,
+			"adult": false,
+			"belongs_to_collection": 645,
+			"original_language": "en",
+			"homepage": "http://www.skyfall-movie.com",
+			"overview": "When Bond's latest assignment goes gravely wrong and agents around the world are exposed, MI6 is attacked forcing M to relocate the agency. These events cause her authority and position to be challenged by Gareth Mallory, the new Chairman of the Intelligence and Security Committee. With MI6 now compromised from both inside and out, M is left with one ally she can trust: Bond. 007 takes to the shadows - aided only by field agent, Eve - following a trail to the mysterious Silva, whose lethal and hidden motives have yet to reveal themselves."
+		}
+	},
+	{
+		"pk": 354912,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Coco",
+			"original_title": "Coco",
+			"genres": [
+				16,
+				10751,
+				35,
+				12,
+				14
+			],
+			"release_date": "2017-10-27",
+			"runtime": 105,
+			"status": "Released",
+			"vote_average": 8.2,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.pixar.com/feature-films/coco",
+			"overview": "Despite his family’s baffling generations-old ban on music, Miguel dreams of becoming an accomplished musician like his idol, Ernesto de la Cruz. Desperate to prove his talent, Miguel finds himself in the stunning and colorful Land of the Dead following a mysterious chain of events. Along the way, he meets charming trickster Hector, and together, they set off on an extraordinary journey to unlock the real story behind Miguel's family history."
+		}
+	},
+	{
+		"pk": 861,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Total Recall",
+			"original_title": "Total Recall",
+			"genres": [
+				28,
+				12,
+				878
+			],
+			"release_date": "1990-06-01",
+			"runtime": 113,
+			"status": "Released",
+			"vote_average": 7.2,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "",
+			"overview": "Construction worker Douglas Quaid discovers a memory chip in his brain during a virtual-reality trip. He also finds that his past has been invented to conceal a plot of planetary domination. Soon, he's off to Mars to find out who he is and who planted the chip."
+		}
+	},
+	{
+		"pk": 607,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Men in Black",
+			"original_title": "Men in Black",
+			"genres": [
+				28,
+				12,
+				35,
+				878
+			],
+			"release_date": "1997-07-02",
+			"runtime": 98,
+			"status": "Released",
+			"vote_average": 7.1,
+			"adult": false,
+			"belongs_to_collection": 86055,
+			"original_language": "en",
+			"homepage": "http://www.sonypictures.com/homevideo/meninblack",
+			"overview": "After a police chase with an otherworldly being, a New York City cop is recruited as an agent in a top-secret organization established to monitor and police alien activity on Earth: the Men in Black. Agent Kay and new recruit Agent Jay find themselves in the middle of a deadly plot by an intergalactic terrorist who has arrived on Earth to assassinate two ambassadors from opposing galaxies."
+		}
+	},
+	{
+		"pk": 13,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Forrest Gump",
+			"original_title": "Forrest Gump",
+			"genres": [
+				35,
+				18,
+				10749
+			],
+			"release_date": "1994-07-06",
+			"runtime": 142,
+			"status": "Released",
+			"vote_average": 8.4,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "",
+			"overview": "A man with a low IQ has accomplished great things in his life and been present during significant historic events—in each case, far exceeding what anyone imagined he could do. But despite all he has achieved, his one true love eludes him."
+		}
+	},
+	{
+		"pk": 376867,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Moonlight",
+			"original_title": "Moonlight",
+			"genres": [
+				18
+			],
+			"release_date": "2016-10-21",
+			"runtime": 111,
+			"status": "Released",
+			"vote_average": 7.4,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://www.moonlight-movie.com",
+			"overview": "The tender, heartbreaking story of a young man’s struggle to find himself, told across three defining chapters in his life as he experiences the ecstasy, pain, and beauty of falling in love, while grappling with his own sexuality."
+		}
+	},
+	{
+		"pk": 603,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Matrix",
+			"original_title": "The Matrix",
+			"genres": [
+				28,
+				878
+			],
+			"release_date": "1999-03-30",
+			"runtime": 136,
+			"status": "Released",
+			"vote_average": 8.1,
+			"adult": false,
+			"belongs_to_collection": 2344,
+			"original_language": "en",
+			"homepage": "http://www.warnerbros.com/matrix",
+			"overview": "Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents fighting the vast and powerful computers who now rule the earth."
+		}
+	},
+	{
+		"pk": 4935,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Howl's Moving Castle",
+			"original_title": "ハウルの動く城",
+			"genres": [
+				14,
+				16,
+				12
+			],
+			"release_date": "2004-11-19",
+			"runtime": 119,
+			"status": "Released",
+			"vote_average": 8.4,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "ja",
+			"homepage": "",
+			"overview": "When Sophie, a shy young woman, is cursed with an old body by a spiteful witch, her only chance of breaking the spell lies with a self-indulgent yet insecure young wizard and his companions in his legged, walking castle."
+		}
+	},
+	{
+		"pk": 99861,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Avengers: Age of Ultron",
+			"original_title": "Avengers: Age of Ultron",
+			"genres": [
+				28,
+				12,
+				878
+			],
+			"release_date": "2015-04-22",
+			"runtime": 141,
+			"status": "Released",
+			"vote_average": 7.3,
+			"adult": false,
+			"belongs_to_collection": 86311,
+			"original_language": "en",
+			"homepage": "http://marvel.com/movies/movie/193/avengers_age_of_ultron",
+			"overview": "When Tony Stark tries to jumpstart a dormant peacekeeping program, things go awry and Earth’s Mightiest Heroes are put to the ultimate test as the fate of the planet hangs in the balance. As the villainous Ultron emerges, it is up to The Avengers to stop him from enacting his terrible plans, and soon uneasy alliances and unexpected action pave the way for an epic and unique global adventure."
+		}
+	},
+	{
+		"pk": 135397,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Jurassic World",
+			"original_title": "Jurassic World",
+			"genres": [
+				28,
+				12,
+				878,
+				53
+			],
+			"release_date": "2015-06-06",
+			"runtime": 124,
+			"status": "Released",
+			"vote_average": 6.6,
+			"adult": false,
+			"belongs_to_collection": 328,
+			"original_language": "en",
+			"homepage": "http://www.jurassicworld.com/",
+			"overview": "Twenty-two years after the events of Jurassic Park, Isla Nublar now features a fully functioning dinosaur theme park, Jurassic World, as originally envisioned by John Hammond."
+		}
+	},
+	{
+		"pk": 504608,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Rocketman",
+			"original_title": "Rocketman",
+			"genres": [
+				10402,
+				18
+			],
+			"release_date": "2019-05-22",
+			"runtime": 121,
+			"status": "Released",
+			"vote_average": 7.4,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.paramount.com/movies/Rocketman/",
+			"overview": "The story of Elton John's life, from his years as a prodigy at the Royal Academy of Music through his influential and enduring musical partnership with Bernie Taupin."
+		}
+	},
+	{
+		"pk": 530385,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Midsommar",
+			"original_title": "Midsommar",
+			"genres": [
+				27,
+				18,
+				9648
+			],
+			"release_date": "2019-07-03",
+			"runtime": 148,
+			"status": "Released",
+			"vote_average": 7.1,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://a24films.com/films/midsommar",
+			"overview": "Several friends travel to Sweden to study as anthropologists a summer festival that is held every ninety years in the remote hometown of one of them. What begins as a dream vacation in a place where the sun never sets, gradually turns into a dark nightmare as the mysterious inhabitants invite them to participate in their disturbing festive activities."
+		}
+	},
+	{
+		"pk": 372058,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Your Name.",
+			"original_title": "君の名は。",
+			"genres": [
+				10749,
+				16,
+				18
+			],
+			"release_date": "2016-08-26",
+			"runtime": 106,
+			"status": "Released",
+			"vote_average": 8.5,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "ja",
+			"homepage": "https://www.funimationfilms.com/movie/yourname/",
+			"overview": "High schoolers Mitsuha and Taki are complete strangers living separate lives. But one night, they suddenly switch places. Mitsuha wakes up in Taki’s body, and he in hers. This bizarre occurrence continues to happen randomly, and the two must adjust their lives around each other."
+		}
+	},
+	{
+		"pk": 315635,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Spider-Man: Homecoming",
+			"original_title": "Spider-Man: Homecoming",
+			"genres": [
+				28,
+				12,
+				878,
+				18
+			],
+			"release_date": "2017-07-05",
+			"runtime": 133,
+			"status": "Released",
+			"vote_average": 7.4,
+			"adult": false,
+			"belongs_to_collection": 531241,
+			"original_language": "en",
+			"homepage": "http://www.spidermanhomecoming.com",
+			"overview": "Following the events of Captain America: Civil War, Peter Parker, with the help of his mentor Tony Stark, tries to balance his life as an ordinary high school student in Queens, New York City, with fighting crime as his superhero alter ego Spider-Man as a new threat, the Vulture, emerges."
+		}
+	},
+	{
+		"pk": 49026,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Dark Knight Rises",
+			"original_title": "The Dark Knight Rises",
+			"genres": [
+				28,
+				80,
+				18,
+				53
+			],
+			"release_date": "2012-07-16",
+			"runtime": 165,
+			"status": "Released",
+			"vote_average": 7.7,
+			"adult": false,
+			"belongs_to_collection": 263,
+			"original_language": "en",
+			"homepage": "http://www.thedarkknightrises.com/",
+			"overview": "Following the death of District Attorney Harvey Dent, Batman assumes responsibility for Dent's crimes to protect the late attorney's reputation and is subsequently hunted by the Gotham City Police Department. Eight years later, Batman encounters the mysterious Selina Kyle and the villainous Bane, a new terrorist leader who overwhelms Gotham's finest. The Dark Knight resurfaces to protect a city that has branded him an enemy."
+		}
+	},
+	{
+		"pk": 807,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Se7en",
+			"original_title": "Se7en",
+			"genres": [
+				80,
+				9648,
+				53
+			],
+			"release_date": "1995-09-22",
+			"runtime": 127,
+			"status": "Released",
+			"vote_average": 8.3,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://www.sevenmovie.com/",
+			"overview": "Two homicide detectives are on a desperate hunt for a serial killer whose crimes are based on the \"seven deadly sins\" in this dark and haunting film that takes viewers from the tortured remains of one victim to the next. The seasoned Det. Sommerset researches each sin in an effort to get inside the killer's mind, while his novice partner, Mills, scoffs at his efforts to unravel the case."
+		}
+	},
+	{
+		"pk": 58,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Pirates of the Caribbean: Dead Man's Chest",
+			"original_title": "Pirates of the Caribbean: Dead Man's Chest",
+			"genres": [
+				12,
+				14,
+				28
+			],
+			"release_date": "2006-06-20",
+			"runtime": 151,
+			"status": "Released",
+			"vote_average": 7.2,
+			"adult": false,
+			"belongs_to_collection": 295,
+			"original_language": "en",
+			"homepage": "http://disney.go.com/disneypictures/pirates/",
+			"overview": "Captain Jack Sparrow works his way out of a blood debt with the ghostly Davey Jones, he also attempts to avoid eternal damnation."
+		}
+	},
+	{
+		"pk": 449443,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Den of Thieves",
+			"original_title": "Den of Thieves",
+			"genres": [
+				28,
+				53,
+				80
+			],
+			"release_date": "2018-01-18",
+			"runtime": 140,
+			"status": "Released",
+			"vote_average": 6.6,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "http://stxfilms.com/denofthieves/",
+			"overview": "A gritty crime saga which follows the lives of an elite unit of the LA County Sheriff’s Dept. and the state’s most successful bank robbery crew as the outlaws plan a seemingly impossible heist on the Federal Reserve Bank."
+		}
+	},
+	{
+		"pk": 9471,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "Charlie's Angels: Full Throttle",
+			"original_title": "Charlie's Angels: Full Throttle",
+			"genres": [
+				28,
+				12,
+				35
+			],
+			"release_date": "2003-06-27",
+			"runtime": 106,
+			"status": "Released",
+			"vote_average": 5.4,
+			"adult": false,
+			"belongs_to_collection": 86029,
+			"original_language": "en",
+			"homepage": "",
+			"overview": "The Angels are charged with finding a pair of missing rings that are encoded with the personal information of members of the Witness Protection Program. As informants are killed, the ladies target a rogue agent who might be responsible."
+		}
+	},
+	{
+		"pk": 522627,
+		"model": "movies.Movie",
+		"fields": {
+			"title": "The Gentlemen",
+			"original_title": "The Gentlemen",
+			"genres": [
+				28,
+				80
+			],
+			"release_date": "2020-01-01",
+			"runtime": 113,
+			"status": "Released",
+			"vote_average": 7.4,
+			"adult": false,
+			"belongs_to_collection": 0,
+			"original_language": "en",
+			"homepage": "https://www.thegentlemen.movie/",
+			"overview": "A drug lord tries to sell off his highly profitable empire."
 		}
 	}
 ]
