@@ -178,10 +178,10 @@ axios.get(`/api/v1/accounts/${userpk}/`)
                         let movieimg = document.createElement("div")
                         movieimg.classList.add("mx-2", "renderingarray")
                         if (movies.includes(n.id)) {
-                            movieimg.innerHTML = `<a href="{% url 'movies:detail' movie.pk %}">
+                            movieimg.innerHTML = `<a href="/movies/${n.id}">
                             <img src="${movieObject[n.id]}" alt="Card image" class="movieposter"></a>`
                         } else {
-                            movieimg.innerHTML = `<a href="{% url 'movies:detail' movie.pk %}">
+                            movieimg.innerHTML = `<a href="/movies/${n.id}">
                             <img src="${movieObject[n.id]}" alt="Card image" class="movieposter" style="-webkit-filter: grayscale(100%);
                             filter: grayscale(100%);"></a>`
                         }

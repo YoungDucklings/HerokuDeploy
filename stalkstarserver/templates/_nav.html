@@ -1,8 +1,12 @@
 {% load static %}
 {% load bootstrap4 %}
-
-<nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg text-white" color-on-scroll="100"
-  id="sectionsNav" style="background-image: linear-gradient(to right, #12c2e9, #c471ed, #f64f59)">
+<style>
+  .form-control::placeholder {
+    color: white !important;
+  }
+</style>
+<nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg text-white"
+  color-on-scroll="100" id="sectionsNav" style="background-image: linear-gradient(to right, #12c2e9, #c471ed, #f64f59)">
   <div class="container">
     <div class="navbar-translate">
       <a class="navbar-brand" href="{% url 'info:intro' %}">YoungDucklings</a>
@@ -62,7 +66,7 @@
       <form action="{% url 'info:search' %}" class="form-inline ml-auto">
         <div class="row mx-3">
           <div class="form-group no-border">
-            <input name="query" type="text" class="form-control" placeholder="Search">
+            <input name="query" type="text" class="form-control" placeholder="Search" style="color:white;">
           </div>
           <button type="submit" class="btn btn-white btn-just-icon btn-round">
             <i class="material-icons">search</i>

@@ -24,3 +24,17 @@
 .mycontentbox {
     height: min-content;
 }
+.array-container::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .array-container ::-webkit-scrollbar-track {
+    border-radius: 1px;
+  }
+  
+  .array-container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #BFBFBF;
+  }
+  
