@@ -38,8 +38,13 @@
               <i id="{{ forloop.counter }}" class="fa fa-star fa-2x" aria-hidden="true"
                 onclick="mouseClick({{ forloop.counter }})" style="color: gold; text-shadow: 2px 2px grey"></i>
               {% else %}
+              {% if request.user.is_authenticated %}
               <i id="{{ forloop.counter }}" class="fa fa-star fa-2x" aria-hidden="true"
                 onclick="mouseClick({{ forloop.counter }})"></i>
+              {% else %}
+              <i id="{{ forloop.counter }}" class="fa fa-star fa-2x" aria-hidden="true"
+                onclick="linktoLogin()"></i>
+              {% endif %}
               {% endif %}
               {% endfor %}
             </div>

@@ -71,11 +71,16 @@
               <i class="material-icons">personsearch</i>
             </button>
             {% if request.user != user%}
+            {% if request.user.is_authenticated  %}
             {% if request.user in user.followers.all %}
             <a href="{% url 'accounts:follow' user.pk %}" class="btn btn-default btn-link p-0">
               <i class="material-icons">personadd</i> </a>
             {% else %}
-            <a href="{% url 'accounts:follow' user.pk %}" class="btn btn-primary btn-link p-0">
+            <a href="{% url 'accounts:follow' user.pk %}" class="btn btn-primary text-white btn-link p-0">
+              <i class="material-icons">personadd</i> </a>
+            {% endif %}
+            {% else %}
+            <a href="{% url 'accounts:login' %}" class="btn btn-primary text-white btn-link p-0">
               <i class="material-icons">personadd</i> </a>
             {% endif %}
             {% endif %}
@@ -208,7 +213,7 @@
       <div id="popular-movie" class="card-body tabcontent" style="display: block;">
         <h4 class="card-title">People also love these movies</h4>
         <div class="mb-2">
-          <div class="defaultarray array-container" >
+          <div class="array-container" >
             {% for pop in popular %}
             {% if pop not in movies %}
             {% if pop.poster_set.all %}
